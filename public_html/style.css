@@ -1,0 +1,189 @@
+:root {
+    --text: #4D4F69;
+    --background: #F0F1F5;
+    --bold: var(--text);
+    --link: var(--text);
+    --hover: #551A8B;
+    --hover-light: var(--hover);
+    --bq-background: #DCE0E8;
+    --bq-border-left: var(--text);
+    --pre-code: #DCE0E8;
+    --pre-code-text: #4D4F69;
+    --th-td-border: #4D4F69;
+    --th: var(--background);
+    --td: var(--background);
+    --h1: var(--text);
+    --h2: #E64553;
+    --h3: #FE640C;
+    --h456: #E9AA2B;
+}
+/* :root {
+    --text: #141619;
+    --background: #F1F1FC;
+    --bold: #bd4f6c;
+    --link: #525252;
+    --hover: #838282;
+    --hover-light: var(--hover);
+    --bq-background: #23477423;
+    --bq-border-left: var(--h3);
+    --pre-code: #33333a;
+    --pre-code-text: #e0e0e0;
+    --th-td-border: #4d4d59;
+    --th: #bbb8cf98;
+    --td: var(--background);
+    --h1: var(--text);
+    --h2: #050a44;
+    --h3: #0a21c0;
+    --h456: #626369;
+} */
+
+svg {
+    max-width: 100%;
+}
+
+/* Bold, itallic and hr */
+b, i {
+    color: var(--bold);
+}
+hr {
+    color: var(--text);
+}
+
+
+/* Table of Contents */
+@media only screen and (min-width: 600px) {
+    #__toc__{
+        column-count: 2;
+        column-rule-style: solid;
+        column-rule-color: var(--text);
+        column-rule-width: 1px;
+    }
+}
+.__toc__a__, .__toc__a__:visited{
+    font-size: 11px;
+    &.__lvl_1__{color: var(--h1);}
+    &.__lvl_2__{color: var(--h2); font-size: 10px;}
+    &.__lvl_3__{color: var(--h3); font-size: 9px;}
+}
+.__toc__a__:hover{
+    color: var(--hover-light);
+}
+.__toc_li__, .__toc_ol__{
+    font-size: 9pt;
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    &.__lvl_1__{list-style-type:decimal;}
+}
+#__toc_button__:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+/* Code Blocks */
+pre {
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    background: var(--pre-code); 
+    color: var(--pre-code-text);
+}
+code {
+    padding: 2px 5px;
+    border-radius: 3px;
+    background: var(--pre-code); 
+    color: var(--pre-code-text);
+}
+
+/* Blockquotes */
+blockquote {
+    padding: 10px;
+    margin: 10px 0;
+    font-style: italic;
+    background: var(--bq-background); 
+    border-left: 4px solid var(--bq-border-left);
+}
+
+/* Links */
+a {
+    /* text-decoration: none; */
+    color: var(--link);
+    &:hover {
+        color: var(--hover);
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+        font-style: italic;
+    }
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;	
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    color:var(--text); 
+    background-color:var(--background)
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    /*text-align: center;*/
+}
+h1 {color: var(--h1)}
+h2 {color: var(--h2)}
+h3 {color: var(--h3)}
+h4, h5, h6 {color: var(--h456)}
+
+/* Paragraphs */
+p {
+    margin-bottom: 15px;
+}
+
+/* Lists */
+ul, ol {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    break-inside:avoid-page;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+th, td {
+    border: 1px solid var(--th-td-border);
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background: var(--th);
+}
+td {
+    background: var(--td);
+}
+
+/* Checklists */
+input[type="checkbox"] {
+    margin-right: 5px;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PHYS134-Electric_Circuits</title>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="../style.css" title="DevEng Style"/>
+	</head>
+<body>
+<script>
+window.MathJax = {
+    loader: {
+        load: ['[tex]/physics', '[tex]/color']
+    },
+    tex: {
+        packages: {
+            '[+]': ['physics', 'color']
+        }
+    }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<div id="__container__">
+
+<h1>PHYS134-Electric_Circuits</h1>
+
+<div onclick="toc_click()" id="__toc_button__" class="w3-block w3-button" style="background-color: #444; color:white; font-weight: bold;">Table of Contents</div>
+<div id="__toc__" class="w3-hide w3-animate-top w3-container">
+<ol class="__toc_ol__ __lvl_1__">
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Resistivity">Resistivity</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Fundamental_Laws_and_Rules">Fundamental Laws and Rules</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Kirchhoff's_Current_Law">Kirchhoff's Current Law</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Kirchhoff's_Voltage_Law">Kirchhoff's Voltage Law</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Ohm's_Rule">Ohm's Rule</a></li>
+</ol>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Resistor_Circuits_&_Potential_Dividers">Resistor Circuits & Potential Dividers</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Internal_Resistance">Internal Resistance</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Ammeters_and_Voltmeters">Ammeters and Voltmeters</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Ammeters">Ammeters</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Voltmeters">Voltmeters</a></li>
+</ol>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Capacitors">Capacitors</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Charging_and_Discharging">Charging and Discharging</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Dielectrics">Dielectrics</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Inductors">Inductors</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Self_Inductance">Self Inductance</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Current">Current</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#L-C_Circuit">L-C Circuit</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#L-R-C_Circuit">L-R-C Circuit</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#AC_Circuits">AC Circuits</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Complex_Notation">Complex Notation</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Power_Source_In_AC">Power Source In AC</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Average_Power">Average Power</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Example:_Purely_Resistive">Example: Purely Resistive</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#More_Generally">More Generally</a></li>
+</ol>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Inductive_Coupling">Inductive Coupling</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Transformers">Transformers</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Summary">Summary</a></li>
+</ol>
+</div>
+<script>
+function toc_click() {
+    var x = document.getElementById('__toc__');
+    if (x.classList.contains("w3-hide")) {
+        x.classList.remove("w3-hide");
+    }
+    else {
+        x.classList.add("w3-hide");
+    }
+}
+</script>
+
+<h1 id="Resistivity">Resistivity</h1>
+<p>There is the A-Level equation for resistivity: \(R=\rho l/A\), and now this formula for resistivity from temperature: \[\rho(T)=\rho_0[1+\alpha(T-T_0)]\] ...where \(\rho_0\) is resistivity at reference temperature \(T_0\), and \(\alpha\) is the temperature coefficient of resistivity.  </p>
+<h1 id="Fundamental_Laws_and_Rules">Fundamental Laws and Rules</h1>
+<p>There are two fundamental laws and one not so fundamental rule when analysing any circuit:  </p>
+<h3 id="Kirchhoff's_Current_Law">Kirchhoff's Current Law</h3>
+<p>This is “conservation of charge (per unit time)” or “conservation of current”. </p>
+<blockquote>Total current into junction (node) = total current out of junction (node)</blockquote>
+<h3 id="Kirchhoff's_Voltage_Law">Kirchhoff's Voltage Law</h3>
+<p>This is conservation of energy. Any energy “lost” from the loads is “replaced” in the generator. For the sign convention here, consider:  </p>
+<blockquote>Positive Volts Generated = Positive Volts DroppedI.e. \(\sum V=0\) (Around a closed loop)</blockquote>
+<p> </p>
+<h3 id="Ohm's_Rule">Ohm's Rule</h3>
+<p>With the notable exception of the ideal generator of “E.M.F.”, the voltage across conducting materials or devices will be a function of the current (and its direction). There are many useful materials for which V/I is a constant (or at least approximately so). We then say “Ohm’s Rule” is obeyed, and: \[V=IR\]  </p>
+<h1 id="Resistor_Circuits_&_Potential_Dividers">Resistor Circuits & Potential Dividers</h1>
+<p>Remember from A-Level that: <b>Resistors In Series:</b> \[R_{tot}=R_1+R_2+R_3+\ldots\] <b>Resistors In Parallel:</b> \[\frac{1}{R_{tot}}=\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}+\ldots\] Furthermore, for resistors in series, voltage dropped over each will follow the rule: \[\frac{V_{out}}{V_{in}}=\frac{R_2}{R_1+R_2}\] ...where \(V_{out}\) is measured across \(R_2\).  </p>
+<h1 id="Internal_Resistance">Internal Resistance</h1>
+<p>No battery, or other source of E.M.F., is perfect since there is some loss of voltage when current is drawn. We account for this loss by saying that the source has “internal resistance” or “source resistance” \(r\) \[\varepsilon=Ir+IR_{load}\] hence... \[V_{out}=\varepsilon -Ir\]  </p>
+<h1 id="Ammeters_and_Voltmeters">Ammeters and Voltmeters</h1>
+<h3 id="Ammeters">Ammeters</h3>
+<p>The maximum current that an ammeter can read is called its “full scale” reading, \(I_{fs}\)  We can adapt the meter to read a larger current by inserting a “shunt” resistor, \(R_{sh}\), in parallel with its internal resistance, \(R_c\)  Some of the total circuit current, \(I\), now bypasses the meter coil such that \(I_{fs}=I-I_{sh}\)  The existence of an internal resistance reduces the measured current: \(I=V/R_{load}\to I=V/(R_{load}+R_{meter})\). For small load resistances this can be problematic, unless we take the internal resistance into account.  </p>
+<h3 id="Voltmeters">Voltmeters</h3>
+<p>The same basic meter can be used as a voltmeter, since if we know the internal resistance we can calculate \(V=IR\)  </p>
+<h1 id="Capacitors">Capacitors</h1>
+<p>For a capacitor: \[Q=VC\] Where \(Q\) is the charge on the capacitor and \(C\) is its capacitance.  You combine capacitance in the opposite way that you combine resistance. I.e. you sum the capacitances of capacitors in parallel, and take the inverse of the sum of the inverse capacitance of capacitors in series.  The energy stored in a capacitor takes the form \[W=\frac{1}{2}CV^2=\frac{1}{2}QV\] This energy is stored in the electric field. For an electric field, \(E\), the energy density, \(u\), (energy per unit volume) is: \[u=\frac{1}{2}\varepsilon_0E^2\]  </p>
+<h2 id="Charging_and_Discharging">Charging and Discharging</h2>
+<p>When charging a capacitor, the charge stored against time takes the following form: \[q=Q_0\left[1-\exp\left(\frac{-t}{RC}\right)\right]\] where \(Q_0\) is the maximum charge stored, and \(\tau=RC\).  So equally: \[v_c=\varepsilon\left[1-\exp\left(\frac{-t}{RC}\right)\right]\]  Whereas the charge and the voltage increase exponentially from \(t=0\), the current decays exponentially from \(I_0=\varepsilon/R\). Also note \(I=dq/dt\).   When discharging a capacitor, the equations above are slightly modified: \[q=Q_0\exp\left(\frac{-t}{RC}\right)\] \[v_c=\varepsilon\exp\left(\frac{-t}{RC}\right)\]  </p>
+<h1 id="Dielectrics">Dielectrics</h1>
+<p>Dielectrics - non-conducting materials between the “plates” of a capacitor can greatly enhance the capacitance.  </p>
+<blockquote>The induced charge in the medium has the opposite polarity w.r.t. the capacitor plates. This reduces the electric field inside the capacitor. The result is an increased capacitance and a higher energy density</blockquote>
+<p> The dielectric constant \(K\) of a material is defined as: \[K=\frac{C}{C_0}\] where \(C\) is the capacitance of the capacitor with the dielectric present, and \(C_0\) is without.  </p>
+<h1 id="Inductors">Inductors</h1>
+<p>An inductor is a circuit element that resists changes in current. A time-varying current produces a time varying magnetic field, which induces an emf according to Faraday’s Law: \[\varepsilon=-\frac{d\Phi_B}{dt}\]  In addition, the emf is induced in each turn of the inductor, such that the total emf is given by \[\varepsilon=-N\frac{d\Phi_B}{dt}\] where \(N\) is the number of turns.  </p>
+<h2 id="Self_Inductance">Self Inductance</h2>
+<p>A current \(i\) in a coil produces a magnetic flux, according to the formula: \[N\Phi_B=Li\] where \(L\) is inductance.  The self-inductance is then defined as \[L=\frac{N\Phi_B}{i}\]  For a time-varying current, Faraday’s Law of electromagnetic induction gives: \[E_L=-N\frac{d\Phi_B}{dt}=-L\frac{di}{dt}\] where \(E_L\) is the "back EMF".  The power to the inductor is: \[P_L=iL\frac{di}{dt}\] and the energy stored in it is: \[W=\frac{1}{2}LI^2=\frac{B^2lA}{2\mu_0}\]  This is Magnetic Field Energy. Defining the magnetic energy density, \(u=U/(\textrm{Volume})\) where our volume term comes from \(lA\), we get: \[u=\frac{B^2}{2\mu_0}\]  </p>
+<h2 id="Current">Current</h2>
+<p>The current will rise gradually, according to: \[i=\frac{\varepsilon}{R}\left[1-\exp\left(-\frac{R}{L}t\right)\right]\] or fall gradually, according to: \[i=\frac{\varepsilon}{R}\exp\left(-\frac{R}{L}t\right)\]  with \(\tau=L/R\)  </p>
+<h1 id="L-C_Circuit">L-C Circuit</h1>
+<p>In the L-C circuit we find a qualitatively new behaviour: <b>Oscillations</b>.  An inductor stores energy in an analogous way that a pendulum “stores” kinetic energy: \[U_L=\frac{1}{2}LI^2\] We can compare this with the energy stored by a capacitance \(C\) with charge \(Q\). This is an analogue to the “potential energy”: \[U_C=\frac{1}{2}CV^2\] The energy is transferred back and forth between the inductor and capacitor.  We can apply K's voltage law to create a second order differential equation, and solve it to find the current in the L-C circuit is equal to: \[i(t)=-\omega Q_0\sin(\omega t+\phi)\] where \(\omega=\sqrt{\frac{1}{LC}}\) which is the angular frequency of the oscillations. <br><img src="../Assets/LC_Equations.png" alt="LC_Equations.png"/><br> <i>note:</i> this is an undamped oscillation.  </p>
+<h1 id="L-R-C_Circuit">L-R-C Circuit</h1>
+<p>For any circuit we can solve Kirchhoff’s voltage law for any of the unknown variables in the circuit (charge, current, voltage). In this case: \[L\frac{di(t)}{dt}+i(t)R+\frac{q(t)}{C}=0\] we can re-express this and divide by \(L\) to get: \[\frac{d^2q}{dt^2}+\frac{R}{L}\frac{dq}{dt}+\frac{q}{LC}=0\]  There are e 2 solutions for the case, \(R\neq0\): one for small \(R\), one for large \(R\): \[q=Ae^{-(R/2L)t}\cos(\sqrt{\frac{1}{LC}-\frac{R^2}{4L^2}}t+\phi)\qquad\qquad R^2\lt \frac{4L}{C}\] \[q=Ae^{\lambda_1t}+Be^{\lambda_2t}\qquad\qquad R^2\gt \frac{4L}{C}\]  </p>
+<h1 id="AC_Circuits">AC Circuits</h1>
+<h2 id="Complex_Notation">Complex Notation</h2>
+<p>I shall only be using complex notation here, as I believe it is vital. Furthermore \(i\) is used for varying current in electronics, so I shall use \(j=\sqrt{-1}\)  Initially we should modify Ohm's rule, to the more accurate version: \[V=IZ\] where \(Z\) is impedance.  Impedance is a complex property, relating resistance \(R\) and inductance \(X\), such that: \[Z=R+jX=|Z|e^{j\phi}\] All the normal properties of complex numbers apply when dealing with impedance, and when you wish to use impedance in calculations, use the magnitude of it: \(|Z|=\sqrt{ZZ^*}\)  Impedances of components: </p>
+<ul>
+<li>Capacitor: \(Z=\frac{1}{j\omega C}=-\frac{j}{\omega C}\)</li>
+<li>Inductor: \(Z=j\omega L\)</li>
+<li>Resistor: \(Z=R\)</li></ul>
+<p> We can calculate the phase difference between components by finding each of their phase angles and comparing them.  You can find the phase angle of a component from: \[\phi=\arctan{\left(\frac{X}{R}\right)}\]  </p>
+<h2 id="Power_Source_In_AC">Power Source In AC</h2>
+<p>We use sinusoidally varying power sources in AC circuits. \[\varepsilon=V_0\cos(\omega t)\]  If we consider a simple resistive circuit, the current through it would be \[i=\frac{\varepsilon}{R}=\frac{v_R}{R}=\frac{V_r}{R}\cos(\omega t)=I\cos(\omega t)\]  and the power: \[p_R=i^2R=I^2R\cos(\omega t)\]  </p>
+<h2 id="Average_Power">Average Power</h2>
+<h3 id="Example:_Purely_Resistive">Example: Purely Resistive</h3>
+<p>How do we find average power \(\overline{P}\), now that \(\overline{v}=0\) and \(\overline{i}=0\)? \[\overline{P}=\overline{vi}\neq\overline{v}\cdot\overline{i}\] \[\overline{P}=RI\overline{cos^2(\omega t)}=\frac{1}{2}I^2R\]  If we define root mean square current as: \[I_{RMS}=\frac{I}{\sqrt{2}}\] Hence \[\overline{P}=I^2_{RMS}R=\frac{V^2_{RMS}}{R}\]  </p>
+<h3 id="More_Generally">More Generally</h3>
+<p>For an arbitrary combination of capacitors, resistors and inductors, the average power is: \[P_{av}=\frac{1}{2}VI\cos\phi\] The <i>power factor</i> \(cos\phi=R/Z\) is ideally high.  For an LRC circuit when the power factor is 1: \[\omega=\frac{1}{\sqrt{LC}}\] ...and the circuit is said to be in resonance. <br><img src="../Assets/LRC_Resonance.png" alt="LRC_Resonance.png"/><br>  </p>
+<h1 id="Inductive_Coupling">Inductive Coupling</h1>
+<p>When we put two loops of wire (with current flowing through them) in a line, the magnetic field of coil (1) will permeate coil (2). This is called mutual "flux linkage". \[N_2\Phi_{B2}=M_{21}i_1\] where \(M_{21}=\sqrt{L_1L_2}\)  We can write: \[\varepsilon_2=-M_{21}\frac{di_1}{dt}\] where \(M_{21}=N_2\Phi_{B2}/i_1\)  </p>
+<h1 id="Transformers">Transformers</h1>
+<p>The transformer allows us to transform time-varying voltages and currents, usually A.C. The flux, \(\Phi_B\) , is given by the average of the magnetic field, \(B\), times the cross sectional area of the core, or ‘yoke’.  \[V_1=N_1\frac{d\Phi_B}{dt}\to\boxed{\frac{V_1}{V_2}=\frac{N_1}{N_2}}\]  Typically transformers are very efficient, such that they satisfy the approximation: \[P_{in}=V_1I_1\approx V_2I2=P_{out}\]  To relate the primary voltage and current to the resistance, we talk about the primary circuit “seeing” a different resistance. Resistance (and impedance) are then transformed according to:  \[R'=\frac{V_1}{I_1}=R\left(\frac{N_1}{N_2}\right)^2\]  </p>
+<h1 id="Summary">Summary</h1>
+<p><br><img src="../Assets/134Equations.png" alt="134Equations.png"/><br> </p>
+</div>
+</body>
+</html>

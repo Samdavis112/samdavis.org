@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PHYS114-Complex_Methods</title>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="../style.css" title="DevEng Style"/>
+	</head>
+<body>
+<script>
+window.MathJax = {
+    loader: {
+        load: ['[tex]/physics', '[tex]/color']
+    },
+    tex: {
+        packages: {
+            '[+]': ['physics', 'color']
+        }
+    }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<div id="__container__">
+
+<h1>PHYS114-Complex_Methods</h1>
+
+<div onclick="toc_click()" id="__toc_button__" class="w3-block w3-button" style="background-color: #444; color:white; font-weight: bold;">Table of Contents</div>
+<div id="__toc__" class="w3-hide w3-animate-top w3-container">
+<ol class="__toc_ol__ __lvl_1__">
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Basic_Tricks">Basic Tricks</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Circuits">Circuits</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Complex_Number_Forms">Complex Number Forms</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Sine_and_Cosine">Sine and Cosine</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Arc_functions">Arc functions</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#De_Moivre’s_Theorem">De Moivre’s Theorem</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Binomial_Expansion">Binomial Expansion</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Roots_of_Unity">Roots of Unity</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#More_Generally">More Generally</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Does_\((a^b)^c=a^{bc}\)?">Does \((a^b)^c=a^{bc}\)?</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Complex_Differentiation">Complex Differentiation</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Complex_Integration">Complex Integration</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Complex_ODE's">Complex ODE's</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Hyperbolic_Trig_Functions:_Cosh_and_Sinh">Hyperbolic Trig Functions: Cosh and Sinh</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Important_Identity">Important Identity</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Taylor_Series">Taylor Series</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Comparing_Hyperbolic_and_Circular_Trig._Functions">Comparing Hyperbolic and Circular Trig. Functions</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Cauchy-Riemann_Equations_For_Complex_Functions">Cauchy-Riemann Equations For Complex Functions</a></li>
+</ol>
+</div>
+<script>
+function toc_click() {
+    var x = document.getElementById('__toc__');
+    if (x.classList.contains("w3-hide")) {
+        x.classList.remove("w3-hide");
+    }
+    else {
+        x.classList.add("w3-hide");
+    }
+}
+</script>
+
+<h1 id="Basic_Tricks">Basic Tricks</h1>
+<ul>
+<li>For polynomials with <i>real coefficients</i>, every complex solution \(\lambda\) has a twin solution \(\lambda^*\)</li>
+<li>Using the conjugate to quickly calculate \(\textrm{Re}(z)\) and \(\textrm{Im}(z)\) can be done as the following:</li></ul>
+<p>\[\textrm{Re}(z)=\frac{z+z^*}{2}\qquad\&\qquad\textrm{Im}(z)=\frac{z-z^*}{2i}\] </p>
+<ul>
+<li>Another trick, is to calculate the reciprocal of a complex number:</li></ul>
+<p>\[\frac{1}{z}=\frac{z^*}{|z|^2}\]  </p>
+<h1 id="Circuits">Circuits</h1>
+<p> If we have an AC circuit with <b>capacitors</b> or <b>inductors</b> in it, then we can analyse the circuit using complex numbers.  </p>
+<ul>
+<li><b>Inductor</b>: stores energy in a magnetic field in an AC circuit; opposes changes in current.</li>
+<li><b>Capacitor</b>: stores electrical energy in an AC circuit; opposes changes in voltage</li></ul>
+<p> In this case we calculate the total <b>impedance</b>, \(Z_{Tot}\). The impedance depends on the <b>angular frequency</b> of the alternating current: \(\omega=2\pi f\), and the components:  </p>
+<ul>
+<li>For a resistor, the impedance \(Z=R\), so the contribution to \(Z_{Tot}\) is unchanged. </li>
+<li>For an inductor, with inductance \(L\) and at an angular frequency \(\omega\) then the inductor has impedance \(Z=iL\omega\).</li>
+<li>For a capacitor, with capacitance \(C\) and at an angular frequency \(\omega\) then the capacitor has impedance \(Z=\frac{1}{i\omega C}=\frac{-i}{\omega C}\).</li></ul>
+<p> </p>
+<h1 id="Complex_Number_Forms">Complex Number Forms</h1>
+<p> \[z=x+iy=r(\cos\theta+i\sin\theta)=re^{i\theta}\]  Convert polar to Cartesian with:  \[x=r\cos\theta\qquad\&\qquad y=r\sin\theta\]  Convert Cartesian to polar with:  \[r=\sqrt{x^2+y^2}=|z|\qquad\&\qquad\tan\theta=y/x\]  (adding or subtracting \(\pi\) to get into correct quadrant)  </p>
+<h1 id="Sine_and_Cosine">Sine and Cosine</h1>
+<p> We define \(\sin(x)\) and \(\cos(x)\) as the following, using the consequences of Euler’s Formula.  \[\cos(x)=\frac{e^{ix}+e^{-ix}}{2}\qquad\&\qquad\sin(x)=\frac{e^{ix}-e^{-ix}}{2i}\]  </p>
+<h1 id="Arc_functions">Arc functions</h1>
+<p> We can use find the formulas for the arc functions, by using their normal respective functions and a clever use of quadratics.  \[\begin{align} &\textrm{Let}\;\;x=\cos(y)=\frac{e^{iy}+e^{-iy}}{2}\\ &2x=e^{iy}+e^{-iy}\\ &e^{iy}-2x+e^{-iy}=0\\ &\left(e^{iy}\right)^2-2xe^{iy}+1=0\\ &\textrm{Quadratic Equation}\\ &e^{iy}=x\pm\sqrt{x^2-1}\\ &\therefore iy=\ln(x\pm\sqrt{x^2-1})\\ &\implies y=-i\ln(x\pm\sqrt{x^2-1})=\arccos(x) \end{align}\]  </p>
+<h1 id="De_Moivre’s_Theorem">De Moivre’s Theorem</h1>
+<p> We know that \(\left(e^{i\theta}\right)^n=e^{in\theta}\) for \(n\in\mathbb{Z}\) and \(n\geq 0\), hence:  \[(\cos\theta+i\sin\theta)^n=\cos(n\theta)+i\sin(n\theta)\]  This is <b>De Moivre’s Theorem</b> and is used to aid trigonometric algebra. This can be demonstrated without the use of Euler’s theorem. (It predates Euler’s theorem)  You can work out triple angle formulas etc using this method:  \[\cos(3\theta)+i\sin(3\theta)=(\cos\theta+i\sin\theta)^3\]  From real and imaginary parts of the expansion:  \[\begin{align} &\cos(3\theta)=\cos^3\theta-3\cos\theta\sin^2\theta\\ &\sin(3\theta)=3\cos^2\theta\sin\theta-\sin^3\theta \end{align}\]  </p>
+<h1 id="Binomial_Expansion">Binomial Expansion</h1>
+<p> For large values of \(n\) expanding brackets can be tedious. However we can use the binomial expansion:  \[(a+b)^n=\sum^n_{r=0}C^n_ra^{n-r}b^r\]  ...Can use \(nCr\) on the calculator, or  \[C^n_r=\frac{n!}{r!(n-r)!}\]  Remember that \(0!=1\)  </p>
+<h1 id="Roots_of_Unity">Roots of Unity</h1>
+<p> <b>Example:</b> Find the roots of \(z^3=1\)  \[\begin{align} &\textrm{Obviously, we have}\;z=1\\ \\ &z^3=e^{i3\theta}=\cos(3\theta)+i\sin(3\theta)=1\\ \\ &\textrm{Re:}\;\cos(3\theta)=1\\ &3\theta=2n\pi\\ &\theta=\frac{2n\pi}{3}\\ \\ &\implies z=e^{2\pi i/3},e^{-2\pi i/3}, e^0(=1) \end{align}\]  </p>
+<h2 id="More_Generally">More Generally</h2>
+<p> Since \(e^{2\pi ki}=1\) for \(k\in\mathbb{Z}\), then:  \[1^{\frac{1}{n}}=e^{\frac{2\pi ki}{n}}\]  There are an infinite number of these (one for each \(k\)), but only \(n\) of them are different. These are the roots of:  \[z^n-1=0\]  </p>
+<h1 id="Does_\((a^b)^c=a^{bc}\)?">Does \((a^b)^c=a^{bc}\)?</h1>
+<p>No!  \[\begin{align} &\ln(a^b)=b\ln a\\ &a^b=\exp(b\ln a+2\pi inb)\;\textrm{for}\;n\in\mathbb{Z}\\ \\&\textrm{Hence:}\\ &(a^b)^c=\left\{\exp(b\ln a+2\pi inb)\;| \;n\in\mathbb{Z}\right\}^c\\ &(a^b)^c=\left\{\exp(cb\ln a+2\pi inb+2\pi imc)\;| \;n,m\in\mathbb{Z}\right\}\\ \end{align}\]  </p>
+<h1 id="Complex_Differentiation">Complex Differentiation</h1>
+<p> \(i\) in functions is just treat like a variable when it comes to differentiation, and \(i^2=-1\).  <b>Example</b> Differentiate  \(e^{i\alpha t}\) with respect to \(t\):  \[\frac{d}{dt}e^{i\alpha t}=i\alpha e^{i\alpha t}\]  </p>
+<h1 id="Complex_Integration">Complex Integration</h1>
+<p> Its the same as above.  <b>Example:</b> Evaluate: \(\int^4_0(t^2+i\sqrt{t})dt\)  \[\int^4_0(t^2+i\sqrt{t})dt=\left[\frac{t^3}{3}+\frac{2it^{3/2}}{3}\right]^4_0=\frac{64}{3}+\frac{16}{3}i\]  </p>
+<h1 id="Complex_ODE's">Complex ODE's</h1>
+<p> An ODE can be a complex differential equation for \(z(t)\), for example:  \[a(t)\ddot{z}+b(t)\dot{z}+c(t)z=d(t)\]  In this case, we write \(z:\mathbb{R}\to\mathbb{C}\). That is \(z\) takes a real number \(t\) and gives a complex number \(z(t)\).  The equation above is equivalent to two real differential equations:  \[\Re(LHS)=\Re(RHS)\qquad\&\qquad\Im(LHS)=\Im(RHS)\]  <b>Example:</b> Find the real and imaginary parts of: \[m\ddot{z}+2mf\dot{z}+kz=F_0e^{i\alpha t}\]  We can use the definition of a complex number (\(z=x+iy\)):  \[m(\ddot{x}+i\ddot{y})+2mf(\dot{x}+i\dot{y})+k(x+iy)=F_0(\cos(\alpha t)+i\sin(\alpha t))\]  So we therefore get two ODE's  \[\Re:\quad m\ddot{x}+2mf\dot{x}+kx=F_0\cos(\alpha t)\]  and...  \[\Im:\quad m\ddot{y}+2mf\dot{y}+ky=F_0\sin(\alpha t)\]  To solve these, see PHYS113-Series and Differential Equations.  </p>
+<h1 id="Hyperbolic_Trig_Functions:_Cosh_and_Sinh">Hyperbolic Trig Functions: Cosh and Sinh</h1>
+<p> The easy way to remember this is to just take the exponential definitions of \(\sin\) and \(\cos\), remove all \(i\)'s from them,  then add on a h to their name!  \[\cosh\theta=\frac{e^\theta+e^{-\theta}}{2}\qquad\&\qquad\sinh\theta=\frac{e^\theta-e^{-\theta}}{2}\]  They are the odd and even parts (respectively) of \(e^\theta\)  </p>
+<h2 id="Important_Identity">Important Identity</h2>
+<p> \[\cosh^2\theta-\sinh^2\theta=1\]  </p>
+<h2 id="Taylor_Series">Taylor Series</h2>
+<p>You can use the Taylor series of \(e^x\) and \(e^{-x}\), to work out the hyperbolics equivalent.  \[e^x=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\ldots\] \[e^{-x}=1-x+\frac{x^2}{2!}-\frac{x^3}{3!}+\ldots\] \[\cosh\theta=\frac{e^\theta+e^{-\theta}}{2}\qquad\&\qquad\sinh\theta=\frac{e^\theta-e^{-\theta}}{2}\]  Hence  \[\cosh(x)=1+\frac{x^2}{2!}+\frac{x^4}{4!}+\ldots\] \[\sinh(x)=x+\frac{x^3}{3!}+\frac{x^5}{5!}+\ldots\]  </p>
+<h2 id="Comparing_Hyperbolic_and_Circular_Trig._Functions">Comparing Hyperbolic and Circular Trig. Functions</h2>
+<p><br><img src="../Assets/HyperbolicVsCircular.png" alt="HyperbolicVsCircular.png"/><br>  </p>
+<h1 id="Cauchy-Riemann_Equations_For_Complex_Functions">Cauchy-Riemann Equations For Complex Functions</h1>
+<p> A function is <b>analytic</b> if it can be infinitely differentiated at every point. An analytic function also has a Taylor Series that converges to the function within the radius of convergence around some point \(x_0\).  Let \(f(x,y)=u(x,y)+iv(x,y)\) and let \(z=x+iy\), then we have a pair of real functions \(u(x,y)\) and \(v(x,y)\). These can each be differentiated to give the four partial derivatives \[\frac{\partial u}{\partial x}, \frac{\partial v}{\partial y},\frac{\partial u}{\partial y},\frac{\partial v}{\partial x}\]  If \(f\) is analytic then these four quantities satisfy the <b>Cauchy-Riemann equations</b>:  \[\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}\qquad\textrm{and}\qquad\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}\]  All analytic functions have the following properties: </p>
+<ul>
+<li>They are infinitely differentiable. </li>
+<li>They have Taylor’s expansion about each point. </li>
+<li>The radius of convergence of the Taylor’s expansion is the distance to the nearest singularity (place were the function beaks down) in the complex plane. </li>
+<li>For example the function \(f(z) =1+z^2\) has a Taylor series \(f(z)=\sum^\infty_{r=0}(−z^2)^r\). The radius of convergence for the series is \(1\), which corresponds to the distance between the origin and \(i\) (or \(−i\)) which are the places where the function \(f(z)\) breaks down. </li></ul>
+<p>  Thus knowing how an analytic function behaves on the complex plane, tells us information about the Taylor series, even if we wish to consider only real functions.  <b>Example:</b> Show that \(f(z)=z^2+(3+i)z\) satisfies the Cauchy-Riemann equations.  <b>Solution:</b> Let \(z=x+iy\) and \(f(x,y)=u(x,y)+iv(x,y)\)  \[\begin{align} f(x,y)&=(x+iy)^2+(3+i)(x+iy)\\ &=x^2-y^2+2ixy+3x+3iy+ix-y \end{align}\]  Therefore  \[\begin{align} &u(z)=x^2-y^2+3x-y\\ &v(z)=2xy+3y+x \end{align}\]  And \[\frac{\partial u}{\partial x}=2x+3\qquad\frac{\partial u}{\partial y}=-2y-1\] \[\frac{\partial v}{\partial x}=-2y+1\qquad\frac{\partial v}{\partial y}=2x+3\]  Both C-R equations are satisfied. </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PHYS267-Solar_System_Physics</title>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="../style.css" title="DevEng Style"/>
+	</head>
+<body>
+<script>
+window.MathJax = {
+    loader: {
+        load: ['[tex]/physics', '[tex]/color']
+    },
+    tex: {
+        packages: {
+            '[+]': ['physics', 'color']
+        }
+    }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<div id="__container__">
+
+<h1>PHYS267-Solar_System_Physics</h1>
+
+<div onclick="toc_click()" id="__toc_button__" class="w3-block w3-button" style="background-color: #444; color:white; font-weight: bold;">Table of Contents</div>
+<div id="__toc__" class="w3-hide w3-animate-top w3-container">
+<ol class="__toc_ol__ __lvl_1__">
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Solar_System_Formation">Solar System Formation</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Solar_Nebula_Theory">Solar Nebula Theory</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Protoplanetary_Disks">Protoplanetary Disks</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Hydrostatic_Equilibrium">Hydrostatic Equilibrium</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Solar_Nebula_Theories">Solar Nebula Theories</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Minimum_Solar_Nebula_Model">Minimum Solar Nebula Model</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Massive_Solar_Nebula_Model">Massive Solar Nebula Model</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Formation_Stages">Formation Stages</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Planetary_Formation">Planetary Formation</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Disc_Condensation">Disc Condensation</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Planetary_Accretion">Planetary Accretion</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Geometric_Accretion">Geometric Accretion</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Gravitational_Accretion">Gravitational Accretion</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Accretion_Timescales">Accretion Timescales</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Planetary_Types">Planetary Types</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Gas_Giants">Gas Giants</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Inner_Planets">Inner Planets</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Outer_Planets">Outer Planets</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Heat_of_Formation">Heat of Formation</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Cooling_of_the_Planets">Cooling of the Planets</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Cooling_Timescales">Cooling Timescales</a></li>
+</ol>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Planetary_Atmospheres">Planetary Atmospheres</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Primary_Atmospheres">Primary Atmospheres</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Retention">Retention</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Capture">Capture</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Secondary_Atmosphere">Secondary Atmosphere</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Atmospheric_Structure">Atmospheric Structure</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Hydrostatic_Equilibrium">Hydrostatic Equilibrium</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Adiabatic_Atmosphere">Adiabatic Atmosphere</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Energy_Balance_and_Temperature">Energy Balance and Temperature</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Greenhouse_Effect">Greenhouse Effect</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Radiative_Energy_Transport">Radiative Energy Transport</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Atmospheric_Layers">Atmospheric Layers</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Sun_and_the_Heliosphere">The Sun and the Heliosphere</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Solar_Atmosphere">Solar Atmosphere</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Hydrostatic_Solar_Corona">Hydrostatic Solar Corona</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Interplanetary_Magnetic_Field_(IMF)">Interplanetary Magnetic Field (IMF)</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Solar_Planetary_Interactions">Solar Planetary Interactions</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Coronal_Mass_Ejections">Coronal Mass Ejections</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Magnetic_Reconnection">Magnetic Reconnection</a></li>
+</ol>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Planetary_Magnetospheres">Planetary Magnetospheres</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#1._No_Field,_no_Atmosphere">1. No Field, no Atmosphere</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#2._No_field,_Atmosphere_Present">2. No field, Atmosphere Present</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#3._Intrinsic_Magnetosphere">3. Intrinsic Magnetosphere</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Exploring_the_Solar_System">Exploring the Solar System</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Ideal_Rocket_Equation">Ideal Rocket Equation</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Including_Gravity">Including Gravity</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Staging">Staging</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Interplanetary_Transfers">Interplanetary Transfers</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Hohmann_Transfer_Orbits">Hohmann Transfer Orbits</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Gravitational_Slingshots">Gravitational Slingshots</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Tidal_Forces">Tidal Forces</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Roche_Limit">Roche Limit</a></li>
+</ol>
+</ol>
+</div>
+<script>
+function toc_click() {
+    var x = document.getElementById('__toc__');
+    if (x.classList.contains("w3-hide")) {
+        x.classList.remove("w3-hide");
+    }
+    else {
+        x.classList.add("w3-hide");
+    }
+}
+</script>
+
+<h1 id="Solar_System_Formation">Solar System Formation</h1>
+<p><i>Observations:</i> </p>
+<ul>
+<li>All the planets' orbits lie roughly in the ecliptic plane.</li>
+<li>The Sun's rotational equator lies nearly in this plane.</li>
+<li>The planets (generally) revolve in a west-to-east direction (the same direction that the sun rotates)</li>
+<li>Planetary orbits are very nearly circular </li></ul>
+<p> A model of the solar system needs to account for these observations. </p>
+<h2 id="Solar_Nebula_Theory">Solar Nebula Theory</h2>
+<p>We remember the jeans mass from PHYS263: \[M_J=\left(\frac{5kT}{Gm}\right)^{3/2}\left(\frac{3}{4\pi\rho}\right)^{1/2}\] In reality clouds aren’t typically spherical or uniform in temperature or density. They typically rotate, and contain magnetic fields. There are also external influences responsible for actually triggering collapse. e.g. a shock wave from a supernova could trigger collapse by increasing local densities to change the Jean’s mass condition. </p>
+<h2 id="Protoplanetary_Disks">Protoplanetary Disks</h2>
+<p>Laplace demonstrated that a rotating sphere of gas eventually flattens to a spinning disk. As matter contracts towards the centre, the disc starts to spin faster due to the conservation of angular momentum. We have the classic angular momentum formula \[\vb{L}=\sum_i\vb{r}_i\times m_i\vb{v}_i.\] <br><img src="../Assets/CloudOfGas.png" alt="CloudOfGas.png"/><br> </p>
+<ul>
+<li>Over the poles, gravitational collapse is balanced only by thermal pressure.</li>
+<li>In the rotational plane, it is opposed by centrifugal force.</li></ul>
+<p> We have the gravitational acceleration \[\vb{g}(r)=-\frac{GM}{r^2}\vu{r},\] and in the frame rotating with angular velocity \(\omega\), we have a centrifugal acceleration \(a=r_\perp\omega^2=r\omega^2\sin\theta\). In vector notation it is \[\vb{a}_\text{c.f.}(r,\theta)=r\omega^2\sin\theta\underbrace{(\sin\theta\;\vu{r}+\cos\theta\;\vu*{\theta})}_{\vu{r}_\perp}\] Thus the net acceleration is \[\vb{a}_\text{net}(r,\theta)=r\omega^2\sin\theta(\sin\theta\;\vu{r}+\cos\theta\;\vu*{\theta})-\frac{GM}{r^2}\vu{r}\] </p>
+<h2 id="Hydrostatic_Equilibrium">Hydrostatic Equilibrium</h2>
+<p>Consider a stationary element of gas of density \(\rho\) and cross sectional area \(A\) at a vertical position between \(z\) and \(z+\Delta z\). The weight of this element \(mg=\rho Vg=\rho A\Delta zg\) is balanced by the forced exerted on the gas from above and below \[\rho A\Delta zg=P_\text{bottom}A-P_\text{top}A\] we can express this as \[\rho\Delta zg=-\Delta P\implies\boxed{\dv{P}{z}=-\rho g}\] This is the equation of hydrostatic equilibrium. For the disk however, it is not a simple flat shape. <br><img src="../Assets/HSE-ProtoDisk.png" alt="HSE-ProtoDisk.png"/><br> \[\dv{P}{z}=-\rho g_z=-\rho\frac{GM}{r^2}\underbrace{\frac{z}{r}}_{\sin\theta}\] If we assume ideal gas at temperature \(T\), then \(P=nKT\) with \(n=\rho/m\), then \[\frac{kT}{m}\dv{\rho}{z}=-\rho\frac{GM}{r^3}z\implies\boxed{\rho=\rho_0\exp\left[-\frac{GMm}{2kTr^3}z^2\right]}\] We can define \(H=\sqrt{2kT/GMm}\;r^{3/2}\) s.t. \(\rho=\rho_0\exp[-(z/H)^2]\), where \(H\) is the "scale thickness" which is the height above the central plane of the disk at which the density has dropped to \(1/e\) of the central density. </p>
+<h2 id="Solar_Nebula_Theories">Solar Nebula Theories</h2>
+<p>We can assume the relative masses of the proto-Sun and surrounding nebula. We assume that the mass of the proto-Sun is \(\sim1.0 M_\odot\). </p>
+<h3 id="Minimum_Solar_Nebula_Model">Minimum Solar Nebula Model</h3>
+<p>This is when we assume the mass of the nebula around the proto-Sun as \(\sim0.01 M_\odot\). This is equivalent to present total mass of the planets plus enough H, He & icy material to give the overall composition the same as the Sun today.  We have found that the </p>
+<ul>
+<li>Sun is 2% heavier elements,</li>
+<li>planets are ~12% heavier elements,</li>
+<li>and the surrounding nebula is 2% heavier elements.</li></ul>
+<p> The mass of present day planets, plus asteroids and comets is \(\lt0.0015 M_\odot\). Therefore a proportion of the total original H and He has been lost. </p>
+<h4 id="Angular_Momentum_Problem">Angular Momentum Problem</h4>
+<p>This leaves us with another major problem. Only about \(1\%\) of the mass of the solar system is contained within the planets. The planets account for \(\gt99\%\) of the angular momentum of the solar system  A simple view of the solar system suggests mass (and hence angular momentum) should be concentrated at the centre \(\to\) The “angular momentum problem”. </p>
+<h3 id="Massive_Solar_Nebula_Model">Massive Solar Nebula Model</h3>
+<p>The massive solar nebula model assumes that mass of the nebula around proto-Sun \(\sim1.0 M_\odot\). This "extra" mass, is assumed to have carried the excess angular momentum away.  For the sun to have so little angular momentum, the matter that formed the proto-Sun must have transferred most of its angular momentum to the surrounding disc. Some of this material must then have been lost from the solar system. This cant have happened if every particle in the solar nebula was moving independently in orbits dictated by Kepler's laws - they must have interactions.  There are three processes suggested to explain angular momentum transport: </p>
+<ol>
+<li> Solar wind,</li>
+<li> Magnetic braking,</li>
+<li> Gas viscosity.</li></ol>
+<p> </p>
+<h4 id="1._Solar_Wind">1. Solar Wind</h4>
+<p>Assume total angular momentum of sun is \(L=M_\odot vR_\odot\). Since \(v=r\omega\) it follows that \(L=M_\odot R_\odot^2\omega\). The rate of loss of angular momentum is thus \[\dv{L}{t}=\dv{M_\odot}{t}R_\odot^2\omega.\] The solar wind therefore carries away angular momentum. We know that solar-type stars have strong solar winds in youth, which clear away gas and dust in the disc. </p>
+<h4 id="2._Magnetic_Braking">2. Magnetic Braking</h4>
+<p>Material in the inner part of the disc is ionised by the solar radiation. The Sun’s magnetic field couples it to the plasma, which is spun up to the solar rotation rate. This increase in angular momentum of the ionised disc corresponds to a decrease in angular momentum of the Sun.  The spin rate of the star is reduced as angular momentum is transferred outwards. The effect is limited to the inner regions of the disc where the magnetic field strength is high.  The effect is also limited to where the magnetic pressure dominates over the gas' dynamic pressure \[P_B=\frac{B^2}{2\mu_0}\gt P_G=\frac{1}{2}\rho v^2.\] Since the magnetic field strength varies with distance \((B=B_0R_\odot^2/r^2)\), this leads to an expression for the Alfven radius \(r_A\) within which the solar wind co-rotates with the Sun as if there was solid body rotation. \[\left(\frac{r_A}{R_\odot}\right)^2=\frac{4\pi B_0^2R_\odot^2}{\mu_0\nu\dot{M}}\] </p>
+<h4 id="3._Gas_Viscosity">3. Gas Viscosity</h4>
+<p>Unencumbered, particles farther out in the disc will move about the proto-Sun in Keplerian orbits, however, collisions between particles produces a viscous drag within the disc. Material in the outer part is sped up driving it outwards, carrying angular momentum with it. Material in the inner part is slowed down, such that it falls inward onto the proto-Sun.  Consider two bodies in circular orbits. Their total angular momentum is \[L=\sum_im_ir_iv_i=\sqrt{GM}(m_1\sqrt{r_1}+m_2\sqrt{r_2}).\] If contact between the particles occurs, the radii (and hence the angular momentum of each particle) will change, whilst the total angular momentum is conserved. The relation between the perturbations is \[m_1\frac{\Delta r_1}{\sqrt{r_1}}=-m_2\frac{\Delta r_2}{\sqrt{r_2}}.\] The perturbation causes the energy equation to become \[E=-\frac{GM}{2}\left(\frac{m_1}{r_1}+\frac{m_2}{r_2}\right),\] so we find \[\Delta E=-\frac{GMm_1\Delta r_1}{2r_1^2}\left[\left(\frac{r_1}{r_2}\right)^{3/2}-1\right].\] This means we can reduce the energy of the system by exchanging angular momentum such that angular momentum moves outwards whilst mass moves inwards. Some of the mass in the disk falls inward onto the star with reduced angular momentum, while the mass moving outward carries increased angular momentum. </p>
+<h2 id="Formation_Stages">Formation Stages</h2>
+<p>There are four key recognised stages: </p>
+<ol>
+<li> Dense cloud collapse, leading to a proto-Sun, and interplanetary disk.</li>
+<li> Proto-Sun growth, material in the disk is transported inwards.</li>
+<li> Terminal accumulation of the Sun: the proto-Sun becomes a T Tauri star and planetary accretion begins.</li>
+<li> Gas dissipation: planetary accretion in the inner solar system ends, and residual gas is removed by T Tauri winds.</li></ol>
+<p> </p>
+<h1 id="Planetary_Formation">Planetary Formation</h1>
+<p>There are six main stages: <br><img src="../Assets/PlanetaryFormation.png" alt="PlanetaryFormation.png"/><br> </p>
+<h2 id="Disc_Condensation">Disc Condensation</h2>
+<p>Formation of planets require "seeds". The process of sowing seeds is condensation, where solid or liquid particles emerge from a gas. Condensation is temperature dependent. When the temperature is low enough molecules of different compounds are formed. </p>
+<ul>
+<li>In the inner disc all materials are gaseous</li>
+<li>Close to Mercury metals begin to condense</li>
+<li>Further out, rocky materials condense</li>
+<li>Most metals / rocks condensing around the present-day orbit of Mars \((T\sim 500\text{K})\)</li>
+<li>Inner planets have high metal/rock content and few volatile materials</li>
+<li>Beyond the "frost line" hydrogen compounds begin to condense. Outer planets have large cores of ice and \(^2\text{H}\) /\(^4\text{He}\) gaseous atmospheres.</li></ul>
+<p> </p>
+<h2 id="Planetary_Accretion">Planetary Accretion</h2>
+<p>After condensation, growth of solid particles occurs due to collisions. Accretion is the growth of grains through collisions the real planet building process. Chondrules are the ‘seed’ particles - about 1 mm in size - along with other, porous molecular aggregates held together by Van der Waals forces.  Accretion proceeds in two ways </p>
+<h3 id="Geometric_Accretion">Geometric Accretion</h3>
+<p>Consider spherical particle of radius \(r\) and geometric cross section \(\sigma=\pi r^2\). If the relative velocity of the particles is \(v\) then volume (\(V\)) swept out in time \(t\) is: \(V=\sigma vt\).  The total number of particles \(N\) encountered in the time \(t\) is \(N=Vn=n\sigma vt=\pi r^2nvt\) where \(n\) is the number density of particles.  Assuming all particles contribute the the growth rate then the mass grows as \[\dv{M}{t}=m\dv{N}{t}=mn\pi r^2v=\rho\pi r^2v\] where \(m\) is the mass of a particle and \(\rho\) is the density of particles. </p>
+<h3 id="Gravitational_Accretion">Gravitational Accretion</h3>
+<p>Objects formed by geometric accretion are called planetesimals. They act as the seeds of planet formation. Once planetesimals had grown to a few kilometres, collisions become destructive, making further growth more difficult. Gravitational accretion then begins to dominate. This then accretes planetesimals to form protoplanets. <br><img src="../Assets/GravitationalAccretionDiagram.png" alt="GravitationalAccretionDiagram.png"/><br> Consider a test particle of mass \(m\) approaching a seed particle of mass \(M\), radius \(r\), with impact parameter \(s\) and relative velocity \(v\).  The gravitational pull of the seed particle captures the test particle, for certain combinations of \(v\) and \(s\). We first use conservation of angular momentum \(mv_fr=mvs\), and conservation of energy \(\frac{1}{2}mv^2=\frac{1}{2}mv^2_f-GMm/r\) to find \(s\): \[s^2=r^2+\frac{2GMr}{v^2}.\] We now consider the seed particle of radius \(r\) and impact cross section <br><img src="../Assets/GravitationalAccretionDiagram2.png" alt="GravitationalAccretionDiagram2.png"/><br> \[\sigma=\pi s^2=\pi\left[r^2+\frac{2GMr}{v^2}\right].\] We now can follow same approach for geometric accretion: \[\dv{M}{t}=m\dv{N}{t}=\pi s^2vmn=\sigma v\rho\] so finally \[\dot{M}=\pi v\rho r^2\left[1+\frac{2GM}{rv^2}\right].\] Since \(M\propto r^3\), then \(\dot{M}\propto r^4\). This leads to runaway growth of the planetesimal. </p>
+<h2 id="Accretion_Timescales">Accretion Timescales</h2>
+<p>These processes result in planetesimals of tens of kilometres in size in less than a million years. Time scale growth can be calculated by \[\tau_\text{growth}\propto\left(\dv{M}{t}\right)^{-1}\] Not only do bigger planetesimals grow the fastest, but smaller planetesimals are quickly destroyed by fast collisions and turned into smaller fragments. \(\implies\) Typically one object will dominate a region. </p>
+<h2 id="Planetary_Types">Planetary Types</h2>
+<h3 id="Gas_Giants">Gas Giants</h3>
+<p>Three stages for gas giant formation via core nucleated accretion model: </p>
+<ol>
+<li> Core accretion.</li>
+<li> Accretion of gas until \(M_\text{gas}\sim M_\text{core}\).</li>
+<li> Runaway accretion of gas \(M_\text{gas}\gg M_\text{core}\).</li></ol>
+<p> </p>
+<h3 id="Inner_Planets">Inner Planets</h3>
+<p>Small amount of metals and rocks in early solar nebula. Rocky materials do not aggregate together easily so the inner planets formed slowly.  By the time inner planetesimals were formed and had significant gravitational fields, the nebula had been cleared out by solar wind. \(\implies\) No nebular gas present to capture a significant atmosphere. </p>
+<h3 id="Outer_Planets">Outer Planets</h3>
+<p>There was great quantities of ice and gas at \(\gt 3\;\text{AU}\). Ices have a large cross-sectional are, therefore large cores formed. This is a less volatile process, so large gas envelopes gradually accreted to the cores. </p>
+<h2 id="Heat_of_Formation">Heat of Formation</h2>
+<p>There are three main sources of heat: </p>
+<ol>
+<li> Heat of accretion - Gravitational potential energy to kinetic energy to thermal energy.</li>
+<li> Heat of differentiation - Denser material sinks which also converts gravitational potential energy to kinetic energy to thermal energy.</li>
+<li> Heat from radioactive decay.</li></ol>
+<p> The initial internal temperature is due to accretion. By considering the accretion of infinitesimally small amounts of mass falling from infinity onto a planetesimal of mass \(M\), the total accretion energy of a sphere of radius \(R\) can be approximated.  The kinetic energy (and hence heat energy) derived from the gravitational potential energy of an element of infalling matter is \[\Delta U=\frac{GM\Delta m}{r}\to U=\int^R_0\frac{GM(r)}{r}\dd{m}=\frac{16}{15}\pi^2\rho^2 GR^5\] where \(M\) is the mass already accreted, \(\Delta m\) is the mass of the infalling particle, and \(r\) is their separation upon impact. Equivalent temperature change can be estimated by considering the specific heat capacity \(C_P\) of a planet (the amount of heat energy required to raise unit mass of material by \(1\text{K}\)). \(\Delta T=U/C_PM\).  If we consider specific heat capacity, \(C_P\), of a planet we can deduce the maximum temperature that a planetary interior could reach as a result of accretion. </p>
+<h2 id="Cooling_of_the_Planets">Cooling of the Planets</h2>
+<p>Three main mechanisms </p>
+<ul>
+<li><i>Convection</i>: \((Q\sim\dv{T}{r})\) in mantle carries hot rock to lithosphere where it solidifies.</li>
+<li><i>Conduction</i>: transfers heat from the base of the lithosphere to the surface \(Q=-k_T\Delta T\) where \(k_T\) is the thermal conductivity.</li>
+<li><i>Radiation</i>: from surface transfers heat to space \(Q=\text{surf. area}\times\sigma T^4\).</li></ul>
+<p> </p>
+<h3 id="Cooling_Timescales">Cooling Timescales</h3>
+<p>Heat content of planet: \[E\propto M\sim\frac{4}{3}\pi R^3\rho\] Cooling rate - can only escape from surface: \[\dv{E}{t}\propto A=4\pi R^2\] Therefore cooling time is: \[\tau_\text{cooling}\propto\frac{E}{\dv{E}{t}}\sim R\] Large bodies take longer to cool. Explains why small bodies cooled early, have thicker crusts, no magnetic fields, and crater-rich surfaces. </p>
+<h1 id="Planetary_Atmospheres">Planetary Atmospheres</h1>
+<h2 id="Primary_Atmospheres">Primary Atmospheres</h2>
+<p>Primary (or primitive) atmospheres are captured from the solar nebula gas. Did Earth have a primary atmosphere?  Consider Neon, its heavy and nonreactive. The abundance in the nebula gas (in the sun) is 0.12%. In Earths atmosphere its 0.0018%, therefore the primitive atmosphere is \(\sim1.5\%\) of the current atmosphere. </p>
+<h3 id="Retention">Retention</h3>
+<p>The ability of a planet of mass \(M\) and radius \(R\) to retain an atmosphere is dependent on the planet’s gravity and the thermal energy of the atmospheric particles.  To escape gravity, a particle must have velocity: \[v_\text{esc}=\sqrt{\frac{2GM}{R}}.\] with that velocity coming from the thermal energy of an atmospheric particle: \[\frac{1}{2}mv_\text{av}^2=\frac{3}{2}kT\implies v_\text{av}=\sqrt{\frac{3kT}{m}}.\] We can calculate that for a nebula of \(T=500\;\text{K}\), a hydrogen molecule has \(v_\text{av}=2.5\;\text{km/s}\). \(v_\text{esc}=11.2\;\text{km/s}\), so we might conclude that the hydrogen cannot escape, and Earth should have retained its primary atmosphere.  We have to consider the distribution of speeds. Even if the average speed is too low to escape, a very small fraction (0.5%) of the molecules are moving more than twice as fast. Typically its found that a planet can <i>hold onto its atmosphere if the escape velocity is 4-6 times greater than the average kinetic velocity</i>. </p>
+<h3 id="Capture">Capture</h3>
+<p>A good rule of thumb is that <i>we need an escape velocity twice as large as the orbital velocity in order to capture orbiting gas</i>. Orbital velocity at Earth's heliospheric distance is \[v_0\approx\sqrt{\frac{GM_\odot}{1\;\text{AU}}}\approx 30\;\text{km/s}\] Compare this to Earth’s escape velocity of \(v_\text{esc}=11.2\;\text{km/s}\) and we can see that Earth is very unlikely to have ever captured a significant primary atmosphere. This is consistent with the observations of low neon abundance in Earth's atmosphere. </p>
+<h2 id="Secondary_Atmosphere">Secondary Atmosphere</h2>
+<p>If present day atmospheres were not captured from the nebula, where did they come from? Gases are vented through volcanic eruptions, or gases delivered by e.g. cometary impacts. </p>
+<h1 id="Atmospheric_Structure">Atmospheric Structure</h1>
+<p><i>Hydrostatic Equilibrium:</i> The balance between the thermal motion of the atmospheric molecules (pressure) and the force of the planet’s gravity determines the structure of a planet’s atmosphere.  <i>Equilibrium Temperature:</i> The thermal energy is dependent on the temperature, which is determined by an ‘energy budget’ between heating due to absorption of solar radiation and the heat reflected by the planet back into space. </p>
+<h3 id="Hydrostatic_Equilibrium">Hydrostatic Equilibrium</h3>
+<p>As discussed before we have the equation for H.E. \[\dv{P}{z}=-\rho g\] If we approximate the atmosphere to be an isothermal ideal gas where \(P=nkT\) (\(n=N/V\)) and \(\rho=nm\) then the equation of hydrostatic equilibrium becomes: \[\dv{P}{z}=-\frac{mP}{kT}g=-\frac{P}{H}\to\frac{\dd{P}}{P}=-\frac{\dd{z}}{H}\] where \(H=kT/mg\) is called the atmospheric scale height. Integrating yields: \[P=P_0\exp\left(-\frac{z}{H}\right)\] </p>
+<h2 id="Adiabatic_Atmosphere">Adiabatic Atmosphere</h2>
+<p>The assumption that the atmosphere is isothermal is very wrong. It varies with height. Instead we consider an adiabatic atmosphere and will consider a parcel of air rising as it expands adiabatically.  The rate of change in temperature with altitude is given by the <i>lapse rate</i> \(\Gamma\;(\text{Km}^{-1})\): \[\Gamma=\dv{T}{z}=\frac{-g}{c_p}\to T(z)=T_0+\Gamma z\] We can then repeat the derivation of the pressure profile using variable temperature: \[\dv{P}{z}=-\frac{mP}{kT}g=-\frac{mP}{k(T_0+\Gamma z)}\] we solve this to find \[P=P_0\left(1+\frac{\Gamma z}{T_0}\right)^{-mg/k\Gamma}\] </p>
+<h2 id="Energy_Balance_and_Temperature">Energy Balance and Temperature</h2>
+<p>The total thermal energy of an atmosphere gives rise to emission of radiated power given by the Stefan-Boltzmann law: \(P=4\pi R^2\sigma\epsilon T^4\) where the emissivity, \(\epsilon\), is the planet’s effectiveness as a thermal emitter.  If the emitted power can be measured, the effective temperature of the planet can be measured \[T_\text{eff}=\left(\frac{P}{4\pi R^3\sigma\epsilon}\right)^{1/4}\] If solar insolation is the only source of atmospheric heating then the temperature can be estimated by considering the absorption and reradiation of the insolation.  For the sun \(L_\odot=3.85\times 10^{26}\;[\text{W}]\) with \(F_\odot=\frac{L_\odot}{4\pi d^2_\odot}\). When the earth is illuminated by the sun some energy heats up the planet, and some is reflected.  The ratio of the total radiation reflected or scattered by the object is called the <i>bond albedo</i> \(A_b\). Thus the absorbed fraction of the solar radiation is \[P_\text{in}=(1-A_b)F_\odot\pi R^2\] the re radiated power over the planet's entire surface is \[P_\text{out}=4\pi R^2\sigma\epsilon T^4\]By considering the balance between insolation and reradiation, we find the equilibrium temperature of the Earth is given by: \[T_\text{eq}^4=\frac{(1-A_b)F_\odot}{4\sigma\epsilon}\] For any planet, we must use \[T_\text{eq}^4=\frac{(1-A_b)F_\odot}{4\sigma\epsilon d^2_\text{AU}}\] If the planet is heated by additional sources then \(T_\text{eq}\neq T_\text{eff}\). </p>
+<h2 id="Greenhouse_Effect">Greenhouse Effect</h2>
+<p>The absorption of solar radiation by an atmosphere is frequency dependent. The surface temperature of a planet can be raised substantially above its equilibrium temperature if its atmosphere is “optically thick” at infrared wavelengths. The atmosphere is “optically thin” at visible wavelengths so sunlight heats the surface. The warm surface radiates its heat at infrared wavelengths. <br><img src="../Assets/GreenhouseEffectEnergyConservation.png" alt="GreenhouseEffectEnergyConservation.png"/><br> </p>
+<ul>
+<li>The solar radiation reaching the surface is \(F_\odot(1-A_b)\).</li>
+<li>The surface emits (as a blackbody) \(\sigma T_s^4\)</li>
+<li>The atmosphere absorbs the infrared radiation emitted from the surface \(\epsilon\sigma T_s^4\) and transmits \((1-\epsilon)\sigma T_s^4\)</li>
+<li>The atmosphere re-radiates at a temperature \(T_a\) both upwards and down.</li>
+<li>Radiate balance demands that: \[\left\{\begin{align}&F_\odot(1-A_b)+\epsilon\sigma  T_a^4=\sigma T^4_s\\&F_\odot(1-A_b)=\epsilon\sigma T_a^4+(1-\epsilon)\sigma T_s^4\end{align}\right.\]</li></ul>
+<p> For \(\epsilon=1,\;T_s^4=2T_a^4\). Assumptions: </p>
+<ol>
+<li> The surface and the atmosphere are each characterized by a single temperature, \(T_s\) and \(T_a\), respectively.</li>
+<li> The atmosphere is completely transparent to solar radiation.</li>
+<li> The atmosphere is completely opaque to infrared radiation, and it acts like a blackbody.</li>
+<li> Earth’s surface is a blackbody.</li></ol>
+<p> </p>
+<h2 id="Radiative_Energy_Transport">Radiative Energy Transport</h2>
+<p>A more realistic treatment of radiative transport yields: \[T^4(\tau)=T_0^4\left(1+\frac{3\tau}{2}\right)\] where \(T(\tau)\) is the temperature at an optical depth, \(\tau\), and \(T_0\) is the temperature at the top of the atmosphere.  Optical depth describes how transparent or opaque a medium is to radiation of a certain frequency. It is described by the Beer-Lambert law: \[I_\nu=I_{\nu0}\exp(-\tau_\nu)\] Optical depth can be described as the integrated effect of attenuation (absorption, reflection, scattering) over a specific path through a medium: \[\tau_\nu=\int_S\beta_\nu\dd{s}\] Where \(\beta_\nu\) is the attenuation coefficient. If it is constant, then \(\tau_\nu=\beta_\nu s\) and \[\frac{I_\nu}{I_{\nu 0}}=\exp(-\beta_\nu s)\] Thus, returning to the equation for temperature in an atmosphere \[T^4(\tau)=T_0^4\left(1+\frac{3\tau}{2}\right).\] </p>
+<h2 id="Atmospheric_Layers">Atmospheric Layers</h2>
+<p>Can we explain the structure of the Earth's atmosphere? <br><img src="../Assets/EarthsAtmosphere.png" alt="EarthsAtmosphere.png"/><br> The upper atmosphere is heated by absorption of solar UV and X-ray radiation (dominant process). The day-night difference is highly pronounced. </p>
+<h1 id="The_Sun_and_the_Heliosphere">The Sun and the Heliosphere</h1>
+<p>The <i>heliosphere</i> is the region of space containing the solar wind that is bound by the <i>heliopause</i>. <br><img src="../Assets/Heliosphere.png" alt="Heliosphere.png"/><br> <i>Termination shock</i> is where the supersonic solar wind is slowed. <i>Bow shock</i> is a hypothesised phenomenon similar to the wake of a boats bow. It may be inhibited by strong interstellar magnetic fields. </p>
+<h2 id="Solar_Atmosphere">Solar Atmosphere</h2>
+<ul>
+<li>The <i>photosphere</i> is the visible surface layer of the Sun, where photons last interact with atoms before escape. \(T\sim 5800\;\text{K}\). It is weakly ionised.</li>
+<li>The <i>chromosphere</i> is a \(\sim2000\;\text{km}\) deep layer that sits on top of the photosphere. The temperature and density drops. It is usually invisible.</li>
+<li>The <i>corona</i> is fully ionised plasma that escapes the Sun and becomes solar wind.</li></ul>
+<p> </p>
+<h3 id="Hydrostatic_Solar_Corona">Hydrostatic Solar Corona</h3>
+<p>We have \[\dv{P}{r}=-\rho g=-\frac{Pm}{kT}\frac{GM_\odot}{r^2}\] For the heliosphere we integrate from the solar surface to a radial distance \(r\): \[\begin{align} &\int_{P_0}^P\frac{\dd{P}}{P}=\frac{-GM_\odot m}{kT}\int_{R_\odot}^r\frac{\dd{r}}{r^2}\\ &\implies P=P_0\exp\left[\frac{GM_\odot m}{kT}\left(\frac{1}{r}-\frac{1}{R_\odot}\right)\right] \end{align}\] As \(r\to\infty, P\to \sim 10^{-6}\;\text{Pa}\). This implies finite pressure at large distances. The local interstellar medium (LISM) pressure of only \(\sim 10^{-14}\;\text{Pa}\) would not contain the corona.  The gas pressure of the local interstellar medium is insufficient to contain a solar corona in hydrostatic equilibrium. Instead, the corona expands continuously outwards into the solar system to form the solar wind. Acceleration takes place within \(\sim107\;\text{km}\) of the Sun \((\sim 10 R_\odot)\) After this, solar wind speed remains constant with distance at about \(400\text{km s}^{-1}\). Plasma eventually confined by the local interstellar medium at distances of \(100-150\;\text{AU}\). This defines the boundary of the heliosphere. </p>
+<h2 id="Interplanetary_Magnetic_Field_(IMF)">Interplanetary Magnetic Field (IMF)</h2>
+<p>A useful thought experiment to consider the creation of the IMF. Consider the Sun’s near magnetic field as approximately dipolar and embedded in a static plasma atmosphere. The initial field configuration is shown below. Switch on radial outflow everywhere at constant speed (and neglect the Sun’s rotation). The field, frozen-in to the solar wind plasma, will be carried radially out into the solar system. <br><img src="../Assets/SunDipolarNonRotatingFieldPattern.png" alt="SunDipolarNonRotatingFieldPattern.png"/><br>  </p>
+<blockquote><b>Aside: Frozen-in-flow (Alfven's Theorem)</b>Particles remain associated with the same B-field lines for all time. Plasmas on different field lines do not mix.<br><img src="../Assets/FrozenInFlow.png" alt="FrozenInFlow.png"/><br>This is only an approximation to the actual flow. It applies when the field varies slowly in space and time compared with particle gyrofrequency and gyroperiod.</blockquote>
+<p> We can consider the motion of <i>one field line</i> at various times as it is carried outwards "frozen" into the plasma flow. After a long time, the field near the Sun points radially inwards or outwards, depending on the sense of the field at the Sun's surface. <br><img src="../Assets/FrozenInFlowHeliosphericDiagram.png" alt="FrozenInFlowHeliosphericDiagram.png"/><br> In reality the Sun rotates with a period of ~27 days. Each element of the solar wind moves radially out, but the feet of the field lines are frozen into the rotating Sun. The field lines are therefore wound into a spiral. <br><img src="../Assets/TheParkerSpiral.png" alt="TheParkerSpiral.png"/><br> Consider two plasma elements emitted from the solar surface, separated by time \(\Delta t\), located at points 1 and 2 respectively. <br><img src="../Assets/TheParkerSpiral2.png" alt="TheParkerSpiral2.png"/><br> The points are separated in \(r\) by \(v_{sw}\Delta t\) and in \(\varphi\) by \(\omega_s\Delta t\). As the elements move to larger \(r\), \(\dd{r}\) remains constant whilst \(\dd{s}\) grows. By analysis of the components of \(\vb{B}\) we know that the field direction must follow the plasma flow: \[\begin{align} &\frac{B_\varphi}{B_r}=-\dv{s}{r}=-\frac{r\omega_s}{v_{sw}}\\ &\implies B_\varphi=-\frac{r\omega_s}{v_{sw}}B_r \end{align}\] Conservation of magnetic flux states that through any surface of radius \(r\), \(\vb{B}\cdot\vb{A}=\text{const}\). thus we have \[B_{rs}\pi R^2_s=B_r\pi r^2\] hence \[B_r=B_{rs}\left(\frac{R_s}{r}\right)^2\] so finally we have \[B_\varphi=-\frac{R_s\omega_s}{v_{sw}}B_{rs}\frac{R_s}{r}\] <br><img src="../Assets/ParkerFields.png" alt="ParkerFields.png"/><br> </p>
+<h2 id="Solar_Planetary_Interactions">Solar Planetary Interactions</h2>
+<p>The solar wind exerts both a dynamic and magnetic pressure on objects. \[\begin{align} &\text{Magnetic:}\quad P_\text{mag}=\frac{B^2}{2\mu_0}\\ &\text{Dynamic:}\quad P_\text{dyn}=\rho v^2 \end{align}\] we can use the fact that the solar wind scales as \(1/r^2\) and measure the density at the Earth \(n_E\) as a basis: \[\rho=mn=mn_E\left(\frac{r_E}{r}\right)^2\] To determine the distance of equilibrium of the pressures from the sun we compute: \[\frac{B^2}{2\mu_0}=\rho v^2\implies r=\sqrt{\frac{B_{rs}^2R_s^2}{2r_E^2\mu_0n_em_pv_{sw}^2}}R_s\] </p>
+<h2 id="Coronal_Mass_Ejections">Coronal Mass Ejections</h2>
+<p>Coronal Mass Ejection: bubble of magnetic flux from Sun. </p>
+<ul>
+<li>Energetic plasma confined within intense magnetic field</li>
+<li>Field is disconnected but must satisfy \(\nabla\cdot\vb{B}=0\), i.e. closed loops of flux observed (rotating signature) as the CME passes over an observer.</li></ul>
+<p> <br><img src="../Assets/CME.png" alt="CME.png"/><br> </p>
+<h3 id="Magnetic_Reconnection">Magnetic Reconnection</h3>
+<p>Break down of frozen-in condition occurs at field gradients / current sheet and introduces diffusion of the field lines through the plasma. When the fields are oppositely-directed at the boundary a null point exists.  Here the field can disconnect and immediately "reconnect" through the boundary in a new configuration. Reconnected field lines contract along the boundary due to field line tension, allowing more field lines to diffuse in and reconnect. </p>
+<h1 id="Planetary_Magnetospheres">Planetary Magnetospheres</h1>
+<p>A planetary magnetosphere is a cavity in the solar wind surrounding a planet. Usually they are produced by the presence of the planet’s magnetic field. In this case, the magnetosphere is the realm where the planet's magnetic field is present. An atmosphere is actually sufficient for a small magnetosphere to be produced!  Planets with magnetic fields essentially have a dipole field, i.e. \(B(r)\propto 1/r^3\). Unmagnetised planets may or may not have an atmosphere. This provides three cases </p>
+<ol>
+<li> No field no atmosphere.</li>
+<li> <i>Induced magnetosphere</i> - The solar wind interaction creates a magnetosphere around the object.</li>
+<li> <i>Intrinsic magnetosphere</i> - The object generates its own magnetic field and a magnetosphere is formed.</li></ol>
+<p> </p>
+<h2 id="1._No_Field,_no_Atmosphere">1. No Field, no Atmosphere</h2>
+<p>Insulating material in a flowing plasma. Magnetic field diffuses through insulator. The body absorbs plasma particles. No upstream solar wind shock formed. Wake left in the plasma behind the body.  Wake is dependent on: </p>
+<ul>
+<li>Thermal properties of solar wind</li>
+<li> IMF direction</li></ul>
+<p> <br><img src="../Assets/NoFieldNoAtmosphere.png" alt="NoFieldNoAtmosphere.png"/><br> If the body has a conducting core, then there are additional effects: </p>
+<ul>
+<li>External field induces currents within core</li>
+<li>This produces a dipole magnetic field which cancels the external field within the core.</li>
+<li>This results in perturbations in the field in the insulating part of the body.</li>
+<li>Shielding currents decay according to \(\tau=R^2\mu_0\sigma\) where \(\sigma\) is electrical conductivity.</li></ul>
+<p> Solar particles encounter the surface of the body and are either absorbed or bounce back. This can lead to evaporation and out-gassing of material, this pressure can balance the solar wind. </p>
+<h2 id="2._No_field,_Atmosphere_Present">2. No field, Atmosphere Present</h2>
+<p>Solar wind is supersonic and thus forms a detached bow shock on the planets atmosphere. A magnetosheath forms beneath the bow shock, where the solar wind is deflected  Within the magnetosheath, the solar wind dynamic pressure is transformed to magnetic pressure, as the IMF piles up at the ionopause. The ionopause occurs where the thermal pressure of the ionosphere equals the solar wind dynamic pressure: \(n_EkT=\rho_{sw}v_{sw}^2\).  We can balance these forces to find the height of the ionopause \[(P_\text{atm}=P_0e^{-h/H})=(P_{sw}=\rho_{sw}v^2_{sw}=n_{sw}m_{sw}v_{sw}^2)\] thus \[h=H\ln\left(\frac{P_0}{n_{sw}m_{sw}v_{sw}^2}\right)\] </p>
+<h2 id="3._Intrinsic_Magnetosphere">3. Intrinsic Magnetosphere</h2>
+<p>Planetary magnetic fields tend to be roughly dipolar. They are usually aligned closely with the planetary rotation axis.  Consider the arrival of a solar wind "front" at the Earth • Solar wind / IMF are frozen-in. Earth’s field and plasma frozen-in. Current sheet formed between the two regimes. <br><img src="../Assets/IntrinsicMagnetosphere.png" alt="IntrinsicMagnetosphere.png"/><br> Solar wind particles approach the Earth with speed \(v_{sw}\) and number density \(n_p\), i.e. a flux of \[F=v_{sw}n_p\] and they encounter the magnetic field that they sense the Lorentz force and gyrate with radius \[r_g=\frac{m_pv_{sw}}{eB_{mp}}\] If the flux of protons approaching the boundary is \(v_{sw}n_p\) then number of protons traversing a section of boundary \(2r_g\) wide each second is: \[2r_gv_{sw}n_p=\frac{2m_pv_{sw}}{eB_{mp}}v_{sw}n_p\] This flux of protons corresponds to a current: \[I=\frac{2m_pn_pv_{sw}^2}{B_{mp}}\] We can use Ampere's law \(2\vb{B}_\text{sheet}=\mu_0I\) \[\frac{2B_\text{sheet}}{\mu_0}=\frac{2m_pv_{sw}^2}{B_{mp}}\to \frac{B_{mp}^2}{2\mu_0}=\frac{2B_{dipole}^2}{\mu_0}=m_pn_pv_{sw}^2\] </p>
+<h1 id="Exploring_the_Solar_System">Exploring the Solar System</h1>
+<h2 id="Ideal_Rocket_Equation">Ideal Rocket Equation</h2>
+<p>We can use conservation of momentum to find \[v_f-v_i=\Delta v=u\ln\left(\frac{m_i}{m_f}\right),\] where \(u\) is the speed of the exhaust gasses. To determine thrust we have the momentum of the ejected gasses \(p=m_gu\) and can find \[F=\dv{p}{t}=u\dv{m_g}{t},\] therefore the acceleration is \[a=\frac{F}{m}=\frac{F}{m_i-\dv{m_g}{t}t}.\] </p>
+<h2 id="Including_Gravity">Including Gravity</h2>
+<p>The previous analysis assumes that there is no external force acting on the rocket. On lift-off from a planet, however, the force of gravity will apply an impulse: \[\dd{J}=F\dd{t}=-mg\dd{t}\] This impulse is equal to the change of momentum \[p_1-p_i=m\dd{v}+u\dd{m}=-mg\dd{t}\] thus we find \[\Delta v=u\ln\left(\frac{m_i}{m_f}\right)-g\Delta t\] </p>
+<h2 id="Staging">Staging</h2>
+<p>In this case, some of the rocket mass is shed part way through the launch. The rocket equation is then applied to each stage separately.  E.g. consider the previous example as a 2-stage rocket, where the dry mass of the first stage is 10% of the total mass. Each stage is to provide half of the required delta-v which, including that required to overcome gravity – the "gravity loss" – is \[\frac{1}{2}(\Delta v+g\Delta t)\]  For each stage: \[\text{Fuel }\%=1-\exp\left(\frac{-(\Delta v+g\Delta t)}{u}\right)\] </p>
+<h2 id="Interplanetary_Transfers">Interplanetary Transfers</h2>
+<p>We have total orbital energy \[E=\frac{1}{2}mv^2-\frac{GMm}{r}=\frac{-GMm}{2a}\] and \[\begin{array}{l|l} \text{Circular} & v_\text{circ}=\sqrt{\frac{GM}{r}},\quad E=E_\text{min}\\\hline \text{Ellipse} & v_\text{circ}\lt v\lt\sqrt{2}v_\text{circ}\to v=\sqrt{\frac{2GM}{r}-\frac{GM}{a}},\quad E\lt0\\\hline \text{Parabolic} & v_\text{esc}=\sqrt{2}v_\text{circ},\quad E=0\\\hline \text{Hyperbolic} & v\gt v_\text{esc}\to\text{Escapes with }v_\infty\to v_\infty^2=-\frac{GM}{a}\quad E\gt 0 \end{array}\] </p>
+<h3 id="Hohmann_Transfer_Orbits">Hohmann Transfer Orbits</h3>
+<p>An example: <br><img src="../Assets/HohmannTransfer.png" alt="HohmannTransfer.png"/><br> </p>
+<h2 id="Gravitational_Slingshots">Gravitational Slingshots</h2>
+<p>Again, by example: <br><img src="../Assets/GravSlingshots.png" alt="GravSlingshots.png"/><br> </p>
+<h1 id="Tidal_Forces">Tidal Forces</h1>
+<p>The force on an object (say the moon) is distributed over the entirety: <br><img src="../Assets/TidalForces.png" alt="TidalForces.png"/><br> \[F=\frac{GM_Em_m}{r_{E-M}^2}\] If we view these forces with respect to the centre of the body (moon) we see a different picture <br><img src="../Assets/TidalForces2.png" alt="TidalForces2.png"/><br> \[\dv{F}{r}=\frac{-2GM_Em_m}{r^3_{E-M}}\] </p>
+<h2 id="Roche_Limit">Roche Limit</h2>
+<blockquote>"The orbital radius below which tidal forces will cause a body, held together only by its own gravity, to disintegrate due to a second celestial body's tidal forces exceeding the first body's gravitational self-attraction."</blockquote>
+<p> \[\frac{GMm}{R^2}\lt\underbrace{\frac{2GMm}{r^3}R}_{dF/dr \times \text{distance}}\] </p>
+</div>
+</body>
+</html>

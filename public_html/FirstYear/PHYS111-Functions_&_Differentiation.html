@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PHYS111-Functions_&_Differentiation</title>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="../style.css" title="DevEng Style"/>
+	</head>
+<body>
+<script>
+window.MathJax = {
+    loader: {
+        load: ['[tex]/physics', '[tex]/color']
+    },
+    tex: {
+        packages: {
+            '[+]': ['physics', 'color']
+        }
+    }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<div id="__container__">
+
+<h1>PHYS111-Functions_&_Differentiation</h1>
+
+<div onclick="toc_click()" id="__toc_button__" class="w3-block w3-button" style="background-color: #444; color:white; font-weight: bold;">Table of Contents</div>
+<div id="__toc__" class="w3-hide w3-animate-top w3-container">
+<ol class="__toc_ol__ __lvl_1__">
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Asymptotic_Formulas_at_\(x\to_0\)">Asymptotic Formulas at \(x\to 0\)</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#List_of_Derivatives">List of Derivatives</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Squeeze_Theorem">Squeeze Theorem</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#L’Hopitals_Rule">L’Hopitals Rule</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Special_Limit">Special Limit</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Leibniz_Formula">Leibniz Formula</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Second_Order_Parametric_Differentiation">Second Order Parametric Differentiation</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Inverse_Function_and_its_Derivative">Inverse Function and its Derivative</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Partial_Differential_Chain_Rule">Partial Differential Chain Rule</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Tangential_Planes">Tangential Planes</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Total_Differential">Total Differential</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Local_Extremum">Local Extremum</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Implicit_Differentiation">Implicit Differentiation</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Coordinate_Systems">Coordinate Systems</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Polar">Polar</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Cylindrical">Cylindrical</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Spherical">Spherical</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Vectors">Vectors</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Products">Products</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Dot_Product">Dot Product</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Cross_Product">Cross Product</a></li>
+</ol>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Directional_Derivative">Directional Derivative</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Lagrange_Multipliers">Lagrange Multipliers</a></li>
+</ol>
+</div>
+<script>
+function toc_click() {
+    var x = document.getElementById('__toc__');
+    if (x.classList.contains("w3-hide")) {
+        x.classList.remove("w3-hide");
+    }
+    else {
+        x.classList.add("w3-hide");
+    }
+}
+</script>
+
+<h1 id="Asymptotic_Formulas_at_\(x\to_0\)">Asymptotic Formulas at \(x\to 0\)</h1>
+<p>\[\begin{align}&\sin{x}=x+\mathcal{O}(x),\\&\cos{x}=1-\frac{1}{2}x^2+\mathcal{O}(x^2),\\&a^x=1+x\ln{a}+\mathcal{O}(x)(a\gt 0),\\&\ln{(1+x)}=x+\mathcal{O}(x),\\&e^x=1+x+\mathcal{O}(x),\\&(1+x)^a=1+ax+\mathcal{O}(x),\\&\tan{x}=x+\mathcal{O}(x),\\&\sinh{x}=x+\mathcal{O}(x),\\&\cosh{x}=1+\frac{x^2}{2}+\mathcal{O}(x^2),\\&\tanh{x}=x+\mathcal{O}(x)\end{align}\] </p>
+<h1 id="List_of_Derivatives">List of Derivatives</h1>
+<p>\[\begin{array}{l | l} \textbf{Easier}&\textbf{Harder}\\ (x^\alpha)'=\alpha x^{\alpha-1}, \forall\alpha & (\arcsin x)' = \frac{1}{\sqrt{1-x^2}},-1\lt  x\lt  1\\ (\sin{x})’=\cos{x} & (\arccos{x})'=-\frac{1}{\sqrt{1-x^2}},(-1\lt  x\lt  1)\\ (\cos{x})’=-\sin{x} & (\arctan{x})'=\frac{1}{1+x^2}\\ (\log_a{x})’=\frac{1}{x\ln{a}} & (\textrm{arccot}\;x)'=-\frac{1}{1+x^2}\\ (\ln{x})’=\frac{1}{x}(x\gt 0) & (\sinh{x})’=\cosh{x}\\ (a^x)’=a^x\ln{a} & (\cosh{x})’=\sinh{x}\\ (e^x)’=e^x & (\tanh{x})’=\frac{1}{(\cosh{x})^2}\\ (\tan{x})’= \sec^2x,(x\neq \frac{\pi}{2}+\pi n,n\in \mathbb{Z}) & (\coth{x})’=-\frac{1}{(\sinh{x})^2}(x\neq 0)\\ (\cot{x})’=-\csc^2x,(x\neq\pi n,n\in \mathbb{Z}) & \end{array}\]  </p>
+<h2 id="Squeeze_Theorem">Squeeze Theorem</h2>
+<p>If \(f(x)\leq g(x)\leq h(x)\) and \(\lim_{x\to 0}f(x)=L\) and \(\lim_{x\to 0}h(x)=L\), we can deduce \(\lim_{x\to 0}g(x)=L\) </p>
+<h2 id="L’Hopitals_Rule">L’Hopitals Rule</h2>
+<p>If a limit produces indeterminacies: \[\lim_{x\to a}\frac{\alpha(x)}{\beta(x)}= \lim_{x\to a}\frac{\alpha'(x)}{\beta'(x)}\] It will work for the following indeterminacies: \[\frac{0}{0},\;\;\frac{\infty}{\infty},\;\;0\times\infty,\;\;1^\infty,\;\;0^0,\;\;\infty^0,\;\;\infty-\infty\]  </p>
+<h2 id="Special_Limit">Special Limit</h2>
+<p>To manipulate the limit \(\lim_{r \to \infty} \left(1 + \frac{1}{r^3}\right)^{3r^3}\) to use the special limit \(\lim_{r \to \infty} \left(1 + \frac{1}{r}\right)^r = e\), we proceed as follows:  Start with the original limit:  \[\lim_{r \to \infty} \left( 1 + \frac{1}{r^3} \right)^{3r^3}\]  Next, let \(x = r^3\). As \(r \to \infty\), \(x \to \infty\) as well. Rewrite the expression in terms of \(x\):  \[\left( 1 + \frac{1}{x} \right)^{3x}\]  Notice that the exponent \(3r^3\) becomes \(3x\). This can be expressed as:  \[\left[ \left( 1 + \frac{1}{x} \right)^x \right]^3\]  We know from the special limit that:  \[\lim_{x \to \infty} \left( 1 + \frac{1}{x} \right)^x = e\]  Therefore, taking the limit as \(x \to \infty\):  \[\left[ \left( 1 + \frac{1}{x} \right)^x \right]^3 \to e^3\]  Thus, the limit simplifies to:  \[\lim_{r \to \infty} \left( 1 + \frac{1}{r^3} \right)^{3r^3} = e^3\]  In conclusion, we have:  \[\boxed{e^3}\]  <i>Personal note:</i> this this trick means that we can use the identity with: \[\lim_{r\to\infty}\left(1+x\right)^\frac{1}{x}\] </p>
+<h2 id="Leibniz_Formula">Leibniz Formula</h2>
+<p>\[(uv)^{(n)}=\sum_{i=0}^nc^i_nu^{(i)}v^{(n-i)},\;\;\; c^i_n=\frac{n!}{i!(n-i)!}\] </p>
+<h2 id="Second_Order_Parametric_Differentiation">Second Order Parametric Differentiation</h2>
+<p>\[\frac{d^2y}{dx^2}=\frac{\frac{d}{dt}(\frac{dy/dt}{dx/dt})}{\frac{dx}{dt}}\] </p>
+<h2 id="Inverse_Function_and_its_Derivative">Inverse Function and its Derivative</h2>
+<p>\[(f^{-1}(y_0))'=\frac{1}{f'(x_0)}\implies (f^{-1}(x))'=\frac{1}{f'(f^{-1}(x))}\] </p>
+<h2 id="Partial_Differential_Chain_Rule">Partial Differential Chain Rule</h2>
+<p>For \(z=f(u(x,y),v(x,y))\)  \[\frac{\partial z}{\partial x}=\frac{\partial z}{\partial u}\frac{\partial u}{\partial x}+\frac{\partial z}{\partial v}\frac{\partial v}{\partial x}\;\;\;\;\;\;\;\;\;\;\;\;\;\frac{\partial z}{\partial y}=\frac{\partial z}{\partial u}\frac{\partial u}{\partial y}+\frac{\partial z}{\partial v}\frac{\partial v}{\partial y}\] </p>
+<h2 id="Tangential_Planes">Tangential Planes</h2>
+<p> If a function \(z=f(x,y)\) is differentiable at point \(M_0(x_0,y_0\)) of the function domain, then at point \(N_0(x_0,y_0,f(x_0,y_0))\) there is a tangent plane to the surface \(S\) defined by:  \[\frac{\partial z}{\partial x}(M_0)(x-x_0)+\frac{\partial z}{\partial y}(M_0)(y-y_0)-(z-f(x_0,y_0))=0\] Or for function \(F(x,y,z)\): \[\frac{\partial F}{\partial x} (x-x_0) + \frac{\partial F}{\partial y} (y-y_0) + \frac{\partial F}{\partial z} (z-z_0)=0\] </p>
+<h1 id="Total_Differential">Total Differential</h1>
+<p>For a differentiable function \(f(x_1,x_2,...,x_m),\) we define the differentials \(dx_1,dx_2,...,dx_m\) to be independent variables, that is, they can be given any values.  Then the <b>differential</b> \(df\), also called the <b>total differential</b>, is defined by \[df=\frac{\partial f}{\partial x_1}dx_1+\frac{\partial f}{\partial x_2}dx_2+...+\frac{\partial f}{\partial x_m}dx_m\] </p>
+<h2 id="Local_Extremum">Local Extremum</h2>
+<p>For \(u=f(M)\) at a point \(M_0(x_1^0,...,x^0_m)\) and partial derivatives with respect to \(x_k\), there is a stationary point if:  \[\frac{\partial u}{\partial x_k}(M_0)=0\] Furthermore, the following expression yields more information about the function. \[R=\frac{\partial^2 u}{\partial x^2}(M_0)\cdot\frac{\partial^2 u}{\partial y^2}(M_0)-(\frac{\partial^2u}{\partial x\partial y}(M_0))^2\] </p>
+<ul>
+<li>If \(R\gt 0\), the point is either a local minimum when \(\frac{\partial^2u}{\partial x^2}(M_0)\gt 0\)  or a local maximum when \(\frac{\partial^2u}{\partial x^2}(M_0)\lt 0\).</li>
+<li>If \(R\lt 0\), the point is not an extremum, rather a saddle point. (3D point of inflection)</li>
+<li>If \(R=0\), we cannot tell what the point is, and have to investigate further.</li></ul>
+<h2 id="Implicit_Differentiation">Implicit Differentiation</h2>
+<p>If \(F(x,y)=0\) defines <i>y</i> implicitly as a function of <i>x,</i> then \[\frac{dy}{dx}=-\frac{F_x}{F_y}, \textrm{ if } F_y\neq0\] \[f''(x)=\frac{d}{dx}\begin{bmatrix}-\frac{F_x(x,f(x))}{F_y(x,f(x))}\end{bmatrix}\] </p>
+<h1 id="Coordinate_Systems">Coordinate Systems</h1>
+<h2 id="Polar">Polar</h2>
+<p>The most fun.  Related to cartesian coordinates: \[x=r\cos{\theta},\;\;\;\;\;y=r\sin{\theta}\] </p>
+<h2 id="Cylindrical">Cylindrical</h2>
+<p>Polar, along with a height,  \(z\). \[x=r\cos{\theta},\;\;\;\;\;y=r\sin{\theta}\;\;\;\;\;z=z\] </p>
+<h2 id="Spherical">Spherical</h2>
+<p>Two sets of angles and a radius. \[x=r\cos{\theta}\sin{\phi},\;\;\;\;\;y=r\sin{\theta}\sin{\phi}\;\;\;\;\;z=r\cos{\phi}\] </p>
+<h1 id="Vectors">Vectors</h1>
+<h2 id="Products">Products</h2>
+<h3 id="Dot_Product">Dot Product</h3>
+<p>The one you’re probably going to need more.  \[\mathbf{a}\cdot\mathbf{b}=|\mathbf{a}||\mathbf{b}|\cos{\phi}\] Magnitude \(|\mathbf{a}|\): \[|\mathbf{a}|=\sqrt{\mathbf{a}\cdot \mathbf{a}}\] Components: \[(Q\mathbf{\hat{i}}+R\mathbf{\hat{j}})\cdot(S\mathbf{\hat{i}}+T\mathbf{\hat{j}})=QS+TR\] </p>
+<h3 id="Cross_Product">Cross Product</h3>
+<p>More complicated, and orthogonal. Use right hand rule: CAB  Note: For vectors, \(a\times b = -b\times a\)  and \(a^2=0\). \[\mathbf{c}=\mathbf{a}\times \mathbf{b}\implies|\mathbf{c}|=|\mathbf{a}||\mathbf{b}|\sin{\phi}\] Components: \[\mathbf{a}\times \mathbf{b}=(a_2b_3-a_3b_2)i-(a_3b_1-a_1b_3)j+(a_1b_2-a_2b_1)k\]  Is possible to work it out by expanding the brackets and remembering \(i^2,j^2,k^2=0\), and the vector circle. i→j→k→i. </p>
+<h1 id="Directional_Derivative">Directional Derivative</h1>
+<p>A unit vector exists for any non-zero vector <b><i>a</b></i> and has the length equal to 1. In Cartesian Coordinates, \(a=(P(x,y,z), Q(x,y,z),R(x,y,z))\). \(u=\frac{1}{\sqrt{P^2+Q^2+R^2}}(P,Q,R) = (\cos\alpha, \cos\beta, \cos\gamma)\), where \(\alpha,\beta,\gamma\) are the angles between vector <b><i>a</b></i> and the corresponding axes. \[\nabla=\frac{\partial}{\partial x}i+\frac{\partial}{\partial y}j+\frac{\partial}{\partial z}k\] \[\nabla f=\frac{\partial f}{\partial x}i+\frac{\partial f}{\partial y}j+\frac{\partial f}{\partial z}k\] So we can therefore derive that the directional derivative \((\frac{\partial f}{\partial \mathbf{u}})\) is: \[\frac{\partial f}{\partial \mathbf{u}}=\nabla f\cdot \mathbf{u}\] Which equals: \[\frac{\partial f}{\partial \mathbf{u}}(M)=|\nabla f|\cos\phi\] </p>
+<h1 id="Lagrange_Multipliers">Lagrange Multipliers</h1>
+<p>The Lagrange multiplier technique lets you find the maximum or minimum of a multivariable function when there is some constraint on the input values you are allowed to use. \[\phi(M)=f(M)+\lambda_1F_1(M)+...+\lambda_kF_k(M)\]  <b>Note:</b> See PHYS113-Series and Differential Equations, towards the end for more on this. </p>
+</div>
+</body>
+</html>

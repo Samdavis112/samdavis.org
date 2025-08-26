@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PHYS103-Electric_&_Magnetic_Fields</title>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="../style.css" title="DevEng Style"/>
+	</head>
+<body>
+<script>
+window.MathJax = {
+    loader: {
+        load: ['[tex]/physics', '[tex]/color']
+    },
+    tex: {
+        packages: {
+            '[+]': ['physics', 'color']
+        }
+    }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<div id="__container__">
+
+<h1>PHYS103-Electric_&_Magnetic_Fields</h1>
+
+<div onclick="toc_click()" id="__toc_button__" class="w3-block w3-button" style="background-color: #444; color:white; font-weight: bold;">Table of Contents</div>
+<div id="__toc__" class="w3-hide w3-animate-top w3-container">
+<ol class="__toc_ol__ __lvl_1__">
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Electric_Fields">Electric Fields</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Coulomb's_Law">Coulomb's Law</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Definition_Of_E-Fields">Definition Of E-Fields</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Electric_Flux">Electric Flux</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Single_Point_Charge">Single Point Charge</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Arbitrary_Closed_Surface">Arbitrary Closed Surface</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Arbitrary_Closed_Surface_Enclosing_<b>no</b>_Charge">Arbitrary Closed Surface Enclosing <b>no</b> Charge</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Gauss'_Law">Gauss' Law</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Charge_Density">Charge Density</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Electric_Field_Computation:_Recipe">Electric Field Computation: Recipe</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Common_Examples">Common Examples</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Conductors">Conductors</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Charged_Conductor">Charged Conductor</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Electric_Potential">Electric Potential</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Electric_Potential_Energy">Electric Potential Energy</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Capacitance">Capacitance</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Magnetic_Fields">Magnetic Fields</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Magnetic_Flux">Magnetic Flux</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Gauss’_Law_for_Magnetic_Fields">Gauss’ Law for Magnetic Fields</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Magnetic_Force_On_Moving_Charge">Magnetic Force On Moving Charge</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Motion_in_both_Fields">Motion in both Fields</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Magnetic_Force_on_a_Current_Carrying_Conductor">Magnetic Force on a Current Carrying Conductor</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Magnetic_Force_on_a_Current_Carrying_Loop">Magnetic Force on a Current Carrying Loop</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Producing_a_Magnetic_Field">Producing a Magnetic Field</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Moving_Charge">Moving Charge</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Current_Carrying_Wire_&_Biot-Savart_Law">Current Carrying Wire & Biot-Savart Law</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Ampere's_Law">Ampere's Law</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Magnetic_Field_Computation:_Recipe">Magnetic Field Computation: Recipe</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Mobile_Conductors">Mobile Conductors</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#EMF_from_changing_B-Field">EMF from changing B-Field</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Displacement_Current">Displacement Current</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Maxwell's_Equations">Maxwell's Equations</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Maxwells_Equations_in_Derivative_Form">Maxwells Equations in Derivative Form</a></li>
+</ol>
+</div>
+<script>
+function toc_click() {
+    var x = document.getElementById('__toc__');
+    if (x.classList.contains("w3-hide")) {
+        x.classList.remove("w3-hide");
+    }
+    else {
+        x.classList.add("w3-hide");
+    }
+}
+</script>
+
+<h1 id="Electric_Fields">Electric Fields</h1>
+<h2 id="Coulomb's_Law">Coulomb's Law</h2>
+<p>Coulomb found that the force was proportional to the product of the two charges, and inversely proportional to the square of the distance between them: \[|F|=k\frac{|q_1q_2|}{r^2}\] where \(k=\frac{1}{4\pi\epsilon_0}\)  </p>
+<h2 id="Definition_Of_E-Fields">Definition Of E-Fields</h2>
+<p> The electric field, \(\mathbf{E}\), (\(NC^{-1}\))at a point is defined as the electric force, \(\mathbf{F}_0\), experienced by a <b>test charge</b> \(q_0\) at that point, <b>divided by the charge</b> \(q_0\), when \(q_0\) approaches zero: \[\mathbf{E}=\lim_{q_0\to 0}\frac{\mathbf{F}_0}{q_0}=k\frac{q}{r^2}\mathbf{\hat{r}}=k\frac{q}{r^3}\mathbf{r}\]  A <b>test charge</b> is used, as it's effect on the field are negligible.  If the electric field \(\mathbf{E}\) at a given point is known, the force acting on a charge \(q_0\) is given by: \[\mathbf{F}=q_0\mathbf{E}\]  To combine E fields, or Forces, we use the vector sum: i.e. \(\mathbf{F}_{total}=\mathbf{F}_1 +\mathbf{F}_2+\mathbf{F}_3\)  </p>
+<h2 id="Electric_Flux">Electric Flux</h2>
+<p> Electric flux is a measure of the “flow” of the <b>electric field</b> through a <b>given surface</b>. Consider a flat area \(A\) perpendicular to a uniform electric field. The electric flux (\(Nm^2C^{-1}\))\(\Phi_E\) is defined as: \[\Phi_E=EA\]  When considering area vectors, the direction of the vector is <b>outward</b> and <b>perpendicular</b> to the <b>closed surface</b>.  It is often appropriate to consider the area as a sum of elements, hence: \[d\Phi_E=\mathbf{E}\cdot d\mathbf{A}\implies\Phi_E=\iint d\Phi_E=\iint\mathbf{E}\cdot d\mathbf{A}\]  </p>
+<h3 id="Single_Point_Charge">Single Point Charge</h3>
+<p> Let's compute the electric flux through a <i>sphere</i> of radius R, when the charge is in the centre of the sphere. \[\Phi_E=E\iint dA=E(4\pi R^2)=\frac{1}{4\pi\epsilon_0}\frac{q}{R^2}(4\pi R^2)=\frac{q}{\epsilon_0}\] Therefore the electric flux is independent of the radius of the sphere!  </p>
+<h3 id="Arbitrary_Closed_Surface">Arbitrary Closed Surface</h3>
+<p> \[\Phi_E=\oint E\cdot dA=\frac{q}{e}\] It is essential that the surface is <b>closed</b>. Total flux does not depend on the shape of the surface. Only the charge inside the surface matters!  </p>
+<h3 id="Arbitrary_Closed_Surface_Enclosing_<b>no</b>_Charge">Arbitrary Closed Surface Enclosing <b>no</b> Charge</h3>
+<p> \[\Phi_E=\oint E\cdot dA=0\] If a field line from an external charge <b>enters</b> the surface at one point, it must <b>leave</b> it at another. This means the flux is 0.  </p>
+<h2 id="Gauss'_Law">Gauss' Law</h2>
+<p> From the previous section it follows that: \[\Phi_E=\oint \mathbf{E}\cdot d\mathbf{A} = \frac{Q_{encl}}{\epsilon_0}\] We can setup <b>Gaussian surfaces</b> to calculate the flux through them to simplify calculations  </p>
+<h2 id="Charge_Density">Charge Density</h2>
+<p> The total charge of a symmetrical organised charged object is related to the charge density: \[\rho=\frac{Q}{V}=\frac{Q}{4/3\pi R^3}\quad\Leftrightarrow\quad Q=\frac{4}{3}\pi R^3\rho\]  and \[\sigma=\frac{Q}{A}\]   We can use this to calculate how the electric field varies within the object itself.  </p>
+<h2 id="Electric_Field_Computation:_Recipe">Electric Field Computation: Recipe</h2>
+<p> <i>A recipe for determining the electric field \(E\):</i> </p>
+<ol>
+<li> Define a Gaussian surface reflecting the symmetry of the problem </li>
+<li> Determine charge \(Q_{encl}\) or the charge density (and what dimensional form of density is appropriate, e.g. volume, length, surface). </li>
+<li> Split the Gaussian surface into regions of \(E\cdot dA=0\) (parallel) and \(E\cdot dA=\textrm{const}\). (perpendicular) </li>
+<li> Calculate (in sections if necessary): \(A_s=\iint_sdA_s\) </li>
+<li> Apply Gauss’s law: \(\Phi_E=\frac{Q_{encl}}{\epsilon_0}=\sum_sEA_S\)</li>
+<li> Solve for \(E\)</li></ol>
+<p> </p>
+<h3 id="Common_Examples">Common Examples</h3>
+<ol>
+<li> <b>Outside a uniformly charged sphere:</b> \[E=\frac{Q}{4\pi\epsilon_0r^2}\]</li>
+<li> <b>Inside a uniformly charged sphere:</b> \[E=\frac{Q}{4\pi\epsilon_0R^3}r:\quad(R\gt r)\]</li>
+<li> <b>Uniformly charged thin wire</b> \[E=\frac{\lambda}{2\pi\epsilon_0r}:\quad(Q=\lambda l)\]</li>
+<li> <b>Uniformly Charged sheet</b> \[E=\frac{\sigma}{2\epsilon_0}:\quad(Q=\sigma A)\]</li>
+<li> <b>Two Sheets</b> \[\textrm{Within: }E=\frac{\sigma}{\epsilon_0},\quad\textrm{Outside: } E=0\]</li></ol>
+<p> </p>
+<h2 id="Conductors">Conductors</h2>
+<p><br><img src="../Assets/ConductorsEFields.png" alt="ConductorsEFields.png"/><br> This <b>separation of charges</b> produces an induced electric field. The electrons will move until the induced field, which they produce, <b>compensates the external field</b>. Therefore, in the electrostatic case (no current), the electric field inside any conductor must be exactly zero.  </p>
+<h3 id="Charged_Conductor">Charged Conductor</h3>
+<p> Consider a <b>positively-charged</b> conductor. Any charge inside the conductor creates an electric field. This field acts on the free electrons inside the conductor. The electrons will move in this field towards the positive charge. This process continues until the total field inside the conductor becomes zero. In that case, the excess charge must exist <b>entirely on the surface</b>.  A cavity within a conductor will be shielded from external electric fields by the same principle as above. <br><img src="../Assets/ConductorCavity.png" alt="ConductorCavity.png"/><br>  </p>
+<h2 id="Electric_Potential">Electric Potential</h2>
+<p> </p>
+<ul>
+<li>To understand electric potential, we need to revisit a few ideas around potential energy, work done, and the concept of a conservative force. </li></ul>
+<p> </p>
+<ul>
+<li>When a force acts on a particle, causing it to move from point a to point b, we say that work has been done by the field on the particle.</li></ul>
+<p> </p>
+<ul>
+<li>A conservative force exists when the work done by that force on an object is independent of the object's path. </li></ul>
+<p> </p>
+<ul>
+<li>In this case, the work can be expressed as the difference between the initial and final values of a potential energy: \(W_{a\to b}=U_a-U_b=-\Delta U\) where \(U_a\) is the potential energy at point \(a\) and \(U_b\) is the potential energy at point \(b\). </li></ul>
+<p> </p>
+<ul>
+<li>That the change in potential energy is negative, for positive work done, is a convention: we say that doing work on an object by a field decreases its potential energy. </li></ul>
+<p> </p>
+<ul>
+<li>Under the action of a conservative force, the total energy of the system is conserved: \(K_a+U_a=K_b+U_b\)</li></ul>
+<p> When charge \(q_0\) moves from point \(a\) to point \(b\), the work done is: \[W_{a\to b}=\int^b_a\mathbf{F}\cdot d\mathbf{l}=\frac{1}{4\pi\epsilon_0}\int^b_a\frac{qq_0}{r^2}\cos\phi\;dl\]  </p>
+<h3 id="Electric_Potential_Energy">Electric Potential Energy</h3>
+<p>\[V=\frac{U}{q_0}\]  Work \[\frac{W}{q_0}=V_a-V_b\implies W=V_{ab}q_0\]  Potential Difference \[V_{ab}=V_a-V_b\]  Relationship Between Potential and Electric Field: \[\mathbf{E}=-\nabla V\]  </p>
+<h2 id="Capacitance">Capacitance</h2>
+<p>...is defined as: \[C=\frac{Q}{V}=\frac{\epsilon_0A}{d}\]  The energy stored in a capacitor is: \(U=\frac{Q^2}{2C}=\frac{1}{2}CV^2=\frac{1}{2}QV\)  Remember \(V=Ed\).  They follow the opposite relations of resistors in series and parallel.  </p>
+<h1 id="Magnetic_Fields">Magnetic Fields</h1>
+<p> </p>
+<h2 id="Magnetic_Flux">Magnetic Flux</h2>
+<p> </p>
+<ul>
+<li>Magnetic flux \(\Phi_B\) through a surface is defined similarly to the electric flux. </li>
+<li>Each curved surface can be divided into small elements, which can be considered flat. </li>
+<li>For each element, the magnetic flux \(d\Phi_B\) is defined as:</li></ul>
+<p>\[d\Phi_B=\mathbf{B}\cdot d\mathbf{A}=B\cos\phi\;dA\] </p>
+<ul>
+<li>The total magnetic flux \(\Phi_B\) is defined as:</li></ul>
+<p>\[\Phi_B=\iint \mathbf{B}\cdot d\mathbf{A}=\iint B\cos\phi\;dA\]  </p>
+<h3 id="Gauss’_Law_for_Magnetic_Fields">Gauss’ Law for Magnetic Fields</h3>
+<p> For a magnetic field, an isolated magnetic charge <b>does not exist</b>. Magnets always have two poles, therefore field lines will never have end points. Thus, Gauss' law for magnetic field is: \[\Phi_B=\oint\mathbf{B}\cdot d\mathbf{A}=0\] <b>(For a closed surface)</b>  </p>
+<h2 id="Magnetic_Force_On_Moving_Charge">Magnetic Force On Moving Charge</h2>
+<p> Any charge moving in a pure magnetic field experiences a force given by: \[\mathbf{F}=q\mathbf{v}\times\mathbf{B}\] The total electromagnetic force, called the Lorentz force is thus: \[\mathbf{F}=q(\mathbf{E}+\mathbf{v}\times\mathbf{B})\]  The significance of the vector cross product in the magnetic force equation is that the force is not aligned with the field, but perpendicular to it.  \[\mathbf{F}=|q|v|B|\sin\phi\]  Notes on <b>velocity selectors</b>, <b>mass spectrometers</b> are better understood with the slides for L9.  </p>
+<h2 id="Motion_in_both_Fields">Motion in both Fields</h2>
+<p><br><img src="../Assets/EB-Field-Gyration.png" alt="EB-Field-Gyration.png"/><br>   </p>
+<h2 id="Magnetic_Force_on_a_Current_Carrying_Conductor">Magnetic Force on a Current Carrying Conductor</h2>
+<p> </p>
+<ul>
+<li>The force acting on an individual particle in the current is: </li></ul>
+<p>\[\mathbf{F}=q\mathbf{v}\times\mathbf{B}=qvB\sin\phi\;\mathbf{n}\] </p>
+<ul>
+<li>The total number of charged particles \(N\) in a conductor with length \(l\), cross-sectional area \(A\) and density of charges \(n\) is:</li></ul>
+<p>\[N=nAl\] </p>
+<ul>
+<li>The magnitude of the total magnetic force on a conductor with current \(I=nqvA\) is:</li></ul>
+<p>\[\mathbf{F}=I\mathbf{l}\times\mathbf{B}=IlB\sin\phi\]  </p>
+<h2 id="Magnetic_Force_on_a_Current_Carrying_Loop">Magnetic Force on a Current Carrying Loop</h2>
+<p> The net force on a current carrying loop is <b>0</b>, and the net torque on the loop is: \[\tau=\mu B\sin\phi\]  </p>
+<h2 id="Producing_a_Magnetic_Field">Producing a Magnetic Field</h2>
+<p> </p>
+<h3 id="Moving_Charge">Moving Charge</h3>
+<p> A moving charge produces a magnetic field: \[\mathbf{B}=\frac{\mu_0}{4\pi}\frac{q\mathbf{v}\times\mathbf{\hat{r}}}{r^2}\] where \(\mathbf{\hat{r}}\) is the unit radial vector perpendicular to \(\mathbf{B}\) and \(r\) is the radial distance to the point at which the field is obtained.  <b>\(\mu_0=4\pi\times 10^{-7}\textrm{TmsC}^{-1}\) : Permeability of free space.</b>  <br><img src="../Assets/MovingChargeMagField.png" alt="MovingChargeMagField.png"/><br>  We can also write the field magnitude in terms of an angle \(\phi\) between the velocity vector \(\mathbf{v}\) and the direction \(\mathbf{\hat{r}}\): \[\mathbf{B}=\frac{\mu_0}{4\pi}\frac{|q|v\sin\phi}{r^2}\]  </p>
+<h3 id="Current_Carrying_Wire_&_Biot-Savart_Law">Current Carrying Wire & Biot-Savart Law</h3>
+<p>The magnetic field produced by a short segment of wire is: \[\mathbf{dB}=\frac{\mu_0}{4\pi}\frac{Id\boldsymbol{\ell}\times\mathbf{\hat{r}}}{r^2}\] This is the <b>Biot-Savart Law</b>. <br><img src="../Assets/BiotSavart.png" alt="BiotSavart.png"/><br> The magnetic field (magnitude) produced by a current in an infinite length line is: \[\mathbf{B}=\frac{\mu_0 I}{2\pi r}\]  </p>
+<h2 id="Ampere's_Law">Ampere's Law</h2>
+<p> We can find the integral of magnetic field around a wire from the following. We will declare a infinitesimally small step around the field as \(d\ell\), (not the same as Biot-Savart law \(d\ell\)) \[\oint \mathbf{B}\cdot d\boldsymbol{\ell}=\mu_0I_{encl}\] </p>
+<ul>
+<li>Ampere’s Law states that the line integral of the magnetic field vector along a closed path is proportional to the net current enclosed by the path.</li>
+<li>It can be proven mathematically that Ampere's Law remains valid for any closed path enclosing any current, and not only for a circle</li>
+<li>The integral does not depend on the radius of the path.</li>
+<li>The direction of the current can be found using the right-hand rule.</li>
+<li>Curl the fingers of your right hand around the integration path so that they curl in the direction of integration.</li>
+<li>Your right thumb indicates the positive direction of current in the Ampere’s law.</li></ul>
+<p> </p>
+<h2 id="Magnetic_Field_Computation:_Recipe">Magnetic Field Computation: Recipe</h2>
+<p> <i>A recipe for determining the magnetic field \(B\):</i> </p>
+<ol>
+<li> Choose an <b>integration path</b> reflecting the symmetry of the problem.</li>
+<li> Determine current \(I_{encl}\) or the current density (and what dimensional form of density is appropriate, e.g. volume, length, surface)</li>
+<li> Split the path into regions of \(\mathbf{B}\cdot d\boldsymbol{\ell}=0\) (perp) and \(\mathbf{B}\cdot d\boldsymbol{\ell}=const\) (parallel)</li>
+<li> Calculate (in sections if req.): \(L_c=\int_cd\boldsymbol{\ell}\)</li>
+<li> Apply <b>Ampere's law:</b> \(\oint\mathbf{B}\cdot d\boldsymbol{\ell}=\sum_c\mathbf{B}L_c=\mu_0I_{encl}\)</li>
+<li> Solve for B</li></ol>
+<p> Examples </p>
+<ol>
+<li> <b>Solenoid:</b> \(\mathbf{B}=\mu_0I\frac{N}{L}\)</li>
+<li> <b>Toroid:</b> \(\mathbf{B}=\frac{\mu_0NI}{2\pi r}\)</li>
+<li> <b>Current Sheet:</b> \(\mathbf{B}=\frac{\mu_0J}{2}\)</li></ol>
+<p> </p>
+<h2 id="Mobile_Conductors">Mobile Conductors</h2>
+<p> </p>
+<ul>
+<li>A charge moving in a magnetic field experiences a force whose magnitude is \(F=|q|vB\)</li>
+<li>Now consider that the motion of the charges is due to motion of the conductor in which the charges are present. The magnetic force will cause the charges to move along the conductor, with positive charge accumulating at one end and negative charge accumulating at the other.</li>
+<li>This charge separation will produce a compensating electric field, that will arrest the movement of the charge when \(qE=qvB\)</li>
+<li>The motion of the conductor has thus created a potential difference along its length: \(V_{ab}=EL=vBL\)</li>
+<li>This potential difference – the change in potential energy (per unit charge) – in moving the charges <b>against</b> the electric field is called the electromotive force (EMF, \(\epsilon\) – which is not actually a force)</li></ul>
+<p> In general we should use vector notation in case the field and velocity are not perpendicular: \[\epsilon=\int^a_b(\mathbf{v}\times\mathbf{B})\;d\boldsymbol{\ell}\] Note the similarity with what we learned about electric fields and potential difference: \[V=\int^b_a\mathbf{E}\cdot d\boldsymbol{\ell}\] Consistent with the schematic on the right, this yields: \[\mathbf{E}=-(\mathbf{v}\times\mathbf{B})\] Interestingly, we find that if the conductor forms a closed loop: \[\epsilon=\oint(\mathbf{v}\times\mathbf{B})\;d\boldsymbol{\ell}\]  </p>
+<h2 id="EMF_from_changing_B-Field">EMF from changing B-Field</h2>
+<p>This is used in PHYS134, for inductors. \[\epsilon=-A\frac{d\mathbf{B}}{dt}=-\frac{d\Phi_B}{dt}=-\mathbf{B}\frac{dA}{dt}\]  \[\epsilon=-N\frac{d\Phi_B}{dt}=-N\mathbf{B}\frac{dA}{dt}\]  </p>
+<h2 id="Displacement_Current">Displacement Current</h2>
+<p> Maxwell noted that the presence of a changing electric field inside a capacitor, for example, produces a changing magnetic field, such that Ampere’s Law must be modified. Inclusion of an ‘imaginary’ current, called the <b>displacement current</b>, accounts for the electric field producing a magnetic field just like a real current would: \[\oint\mathbf{B}\cdot d\boldsymbol{\ell}=\mu_0I_{encl}+\mu_0I_{disp}\] The displacement current is defined to be: \[I_{disp}=\epsilon_0\frac{d\Phi_E}{dt}\] such that \[\oint\mathbf{B}\cdot d\boldsymbol{\ell}=\mu_0I_{encl}+\mu_0\epsilon_0\frac{d\Phi_E}{dt}\]  </p>
+<h1 id="Maxwell's_Equations">Maxwell's Equations</h1>
+<p> From the entirety of the summary note so far, we have the <b>four Maxwell's Equations:</b> </p>
+<ol>
+<li> Static electric charges produce an electric field. These two quantities are related by <b>Gauss’s Law for electric fields</b></li>
+<li> No isolated magnetic ‘monopoles’ have been observed. <b>Gauss’s Law for a magnetic field</b></li>
+<li> Motion of electric charges or a changing electric field induces a magnetic field. These two quantities are related by <b>Ampere’s Law</b></li>
+<li> Varying magnetic fields induces an electric field. These two quantities are related by <b>Faraday’s Law</b></li></ol>
+<p> \[\begin{align} (1)\quad&\Phi_E=\oint\mathbf{E}\cdot d\mathbf{A}=\frac{Q_{encl}}{\epsilon_0}\\ (2)\quad&\Phi_B=\oint\mathbf{B}\cdot d\mathbf{A}=0\\ (3)\quad&\oint\mathbf{B}\cdot d\boldsymbol{\ell}=\mu_0I_{encl}+\mu_0\epsilon_0\frac{d\Phi_E}{dt}\\ (4)\quad&\oint\mathbf{E}\cdot d\boldsymbol{\ell}=-\frac{d\Phi_B}{dt} \end{align}\]  </p>
+<h1 id="Maxwells_Equations_in_Derivative_Form">Maxwells Equations in Derivative Form</h1>
+<p><b>Note: NOT ASSESSED</b> After completing PHYS115-Vector Calculus, it becomes apparent the usefulness of vector calculus in this module. Maxwell's equations can be rewritten in the following (easier to remember) form:  \[\begin{align} &(1)\quad\nabla\cdot\mathbf{E}=\frac{\rho}{\epsilon_0}\\ &(2)\quad\nabla\cdot\mathbf{B}=0\\ &(3)\quad\nabla\times\mathbf{B}=\mu_0J+\mu_0\epsilon_0\frac{\partial\mathbf{E}}{\partial t}\\ &(4)\quad\nabla \times\mathbf{E}=-\frac{\partial\mathbf{B}}{\partial t}\\ \end{align}\]  \(J\) is the current density, such that: \[J=\frac{I}{A}\] where \(I\) is the current flowing through the cross sectional area \(A\). </p>
+</div>
+</body>
+</html>

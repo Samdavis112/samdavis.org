@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PHYS131-Uncertainty_&_Error</title>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="../style.css" title="DevEng Style"/>
+	</head>
+<body>
+<script>
+window.MathJax = {
+    loader: {
+        load: ['[tex]/physics', '[tex]/color']
+    },
+    tex: {
+        packages: {
+            '[+]': ['physics', 'color']
+        }
+    }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<div id="__container__">
+
+<h1>PHYS131-Uncertainty_&_Error</h1>
+
+<div onclick="toc_click()" id="__toc_button__" class="w3-block w3-button" style="background-color: #444; color:white; font-weight: bold;">Table of Contents</div>
+<div id="__toc__" class="w3-hide w3-animate-top w3-container">
+<ol class="__toc_ol__ __lvl_1__">
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Mean_&_Variance">Mean & Variance</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Error_Propagation_Single_Variable_Functions">Error Propagation Single Variable Functions</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Functional_Approach">Functional Approach</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Calculus_Approach">Calculus Approach</a></li>
+</ol>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Error_Propagation_Multi_Variable_Functions">Error Propagation Multi Variable Functions</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Functional_Approach">Functional Approach</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Calculus_Approach">Calculus Approach</a></li>
+</ol>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Combining_Results">Combining Results</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Chauvenet’s_Criterion">Chauvenet’s Criterion</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Poisson_Distribution">Poisson Distribution</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Approximating_at_Large_Means">Approximating at Large Means</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Binomial_Distribution">Binomial Distribution</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Method_of_least_squares">Method of least squares</a></li>
+</ol>
+</div>
+<script>
+function toc_click() {
+    var x = document.getElementById('__toc__');
+    if (x.classList.contains("w3-hide")) {
+        x.classList.remove("w3-hide");
+    }
+    else {
+        x.classList.add("w3-hide");
+    }
+}
+</script>
+
+<h1 id="Mean_&_Variance">Mean & Variance</h1>
+<p>\[\overline{x}=\frac{\sum_i^nx_i}{n}\] \[\sigma^2=\frac{1}{N-1}\sum^N_{i=1}(x_i-\overline{x})^2\] \[\alpha=\frac{\sigma}{\sqrt{N}}\] </p>
+<h1 id="Error_Propagation_Single_Variable_Functions">Error Propagation Single Variable Functions</h1>
+<h3 id="Functional_Approach">Functional Approach</h3>
+<p>Symmetric Error: \[\alpha_Z=|f(\overline{A}+\alpha_A)-f(\overline{A})|\] Asymmetric Error: \[\alpha_Z^+=|f(\overline{A}+\alpha_A)-f(\overline{A})|\;\;\;\;\;\;\alpha_Z^-=|f(\overline{A})-(\overline{A}-\alpha_A)|\] </p>
+<h3 id="Calculus_Approach">Calculus Approach</h3>
+<p><b>Note:</b> Always symmetric, valid for small errors only. \[\alpha_Z=|\frac{df(A)}{dA}|\alpha_A\] </p>
+<h1 id="Error_Propagation_Multi_Variable_Functions">Error Propagation Multi Variable Functions</h1>
+<h3 id="Functional_Approach">Functional Approach</h3>
+<p><b>Note: MUST NOT USE ON SQUARED VALUES</b> The best estimate of \(Z\) is: \(\overline{Z}=f(\overline A, \overline B)\). \[\alpha_Z^A=f(\overline A+\alpha_A,\overline B)-f(\overline A, \overline B)\] \[\alpha_Z^B=f(\overline A,\overline B+\alpha_B)-f(\overline A, \overline B)\] So the <b>Total Error</b> in \(Z\): \[\alpha_Z=\sqrt{(\alpha_Z^A)^2+(\alpha_Z^B)^2}\] </p>
+<h3 id="Calculus_Approach">Calculus Approach</h3>
+<p>The best estimate of \(Z\) is: \(\overline{Z}=f(\overline A, \overline B)\). \[\alpha_Z^A=\frac{\partial Z}{\partial A}\cdot\alpha_A\] \[\alpha_Z^B=\frac{\partial Z}{\partial B}\cdot\alpha_B\] So the <b>Total Error</b> in \(Z\): \[\alpha_Z=\sqrt{(\alpha_Z^A)^2+(\alpha_Z^B)^2}=\sqrt{(\frac{\partial Z}{\partial A})^2\cdot\alpha_A^2+(\frac{\partial Z}{\partial B})^2\cdot\alpha_B^2}\] </p>
+<h1 id="Combining_Results">Combining Results</h1>
+<p>The weight of each result is: \[w_i=\frac{1}{\alpha^2_i}\] The combined estimate is: \[x_{CE}=\frac{\sum_iw_ix_i}{\sum_iw_i}=\frac{\sum_i\frac{x_i}{\alpha^2_i}}{\sum_i\frac{1}{\alpha^2_i}}\] The inverse of the square of the standard error of the weighted mean is the sum of the weightings: \[\frac{1}{\alpha^2_{CE}}=\sum_i\frac{1}{\alpha^2_i}\] </p>
+<h1 id="Chauvenet’s_Criterion">Chauvenet’s Criterion</h1>
+<p>Chauvenet's criterion: a data point is rejected from a sample if the number of events we expect to be further from the mean than the suspect point, for the sample's mean and standard deviation, is less than half.  </p>
+<ol>
+<li> Calculate the mean and standard deviation.</li>
+<li> Find the difference between the mean and the potential outlier</li>
+<li> Find the probability that a result would randomly differ from the mean by the same amount</li>
+<li> Multiply with the number of data points </li>
+<li> If the outlier is rejected and the mean and standard deviation are recalculated for the remaining data points</li></ol>
+<h1 id="Poisson_Distribution">Poisson Distribution</h1>
+<p>The average count \(\overline{N}\), is given by: \[\overline{N}=\mu\cdot t\] where \(\mu\) is the average count rate, and \(t\) is the counting time \[\textrm{Standard Deviation:  }\sigma=\sqrt{\overline{N}}\] \[\textrm{Results: }(\overline{N}\pm\sigma)\]  </p>
+<h2 id="Approximating_at_Large_Means">Approximating at Large Means</h2>
+<p><b>Poisson:</b> \[P(N;\overline{N})=\frac{N^{-N}}{N!}e^{-\overline{N}}\]  <b>Gaussian:</b> \[G(x;\overline{x},\sigma)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\overline{x})^2}{2\sigma^2}}=\frac{1}{\sqrt{2\pi\overline{N}}}e^{-\frac{(N-\overline{N})^2}{2\overline{N}}}\]  </p>
+<h1 id="Binomial_Distribution">Binomial Distribution</h1>
+<p>If the probability of an event happening (success) is \(p\), and probability of event not taking place (failure) is \(1-p=q\), the probability \(P(r)\) for a total of \(r\) successes in \(N\) attempts is: \[\boxed{P(r)=\frac{N!}{r!(N-r)!}p^r(1-p)^{N-r}}\]  </p>
+<h1 id="Method_of_least_squares">Method of least squares</h1>
+<p>The method of least squares can be used to find the best-fit.  For a set of points \((x_i,y_i)\): <br><img src="../Assets/MethodOfLeastSquares.png" alt="MethodOfLeastSquares.png"/><br> <br><img src="../Assets/MethodOfLeastSquares2.png" alt="MethodOfLeastSquares2.png"/><br> </p>
+</div>
+</body>
+</html>

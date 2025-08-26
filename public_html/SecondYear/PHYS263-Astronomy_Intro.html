@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PHYS263-Astronomy_Intro</title>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="../style.css" title="DevEng Style"/>
+	</head>
+<body>
+<script>
+window.MathJax = {
+    loader: {
+        load: ['[tex]/physics', '[tex]/color']
+    },
+    tex: {
+        packages: {
+            '[+]': ['physics', 'color']
+        }
+    }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<div id="__container__">
+
+<h1>PHYS263-Astronomy_Intro</h1>
+
+<div onclick="toc_click()" id="__toc_button__" class="w3-block w3-button" style="background-color: #444; color:white; font-weight: bold;">Table of Contents</div>
+<div id="__toc__" class="w3-hide w3-animate-top w3-container">
+<ol class="__toc_ol__ __lvl_1__">
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Measuring_Distances">Measuring Distances</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Within_Sol">Within Sol</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Parallax">Parallax</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Ellipses">Ellipses</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Kepler's_Laws">Kepler's Laws</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Periapsis_and_Apoapsis">Periapsis and Apoapsis</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Position_vs_Physical_Quantities_in_Ellipses">Position vs Physical Quantities in Ellipses</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Centre_of_Mass">Centre of Mass</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Orbits">Orbits</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Solar_vs_Sidereal_Day">Solar vs Sidereal Day</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Mapping_the_Skies">Mapping the Skies</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Angular_Separation_Between_Sources">Angular Separation Between Sources</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Energy:_Luminosity_\(L\)">Energy: Luminosity \(L\)</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Magnitudes">Magnitudes</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Apparent_Magnitude_(\(m\))">Apparent Magnitude (\(m\))</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Colour_in_Astronomy">Colour in Astronomy</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Absolute_Magnitude:_\(m\;\text{at}\;d=10\;\text{pc}\)">Absolute Magnitude: \(m\;\text{at}\;d=10\;\text{pc}\)</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Distance_Modulus">Distance Modulus</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Blackbody_Radiation">Blackbody Radiation</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Wien's_Displacement_Law">Wien's Displacement Law</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Blackbodies:_Luminosity">Blackbodies: Luminosity</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Emission_and_Absorption_Lines">Emission and Absorption Lines</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Bohr_Atom_-_Hydrogen">The Bohr Atom - Hydrogen</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Doppler_Effect">Doppler Effect</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Doppler_Effect_+_Kepler's_Third_Law">Doppler Effect + Kepler's Third Law</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Widths_of_Spectral_Lines">Widths of Spectral Lines</a></li>
+</ol>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Telescopes">Telescopes</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Data_Reduction">Data Reduction</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Classifying_Stars">Classifying Stars</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Spectral_Types">Spectral Types</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#HR_Diagrams">HR Diagrams</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Stellar_Lifetime">Stellar Lifetime</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Star_Formation">Star Formation</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Initial_Mass_Function">Initial Mass Function</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#After_fusion">After fusion</a></li>
+</ol>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Detecting_other_Planetary_Systems">Detecting other Planetary Systems</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Stellar_Populations">Stellar Populations</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Redshift">Redshift</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Galaxies">Galaxies</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Measuring_Distant_Galaxies">Measuring Distant Galaxies</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Luminosity_Functions">Luminosity Functions</a></li>
+</ol>
+</div>
+<script>
+function toc_click() {
+    var x = document.getElementById('__toc__');
+    if (x.classList.contains("w3-hide")) {
+        x.classList.remove("w3-hide");
+    }
+    else {
+        x.classList.add("w3-hide");
+    }
+}
+</script>
+
+<h1 id="Measuring_Distances">Measuring Distances</h1>
+<h2 id="Within_Sol">Within Sol</h2>
+<p>Consider the Sun, Earth and an interior planet, e.g. Venus. P is the period of the inner planet and a the average distance of the planet to the Sun. Using radar at an ideal time, e.g. during the transit of Venus, we can easily measure the minimum distance Earth-Venus (EV). This means that: \[P^2=ka^3\implies Y^2=\frac{P^2_E}{P^2_V}=\frac{a^3_E}{a^3_V}\implies a_E=\frac{(EV)Y^{2/3}}{Y^{2/3}-1}=1\text{AU}\] </p>
+<h1 id="Parallax">Parallax</h1>
+<p>...is the angle subtended by the apparent motion of a ‘nearby’ star relative to the celestial sphere, caused by the orbit of the Earth around the Sun. \[d(\text{pc})=\frac{1\text{AU}}{\theta('')}\] \(\theta\) is measured in arcsec ('',1/3600 deg). It is the angular displacement relative to a fixed background when the Earth moves by 1 AU. For Summer-Winter, Earth moves by 2 AU, so divide that angle by 2, to get \(\theta\). </p>
+<h1 id="Ellipses">Ellipses</h1>
+<p>An ellipse is defined by a set of points in a plane such that <br><img src="../Assets/Ellipse.png" alt="Ellipse.png"/><br> \[r+r'=2a\qquad\qquad\frac{x^2}{a}+\frac{y^2}{b}=1\] where \(a\) is the <i>semi-major axis</i>, \(b\) is the <i>semi-minor axis</i>, and \(r\) and \(r'\) represent the distances to the ellipse from the two focal points or focii. The parameter \(e\) is the <i>eccentricity</i> of the ellipse, and is defined as the distance between the focii divided by the length of the major axis \(2a\), implying that each focus is a length \(ae\) from the centre. \[e=\frac{ae}{a}\] In polar coordinates we can describe an ellipse from the principle focus \(F\) with the equation \[r=\frac{a(1-e^2)}{e\cos\theta+1}\] </p>
+<h1 id="Kepler's_Laws">Kepler's Laws</h1>
+<ol>
+<li> The planets orbit the Sun in ellipses with the sun at one focus.</li>
+<li> The line joining the planet to the Sun sweeps out equal areas in equal times. \(\dot{A}=L/2m=\text{const}\)</li>
+<li> Harmonic Law: \[P^2=Ka^3\] where \(P\) is the period, and \(a\) is average separation. For an orbit around the Sun if \([P]=\text{years}\) and \([a]=\text{AU}\), then \(K=1\). We can use Newtons laws with a circular orbit to find \[K=\frac{4\pi^2}{GM}\]</li></ol>
+<h1 id="Periapsis_and_Apoapsis">Periapsis and Apoapsis</h1>
+<p>...highest and lowest speed. \[\text{Periapsis=closest}\implies\theta=0\implies r_{pe}=\frac{a(1-e^2)}{e+1}\] \[\text{Apoapsis=farthest}\implies\theta=\pi\implies r_{pe}=\frac{a(1-e^2)}{e-1}=a(1+e)\] </p>
+<h1 id="Position_vs_Physical_Quantities_in_Ellipses">Position vs Physical Quantities in Ellipses</h1>
+<p>We can use Newtons gravitational force law to derive an equation to track \(r\) as a function of orbit position and related with physical quantities in the system. For a body with a relatively small mass \(m\) relative to a large mass \(M\): \[r=\frac{L^2}{GMm^2(1+e\cos\theta)}\] Comparing this to the equation we have to describe an ellipse from the principle focus \(F\), it implies that \[L=\sqrt{GMm^2a(1-e^2)}\] We can use these expressions (and \(|\mathbf{L}|=|\mathbf{r}\times\mathbf{p}|\))to derive the speeds of orbit at perihelion and aphelion \[\begin{align} &v_p=\sqrt{\frac{GM(1+e)}{a(1-e)}}\\ &v_{ap}=\sqrt{\frac{GM(1-e)}{a(1+e)}} \end{align}\] Since e is always positive (by definition), we can see that the velocity at perihelion is always high than at aphelion (in agreement with Kepler’s Second Law). </p>
+<h1 id="Centre_of_Mass">Centre of Mass</h1>
+<p>We can define the reduced mass: \[\mu=\frac{m_1m_2}{m_1+m_2}\qquad F=\mu a\qquad r_1m_1=r_2m_2\qquad r=r_1+r_2\] We can then write K's III'rd in a more general form with \(r\) being the separation between particles and \(\omega\) is the angular frequency. \[\frac{Gm_1m_2}{r^2}=\mu a=\frac{m_1m_2}{m_1+m_2}r\omega^2\] We can then use \(P=\frac{2\pi}{\omega}\), \[\implies P^2=\frac{4\pi^2r^3}{G(m_1+m_2)}\] </p>
+<h1 id="Orbits">Orbits</h1>
+<p>The energy of a particle in orbit is as follows \[\begin{align} E&=\frac{1}{2}m(v_R^2+v_T^2)-\frac{GMm}{r}\\ &=\frac{1}{2}mv_R^2+\underbrace{\frac{L^2}{2mr^2}-\frac{GMm}{r}}_{U_r} \end{align}\] The four orbital cases are: </p>
+<ol>
+<li> \(E=E_\text{min}\): Closed orbit, Circle, only one possible \(r\) value.</li>
+<li> \(E\lt 0\): Closed orbit, ellipse with \(e\lt 1\).</li>
+<li> \(E=0\): Open orbit, parabola (\(e=1\))</li>
+<li> \(E\gt0\): Open orbit, hyperbola (\(e\gt1\))</li></ol>
+<h1 id="Solar_vs_Sidereal_Day">Solar vs Sidereal Day</h1>
+<p>There is a discrepancy between the day we use in our lives (solar day) and the sidereal day, due to the fact that the Earth is rotating as it orbits the Sun. </p>
+<ul>
+<li><i>Sidereal Day:</i> one rotation of the Earth on its axis relative to the stars</li>
+<li><i>Solar Day:</i> one rotation of the Earth on its axis relative to the Sun (our “normal” day)</li></ul>
+<p> Solar day is 4 mins longer. Hence solar year is one day shorter than sidereal year. </p>
+<h1 id="Mapping_the_Skies">Mapping the Skies</h1>
+<ul>
+<li><i>Right ascension (R.A.)</i> measured eastwards (+) in the equatorial plane. Represented by a time (hr, min, sec) with \(15^\circ=1\text{hr}\) from  \((360^\circ/24\text{hr})\). "Sexagesimal."</li>
+<li><i>Declination (Dec.)</i> measured as an angle in degrees able the R.A. plane (x-y). Aloowed values are \((-90, 90)^\circ\)</li></ul>
+<p> Conversions: \[\begin{align} &\text{H:M:S}(\text{hours,hex})=15\left(H+\frac{M}{60}+\frac{S}{3600}\right)\\ &\text{D:M:S}(\text{deg,hex})=\left(H+\frac{M}{60}+\frac{S}{3600}\right)\\ \end{align}\] </p>
+<h2 id="Angular_Separation_Between_Sources">Angular Separation Between Sources</h2>
+<p>Angular separation (\(\theta\)) = plane-of-the-sky distance between two sources. BUT don’t forget trigonometric adjustment for RA because of being offset from the equatorial plane (analogous to equator line). \[\begin{align} &\Delta RA=(RA_1-RA_2)\cos(Dec)\\ &\Delta Dec=Dec_1-Dec_2\\ &\implies\theta=\sqrt{\Delta RA^2+\Delta Dec^2} \end{align}\] </p>
+<h2 id="Energy:_Luminosity_\(L\)">Energy: Luminosity \(L\)</h2>
+<p>We also have the unit \[1\;\text{erg}\;\text{s}^{-1}=10^{-7}\;\text{W}\] There is the following relation between an objects luminosity and the flux from the object passing through an area: (energy per second per area \(f\)) \[f=\frac{L}{4\pi d^2}\qquad [f]=\text{Wm}^{-2}=\text{erg}\;\text{s}^{-1}\text{cm}^{-2}\] so we can define \(d\) as the luminosity distance \[d=\sqrt{\frac{L}{4\pi f}}\] We also have flux density: Energy per second per area per \(\lambda\) or \(\nu\). \[f_\lambda,f_\nu\implies f=\int f_\lambda\;d\lambda\] These can also be defined for a wavelength or frequency band s.t. \[f_\text{band}=\int^{\lambda_\text{max, band}}_{\lambda_\text{min, band}}f_\lambda\;d\lambda\] </p>
+<h1 id="Magnitudes">Magnitudes</h1>
+<h2 id="Apparent_Magnitude_(\(m\))">Apparent Magnitude (\(m\))</h2>
+<p>A means of quantifying how bright an object is in the sky. \[\boxed{m_1-m_\text{ref}=-2.5\log\left(\frac{F_1}{F_\text{ref}}\right)}\] We  an use the reference of Vega \(m_\textrm{vega}=m_\textrm{ref}=0\) with \(F_\text{vega}=2.84\times 10^{-8}\;\text{W m}^{-2}\). We can therefore write \[m=-2.5\log(F)+2.5\log(F_\text{ref})\] where we can say that the last term is the zero point \(Z_p\) and then calculate that and store it for later use. \[\boxed{m=-2.5\log(F)+Z_p}\] where for the Vega reference we can sat that \(Z_p=-18.87\) \[\boxed{\implies m=-2.5\log(F_{SI}/\text{W m}^2)-18.87}\] </p>
+<h2 id="Colour_in_Astronomy">Colour in Astronomy</h2>
+<p>In astronomy, colour is the difference in magnitudes for the same source, measured with different filters or band-passes: \(m_{b1}-m_{b2}\). \[m_{b1}-m_{b2}=-2.5\log\left(\frac{f_{b1}}{f_{b2}}\right)\] If the filters to discern the bands are B and V, the B-V colour is: \[m_B-m_V=B-V=-2.5\log\left(\frac{f_B}{f_V}\right)\] were we have the following bands <br><img src="../Assets/colourBands.png" alt="colourBands.png"/><br> In astronomy we typically calculate colours as the difference of a bluer-redder mag, such that \[\begin{align} &\Delta m=(m_{\lambda-}-m_{\lambda+})\gt0:\;\text{"red"}\\ &\Delta m=(m_{\lambda-}-m_{\lambda+})\lt 0:\;\text{"blue"}\\ \end{align}\] </p>
+<h2 id="Absolute_Magnitude:_\(m\;\text{at}\;d=10\;\text{pc}\)">Absolute Magnitude: \(m\;\text{at}\;d=10\;\text{pc}\)</h2>
+<p>A given object observed further away will appear fainter, and thus will have a higher (larger) magnitude. \[M=m-5\log(d)+5\] (with \(d\) in \(\text{pc}\)), or \[M=m+5\log\theta+5\] for parallax \(\theta\) in \(\text{arcsec('')}\). </p>
+<h2 id="Distance_Modulus">Distance Modulus</h2>
+<p>We can use the definition of the different magnitudes to define something called the distance modulus \(D_M\) \[D_M(\text{pc})=m-M=5\log(\text{d/pc})-5\] We can also use this to obtain distances \[d=10^{\frac{D_M-25}{5}}\text{Mpc}\] </p>
+<h1 id="Blackbody_Radiation">Blackbody Radiation</h1>
+<p>For blackbodies the thermal ration emitted by the Planck function \[SB_\lambda(T,\lambda)=\frac{f_\lambda(T,\lambda)}{\text{steradian}}=\frac{2hc^2}{\lambda^5(e^{\frac{hc}{\lambda k_BT}}-1)}\] Surface brightness or intensity is measured in: Power per unit area per unit wavelength per steradian = \(f_\lambda/\text{sr}\). </p>
+<h2 id="Wien's_Displacement_Law">Wien's Displacement Law</h2>
+<p>We can differentiate the Planck function to find the beak to find \[\lambda_\text{max}T=2.898\times 10^{-3}\;[\text{mK}]\] </p>
+<h2 id="Blackbodies:_Luminosity">Blackbodies: Luminosity</h2>
+<p>We can treat stars as blackbodies. The Planck function is flux at the surface per steradian so, the we can integrate it over the solid angle to find \[f_s(T)\equiv\text{flux at surface}=\sigma T^4\] To obtain the luminosity we can integrate this over spherical coordinates to find \[\boxed{L(T)=4\pi R^2\sigma T^4}\implies f_s=\frac{L}{4\pi R^2}\] Hence we can measure the flux \(f\), distance \(D\) and temperature \(T\) of the star to determine i ts radius \(R\) \[\boxed{R=\sqrt{\frac{fD^2}{\sigma T^4}}}\] We can combine these equations with other quantities we derive earlier to find \[\boxed{M_1-M_2=2.5\log\left(\frac{L_2}{L_1}\right)}\] \[M_1-M_\odot=2.5\log\left(\frac{L_\odot}{L_1}\right)\implies\boxed{\frac{L}{L_\odot}=10^{0.4(M_\odot-M)}}\] Useful to determine the radius of a star \[\boxed{\frac{R}{R_\odot}=\sqrt{\frac{LT^4_\odot}{L_\odot T^4}}}\] </p>
+<h1 id="Emission_and_Absorption_Lines">Emission and Absorption Lines</h1>
+<h1 id="The_Bohr_Atom_-_Hydrogen">The Bohr Atom - Hydrogen</h1>
+<p>In general, for a simple system: an electron at level \(n\) around a positive charge \(Z\) has an energy of \(E\) \[E(n)=-13.6\frac{Z^2}{n^2}\text{eV}\qquad\text{For $^1$H,}\;Z=1\] We have the Rydberg Formula \[\frac{1}{\lambda}=R\left[\frac{1}{n^2_f}-\frac{1}{n^2_i}\right]\] For hydrogen \(R=E_\text{ion}/hc=1.097\times 10^7\;\text{m}^{-1}\)  To see these transitions the atom needs to be excited. The ratio of electrons in a given \(n+1\) energy level (in relation to level \(n\)) is given by the Boltzmann equation and is a function of temperature: \[\text{Excitation:}\qquad\frac{N_{n+1}}{N_n}=\left(\frac{g_{n+1}}{g_n}\right)\exp\left(\frac{-(E_{n+1}-E_n)}{Tk_b}\right)\] for neutral hydrogen \(g_n\propto 2n^2\) \[\text{Excitation:}\qquad\frac{N_{n+1}}{N_n}=\left(\frac{g_{n+1}}{g_n}\right)\exp\left(\frac{-(E_{n+1}-E_n)}{Tk_b}\right)\] In order to estimate the ratio of ionised to neutral atoms of a specific element, we use the Saha equation (“similar” to Boltzmann, but for ionisation): \[\frac{N_{II}}{N_I}\propto T^\frac{5}{2}e^\frac{-E_\text{ion}}{Tk_b}\] </p>
+<h2 id="Doppler_Effect">Doppler Effect</h2>
+<p>For \(v\lt\lt c\): \[\frac{\Delta\lambda}{\lambda}=\frac{\lambda_\text{obs}-\lambda_0}{\lambda_0}=\frac{v}{c}\] for the relativistic case (\(v\sim c\)): \[\frac{\Delta\lambda}{\lambda_0}=\sqrt{\frac{1+v/c}{1-v/c}}-1\] </p>
+<h3 id="Doppler_Effect_+_Kepler's_Third_Law">Doppler Effect + Kepler's Third Law</h3>
+<p>We know \[P^2=\frac{4\pi^2a^3}{G(M_1+M_2)}\] we can find that \(a=P(v_1+v_2)/2\pi\) from \(a=a_1+a_2\) and \(v_{1,2}=2\pi a_{1,2}/P\). Such that \[P^2=\frac{4\pi^2 P^3(v_1+v_2)^3}{8\pi^3G(M_1+M_2)}\] \(v_1, v_2\) are average rotational velocities. With Doppler we measure radial (projected) velocities. The former are larger than the latter as we only see a fraction of their motion. We have \(v_{d1,d2}=v_{1,2}\sin i\) where \(i\) is the inclination angle of the orbit. (\(0^\circ\)=face on, \(90^\circ\)=edge on) \[M_1+M_2=\frac{P(v_{d1}+v_{d2})}{2\pi G\sin^3i}\] where \(v_{d1,d2}=c\Delta\lambda_{1,2}/\lambda\). </p>
+<h3 id="Widths_of_Spectral_Lines">Widths of Spectral Lines</h3>
+<ol>
+<li> Quantum effects, Heisenberg's uncertainty principle: \(|\Delta E|\Delta t\approx\hbar\). Use Rydberg s formula then solve for \(\Delta\lambda\)Thus \(\Delta\lambda\approx\lambda^/2\pi c\Delta t\). This effect is tiny, and negligible.</li>
+<li> Thermal Broadening, movement of gas particles: \(\Delta\lambda=\lambda/c \times\sqrt{2k_BT/m +v^2_\text{turb}}\).</li>
+<li> Dynamics. Turbulent motion affects the thermal broadening equation. Rotation of the gas also affects the lines \(\Delta\lambda=v_\text{rot}\sin(i)\lambda/c\)</li></ol>
+<p> </p>
+<h1 id="Telescopes">Telescopes</h1>
+<p>Radiation Collecting Power (\(RC_P\)). Capturing more photons means we can see fainter sources. The collecting power of a telescope is the area of its lens or mirror. Therefore: \[RC_P=A=\pi R^2\implies\boxed{RC_P\propto D^2}\] Resolution of a telescope is \(\Delta\theta\), commonly quoted in arcsec ('') as an angle. The limit in resolution of a telescope results from diffraction as the light goes through an aperture and thus depends on diameter \(D\) and wavelength \(\lambda\) \[\Delta\theta\propto\frac{\lambda}{D}\implies\Delta\theta=1.22\frac{\lambda}{D}\qquad\text{Rayleigh Criterion}\] The f-number (focal ratio) F# or f# is defined as the ratio of the focal length to the diameter of the lens. \[f\#=\frac{f}{D}\] </p>
+<h2 id="Data_Reduction">Data Reduction</h2>
+<p>\[\text{Raw data = (Astro Flux+Sky Flux)$\times$Pixel Response + Read-out}\] We want \(\text{Astro Flux}\) so we can follow the obvious method to find it.  We can then use Astrometry to calibrate the data. \[m_\text{star}-m_\text{ref}=-2.5\log\left(\frac{\text{Counts}_\text{star}}{\text{Counts}_\text{ref}}\right)\] thus \[m_\text{star}=-2.5\log(\text{Counts}_\text{star})+ZP_\text{counts}\] </p>
+<h1 id="Classifying_Stars">Classifying Stars</h1>
+<h2 id="Spectral_Types">Spectral Types</h2>
+<p>"<b>O</b>h <b>B</b>e <b>A</b> <b>F</b>ine <b>G</b>al <b>K</b>iss <b>M</b>e!" This is a mnemonic to remember the spectral types. Note that each class is subdivided with a numeric digit with 0 being the hottest and 9 being coolest. <br><img src="../Assets/WiensLawSpectralClasses.png" alt="WiensLawSpectralClasses.png"/><br> <b>Harvard Stellar Classification</b>: <br><img src="../Assets/HarvardStellarClassification.png" alt="HarvardStellarClassification.png"/><br> </p>
+<h2 id="HR_Diagrams">HR Diagrams</h2>
+<p>Hertzsprung-Russell Diagrams are a plot of Luminosity against decreasing Surface Temperature. <br><img src="../Assets/HRDiag.png" alt="HRDiag.png"/><br> We can calculate the stellar radius for any position in the HR diagram, since HR is \(L\) vs \(T\): \[\frac{R}{R_\odot}=\sqrt{\frac{LT_\odot^4}{L_\odot T^4}}\] We can go beyond that if we remember \(L=4\pi R^2\sigma T^4\) which in log axes, becomes \[\log(L)=\log(4\pi\sigma)+2\log R+4\log T\] When we plot an HR diagram, we are actually plotting the Stefan Boltzmann law for a blackbody, with a stronger dependence on \(T\) than on \(R\).  </p>
+<blockquote><b>Mass:</b> \[L\propto M^4\]Or in solar units\[\frac{L}{L_\odot}=\left(\frac{M}{M_\odot}\right)^4\]</blockquote>
+<p> Usually \(0.1M_\odot\lt M\lt 100M_\odot\). </p>
+<h2 id="Stellar_Lifetime">Stellar Lifetime</h2>
+<p>When a star loses 10% of its hydrogen, it destabilises. The main sequence lifetime \(\sim\text{(available energy)/(avg Luminosity)}\) \[\implies\tau\propto\frac{M}{L}=\frac{M}{M^4}\implies\boxed{\tau\propto M^{-3}}\] The Suns expected lifetime is \(\tau_\odot\sim10^{10}\;\text{yrs}\) hence \[\tau=\tau_\odot\left(\frac{M}{M_\odot}\right)^{-3}\] </p>
+<h1 id="Star_Formation">Star Formation</h1>
+<p>The Jeans mass is defined as the total mass required for a certain temperature \(T\) and radius \(R\) needed for a cloud of gas to collapse into a star. \[M_J=\frac{5k_BTR_c}{G\mu m}\] where \(\mu\) is the molecular weight and \(m\) is the mass of the gas atom. </p>
+<h2 id="Initial_Mass_Function">Initial Mass Function</h2>
+<p>The initial mass function (<i>IMF</i>) describe the number of stars per stellar mass when stars are born. \[\phi=\frac{dN}{dM}=AM^\alpha\] Mass in stars per mass \[\xi=M\phi=\frac{dM_*}{dM}\] Not all gas mass is converted to stars. We can use the star-formation efficiency (SFE) to parameterise the fraction that ends up in stars: \[M_*=\text{SFE}\times M_\text{gas}\] We can use basic calculus on these expressions to find out information about birth rates. </p>
+<h3 id="After_fusion">After fusion</h3>
+<p>There are three cases: </p>
+<ol>
+<li> Electron degeneracy \(\to\) White Dwarf for \(M\lt 1.44M_\odot\) (Chandrasekhar Limit)</li>
+<li> Neutron degeneracy \(\to\) Neutron Star  for \(M\lesssim 3M_\odot\).</li>
+<li> Else \(\to\) Black Hole.</li></ol>
+<p> From accretion of matter (usually from a binary star system planetary nebula) a white dwarf can gain mass above the Chandrasekhar limit and undergo a type 1A supernova. </p>
+<h1 id="Detecting_other_Planetary_Systems">Detecting other Planetary Systems</h1>
+<p>Finding planets around other stars has been a key goal in Astronomy, however, planets are on average ~100 million times fainter than stars. Planets can be found in 5 main different ways </p>
+<ol>
+<li> Direct Detection - Extremely challenging. </li>
+<li> Astrometric (wobble) - Star wobbling due to mass of heavy planets. We use \[P^2=\frac{4\pi^2 a^3}{G(M_\text{star}+m_p)}\] with \(a=a_\text{star}+a_\text{planet}\) and \(a_\text{planet}m_\text{planet}=a_\text{star}M_\text{star}\)</li>
+<li> Gravitational lensing the image of a background star behind a star with a planet can be lopsided.</li>
+<li> Spectroscopic detections -  Radial velocities: \(v_pm_p=v_sM_s\). The wobble of the star caused by the mass of planets is imprinted on its absorption lines by the Doppler effect. <br><img src="../Assets/DopplerSpectroscopyRadialVelocities.png" alt="DopplerSpectroscopyRadialVelocities.png"/><br></li>
+<li> Transit Detections: Planets moving in front of their stars cause a dip in the light visible from Earth. \(A_p=f_\text{loat}\times A_s\implies R_p=\sqrt{A_p/\pi}\).</li></ol>
+<h1 id="Stellar_Populations">Stellar Populations</h1>
+<p>Stellar populations in the Milky Way can be broken into two populations: </p>
+<ul>
+<li><i>Population I stars:</i> Young, metal-rich and blue. In spiral galaxies mostly in the disk + bulge</li>
+<li><i>Population II stars:</i> Old, metal-poor and red. In spiral galaxies mostly in the halo + bulge</li></ul>
+<p> Note, to astronomers metals are ALL elements heavier than H & He. There are also population III stars, which are the first  stars after the B-Bang.  <i>Leavitt law (1912):</i> Cepheid (variable/pulsating) stars: their luminosity is a function of their pulsating period. \[\begin{align} &\log(L/[\text{W}])=1.195\log(P/[\text{days}])+28.95\\ &0.394M_V=-\log(P/[\text{days}])-0.657 \end{align}\] </p>
+<h1 id="Redshift">Redshift</h1>
+<p>We define redshift \[z=\frac{\lambda_\text{obs}-\lambda_0}{\lambda_0}\implies v_\text{shift}=cz\implies d=\frac{zc}{H_0}\] </p>
+<h1 id="Galaxies">Galaxies</h1>
+<h2 id="Measuring_Distant_Galaxies">Measuring Distant Galaxies</h2>
+<p>We can measure magnitudes in different bands to find \[M_*[M_\odot]\propto10^{0.4\times M_V}\times\frac{\text{Mass}}{\text{Luminosity}}\] We also have the gas fraction \[f_\text{gas}=\frac{M_\text{gas}}{M_\text{total}}\] The star formation rate SFR of a galaxy is \[\text{SFR}=\frac{\Delta M}{\Delta t}\] </p>
+<h1 id="Luminosity_Functions">Luminosity Functions</h1>
+<p>We can define the number of galaxies per unit volume \(\Phi\) such that \[\frac{d\Phi}{dL}=\underbrace{\frac{\Phi^*}{L^*}}_\text{Normalisation}\times\underbrace{\left(\frac{L}{L^*}\right)^\alpha}_\text{power-law}\times\underbrace{e^{-L/L^*}}_\text{exponential}\] This is the Schetcher function. It has parameters \(\Phi^*,L^*,\alpha\). It may be written in the form \[\Phi(L)dL=\frac{\Phi^*}{L^*}\left(\frac{L}{L^*}\right)^\alpha e^{-L/L^*}dL\] Integrating the Schetcher function provides luminosity densities or SFR densities or mass densities. The integral of SFR function gives star formation rate density \[\text{SFRD[M$_\odot$yr$^{-1}$Mpc$^{-3}$]}=\int\Phi(SFR)\;dSFR=\Phi^*\times SFR^*\times\Gamma(\alpha+2)\] By integrating the star-formation rate density at each redshift we can predict the stellar mass density \[\rho_{M_*}=\int_0^\infty SFRD\;dt\] </p>
+</div>
+</body>
+</html>

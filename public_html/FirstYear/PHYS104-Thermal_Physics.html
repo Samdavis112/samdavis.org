@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PHYS104-Thermal_Physics</title>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="../style.css" title="DevEng Style"/>
+	</head>
+<body>
+<script>
+window.MathJax = {
+    loader: {
+        load: ['[tex]/physics', '[tex]/color']
+    },
+    tex: {
+        packages: {
+            '[+]': ['physics', 'color']
+        }
+    }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<div id="__container__">
+
+<h1>PHYS104-Thermal_Physics</h1>
+
+<div onclick="toc_click()" id="__toc_button__" class="w3-block w3-button" style="background-color: #444; color:white; font-weight: bold;">Table of Contents</div>
+<div id="__toc__" class="w3-hide w3-animate-top w3-container">
+<ol class="__toc_ol__ __lvl_1__">
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Four_Laws_Of_Thermodynamics">The Four Laws Of Thermodynamics</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Big_List_of_Definitions">The Big List of Definitions</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Thermal_Expansion">Thermal Expansion</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Ideal_Gasses">Ideal Gasses</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Heat_Conduction">Heat Conduction</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Heat_capacity">Heat capacity</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Calories">Calories</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#States_Of_Matter">States Of Matter</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Phase_boundaries">Phase boundaries</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Claudius-Clapeyron_Equation">Claudius-Clapeyron Equation</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#State_vs_Phase">State vs Phase</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#State_Principle">State Principle</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Equation_Of_State">Equation Of State</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Van_Der_Waals_Equation">Van Der Waals Equation</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Isotherms">Isotherms</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Work_of_processes">Work of processes</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Internal_Energy">Internal Energy</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#First_Law_of_Thermodynamics">First Law of Thermodynamics</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Quasistatic_Processes">Quasistatic Processes</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Adiabatic_process_for_an_ideal_gas">Adiabatic process for an ideal gas</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Flow_processes">Flow processes</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Cyclic_Processes">Cyclic Processes</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Heat_Engines">Heat Engines</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Carnot_cycle">Carnot cycle</a></li>
+</ol>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Coefficients_that_Characterizes_the_Classical_States">Coefficients that Characterizes the Classical States</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Thermodynamic_Definition_of_Entropy">Thermodynamic Definition of Entropy</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Entropic_Form,_Second_Law">Entropic Form, Second Law</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Principle_of_Minimum_Energy_(Closed_Systems)">Principle of Minimum Energy (Closed Systems)</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Statistical_Definition_of_Entropy">Statistical Definition of Entropy</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Gibbs_Entropy_Formula">Gibbs Entropy Formula</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Boltzmann_Distribution">Boltzmann Distribution</a></li>
+</ol>
+</div>
+<script>
+function toc_click() {
+    var x = document.getElementById('__toc__');
+    if (x.classList.contains("w3-hide")) {
+        x.classList.remove("w3-hide");
+    }
+    else {
+        x.classList.add("w3-hide");
+    }
+}
+</script>
+
+<p>Important note for this course, in differentials and integrals: </p>
+<ul>
+<li>\(dx\) and \(\partial x\), means a infinitesimally small change in \(x\), as traditionally used in calculus. </li>
+<li>\(\Delta x\), means a finite change in a variable. I.e. \(\Delta x = x_2-x_1\) </li>
+<li>\(\delta x\), this is similar to the first bullet point, but all it signifies is that the path of which the variable takes is very important here. E.g. \(\delta W\), can be very different depending on the path you take.</li></ul>
+<p>  </p>
+<h1 id="The_Four_Laws_Of_Thermodynamics">The Four Laws Of Thermodynamics</h1>
+<p> </p>
+<ul>
+<li>0th Law: Asserts the existence of thermal equilibrium.</li>
+<li>1st Law: Energy is conserved. </li>
+<li>2nd Law: In spontaneous processes, entropy never decreases.</li>
+<li>3rd Law: There is an absolute zero of temperature where entropy vanishes, but this can never be reached.</li></ul>
+<p> </p>
+<h1 id="The_Big_List_of_Definitions">The Big List of Definitions</h1>
+<p> </p>
+<ul>
+<li><b>Heat</b> is the energy that is transferred from one body to another as a result of a difference of temperature.</li>
+<li><b>Work</b> is energy that is transferred via a force that moves an object over a distance.</li>
+<li><b>Temperature</b> is a measure of the average kinetic energy of the particles in a substance.</li>
+<li>A <b>system</b> is a collection of matter or a region of space that is being studied.</li>
+<li>A <b>boundary</b> is a surface that separates a system from its surroundings.</li>
+<li>An <b>open system</b> is a system that can exchange both matter and energy with its surroundings.</li>
+<li>A <b>closed system</b> is a system that can only exchange energy with its surroundings.</li>
+<li>An <b>isolated system</b> cannot exchange energy nor matter with its surroundings.</li>
+<li>A <b>state</b> is a condition of a system that can be described by its properties</li>
+<li>An <b>equilibrium</b> is a state of a system that does not change unless disturbed by an external influence</li>
+<li>A <b>process</b> is a change of a system from one change to another.</li>
+<li>A <b>cycle</b> is a process that returns a system to its initial state.</li>
+<li>A <b>steady state</b> is a state that can only change in space.</li>
+<li>A <b>transient state</b> changes both in space and time.</li>
+<li>A <b>property</b> is a characteristic of a substance that can be calculated, such as mass.</li>
+<li>An <b>intensive property</b> is a property that does not depend on the size or extent of the system, such as temperature.</li>
+<li>An <b>extensive property</b> is one that does depend on the size of a system, such as mass or energy.</li>
+<li>A <b>state property</b> is a property that can be measured or calculated that depends only on the current state of the system, not past.</li>
+<li>A <b>process property</b> is not a property of a system, but rather characterises the flow of a quantity across a boundary.</li>
+<li>A <b>spontaneous process</b> occur in the real world, and involve friction, viscosity or deformation.</li>
+<li>A <b>reversible process</b> have to avoid all of the conditions of a spontaneous process. They are idealised cases.</li>
+<li>An <b>unnatural process</b> do not occur in the real world, and proceed opposite to spontaneous processes.</li></ul>
+<p> </p>
+<h1 id="Thermal_Expansion">Thermal Expansion</h1>
+<p> Linear expansion: \[L\approx(1+\alpha\Delta T)L_0\quad\textrm{or}\quad\frac{\Delta L}{L}\approx\alpha\Delta T\] Volume expansion: \[V\approx(1+\beta\Delta T)V_0,\quad\beta=3\alpha\] with: \[\beta = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_p\] Some examples of thermal expansion are bimetallic strips, and the ocean.  <b>Remember deformations from PHYS102-Classical Mechanics</b> Table of deformations (Youngs modulus type stuff):  </p>
+<table Class="centre"><thead><tr><th style="text-align:left">Type</th><th style="text-align:left">Stress</th><th style="text-align:left">Strain</th><th style="text-align:left">Deformation</th></tr></thead><tbody><tr><td style="text-align:left">Uniaxial (Youngs Modulus)</td><td style="text-align:left">\(\frac{F_{\perp}}{A}\)</td><td style="text-align:left">\(\frac{\Delta l}{l_0}\)</td><td style="text-align:left">\(Y=\frac{F_{\perp}/A}{\Delta l /l_0}\)</td></tr><tr><td style="text-align:left">Bulk (Bulk Modulus)</td><td style="text-align:left">\(\Delta p\)</td><td style="text-align:left">\(\frac{\Delta V}{V_0}\)</td><td style="text-align:left">\(B=-\frac{\Delta p}{\Delta V/V_0}\)</td></tr><tr><td style="text-align:left">Shear (Shear Modulus)</td><td style="text-align:left">\(\frac{F_{//}}{A}\)</td><td style="text-align:left">\(\frac{x}{h}\)</td><td style="text-align:left">\(S=\frac{F_{//} /A}{x/h}\)</td></tr></tr></body></table>
+<p>  </p>
+<h1 id="Ideal_Gasses">Ideal Gasses</h1>
+<p> Boyle's law: \(p\propto 1/V\) Charles' Law: \(V\propto T\) Gay-Lussac's Law: \(p\propto T\)  Combining to: \[pV\propto T\] (at a constant \(N\))  Furthermore, we can derive the ideal gas equations \[pV=nRT\qquad\&\qquad pV=Nk_BT\] with \(R=N_Ak_B\)  Furthermore, \(U=nC_vT\)  The root-mean-square (rms) speed of an ideal gas is given by: \[v_{rms}=\sqrt{\frac{3RT}{M}}=\sqrt{\frac{3k_BT}{m}}\] where \(M\) is molar mass, and \(m\) is particle mass.  Finally: \(\overline{K}=\frac{3}{2}Nk_BT=\frac{3}{2}nRT\)  </p>
+<h1 id="Heat_Conduction">Heat Conduction</h1>
+<p>\[\frac{Q}{\Delta t}=-K\Delta T\] where \(K\) is thermal conductance.  For short times and distances we have <i>Fourier's Law</i>: \[q=-k\frac{dT}{dx}\] where \(q\) is the heat flux density and \(k\) is thermal conductivity  </p>
+<h1 id="Heat_capacity">Heat capacity</h1>
+<p> \[C_V=\left(\frac{\partial Q}{\partial T}\right)_V,\qquad C_p=\left(\frac{\partial Q}{\partial T}\right)_p\] ...Molar heat capacity at fixed volume or pressure. or \(c\) is per unit mass, (specific heat capacity).  </p>
+<h1 id="Calories">Calories</h1>
+<p> 1cal is a small calorie, which is the energy to raise 1g of water by 1°C.  Specifically: \(1\textrm{ cal}=4.184\)J  1Cal = \(10^3\)cal = 1kcal  </p>
+<h1 id="States_Of_Matter">States Of Matter</h1>
+<p> We can represent that states of a substance using a phase diagram. This is pressure of a substance against its temperature, with the different states drawn on this graph.  <br><img src="../Assets/PhaseDiagrams.png" alt="PhaseDiagrams.png"/><br>  Another example: <br><img src="../Assets/SupercriticalFluids.png" alt="SupercriticalFluids.png"/><br>  Generalised, with special features: <br><img src="../Assets/GeneralPhaseDiagram.png" alt="GeneralPhaseDiagram.png"/><br>  Changing the conditions can change the state in a phase transition. Along the <i>phase boundaries</i>, two phases are in equilibrium. At the <i>triple point</i> all three phases coexist. At a <i>critical point</i>, two phases becomes indistinguishable.  </p>
+<h2 id="Phase_boundaries">Phase boundaries</h2>
+<p> At the phase transition, at fixed pressure \(p\), per unit mass of the substance, </p>
+<ul>
+<li>The energy* changes: latent heat \(L\)</li>
+<li>The volume changes: specific volume \(\Delta v\)</li>
+<li>The entropy changes: specific entropy \(\Delta s=\frac{L}{T}\)</li></ul>
+<p> (<i> this energy change is at constant pressure, and we will later call it enthalpy)  The tangent to the curve between states, called the </i>coexistence curve* has slope \[\frac{dp}{dT}=\frac{L}{T\Delta v}=\frac{\Delta s}{\Delta v}\]  </p>
+<h2 id="Claudius-Clapeyron_Equation">Claudius-Clapeyron Equation</h2>
+<p> On the evaporation curve, a useful approximation is to set: \[\Delta v\approx v_{gas}\approx \frac{nRT}{pm}\] amounting to the gas having a much larger volume than the liquid, and treating it as ideal. This gives \[\frac{dp}{dT}=\frac{pL}{T^2\left(\frac{R}{M}\right)}\] where \(M\) is the molar mass.  </p>
+<h2 id="State_vs_Phase">State vs Phase</h2>
+<p> </p>
+<ul>
+<li><i>State of matter</i>: General term that describes the physical form of matter, such as solid, liquid, gas, or plasma. </li>
+<li><i>Phase of matter</i>: more specific term for a region of matter that has uniform physical and chemical properties, such as density, temperature, or composition. </li></ul>
+<p> A state of matter can have one or more phases, depending on the conditions.  </p>
+<h2 id="State_Principle">State Principle</h2>
+<p> The state of a system is described by \(r+1\) <i>intensive variables,</i> where \(r\) is the number of significant <i>work interactions</i>.  For example, a simple compressible matter, \(r=1\).  <b>Some extensive variables:</b> </p>
+<ul>
+<li>Internal energy \(U\)</li>
+<li>Volume \(V\)</li>
+<li>particle number \(N\textrm{ or }n\)</li>
+<li>Entropy \(S\)</li></ul>
+<p> <b>...And some intensive variables</b> </p>
+<ul>
+<li>Temperature \(T\)</li>
+<li>pressure \(p\)</li>
+<li>chemical potential \(\mu\)</li></ul>
+<p> </p>
+<h2 id="Equation_Of_State">Equation Of State</h2>
+<p> Using these variables, you can create an equation of state. For example, for an ideal gas: \(pV=Nk_BT\)  <br><img src="../Assets/IHaveNoIdea.png" alt="IHaveNoIdea.png"/><br>  </p>
+<h1 id="Van_Der_Waals_Equation">Van Der Waals Equation</h1>
+<p> A better ideal gas equation, that accounts for the size of the molecules, and the attractive forces between them.  \[\left(p+\frac{an^2}{V^2}\right)(V-nb)=nRT\]  </p>
+<ul>
+<li>\(a\) models attraction of molecules, which reduces the pressure.</li>
+<li>\(b\) represents volume taken up by the finite-sized gas molecules.</li></ul>
+<p> When \(a=b=0\), the gas is ideal, and the normal ideal gas equation pops out.  </p>
+<h1 id="Isotherms">Isotherms</h1>
+<p> \(p(V)\) at a constant \(T\). <br><img src="../Assets/IsoTherms.png" alt="IsoTherms.png"/><br>  ...more formally: \[\left(\frac{\partial p}{\partial V}\right)_T\lt 0:\textrm{  The system is stable}\]  or <br><img src="../Assets/IsoTherms2.png" alt="IsoTherms2.png"/><br> \[\left(\frac{\partial p}{\partial V}\right)_T\gt 0:\textrm{  The system is unstable}\]  </p>
+<h1 id="Work_of_processes">Work of processes</h1>
+<p> Over a small step, \((dW)\): \[dW=Fdx=pAdx=pdV\]  If we <i>reverse the process</i>, \(W=-W\).  Furthermore, for a <i>cyclic process</i>, \[W=\oint pdV\] ...which is the enclosed area.  </p>
+<h1 id="Internal_Energy">Internal Energy</h1>
+<p>For \(n\) moles of ideal gas with \(f\) degrees of freedom: \(U=nC_VT\), with \(C_V=fR/2\)  Basically, for a gas in a 3D volume: \[U=\frac{3}{2}nRT\]  </p>
+<h1 id="First_Law_of_Thermodynamics">First Law of Thermodynamics</h1>
+<p> </p>
+<blockquote>In any thermodynamic process, the <b>total energy</b> (of a system + surroundings) is <b>conserved</b></blockquote>
+<p> For a closed system: \[\Delta U=Q-W\] ...where \(\Delta U\) is the change of internal energy, \(Q\) is the heat transferred into the system, and \(W\) is the work done by the system.  Heat and work are <i>process properties</i>. This means they are not a function of the initial and final state, but on the path between them. Internal energy is a <i>state property</i>. It is changed by the process in a way that can be inferred from the initial and final state.  </p>
+<h2 id="Quasistatic_Processes">Quasistatic Processes</h2>
+<p> ... An idealised process, keeping the system in thermal equilibrium. System can be described by its equilibrium properties, even though these now depend on time. It requires the process to be sufficiently slow.  <b>Examples:</b> </p>
+<ul>
+<li>Expansion and contraction of railway tracks due to temperature changes. </li>
+<li>The charging and discharging of a smartphone battery. </li>
+<li>The growth of a tree.</li></ul>
+<p> <b>In terms of state variables:</b> </p>
+<ul>
+<li><i>Isochoric:</i> \(V=\) const. Thus we can tell from \(dW=pdV\) that the work must be \(0\), hence \(Q=\Delta U\)</li>
+<li><i>Isobaric:</i> \(p=\) const. Using the method above, we can tell that \(W=p\Delta V\), hence \(Q=\Delta H=\Delta U+p\Delta V\), and \(\Delta S=mc_p\ln(T_f/T_i)\)</li>
+<li><i>Isothermal:</i> \(T=\) const, where \(p\) varies with \(V\). \(\Delta U=0\implies Q=-W\), furthermore <i>in ideal gases only</i>: </li></ul>
+<p>\[Q=-W=nRT\ln\frac{V_2}{V_1}\] ...you may use the second law of thermodynamics (\(T\;dS=\delta Q\)) to work out the change in entropy. </p>
+<ul>
+<li><i>Adiabatic:</i> \(Q=0\)</li></ul>
+<p> <br><img src="../Assets/IdealGasEquations.png" alt="IdealGasEquations.png"/><br>  <br><img src="../Assets/QuasistaticProcesses.png" alt="QuasistaticProcesses.png"/><br>  </p>
+<h2 id="Adiabatic_process_for_an_ideal_gas">Adiabatic process for an ideal gas</h2>
+<p> \[pV^\gamma=\textrm{const}\] with adiabatic exponent \(\gamma=C_p/C_v=1+2/f\)  </p>
+<h1 id="Flow_processes">Flow processes</h1>
+<p>Three main kinds of processes: changes in a system, cycles in a system <b>flows through a system</b>  <i>first law of flow processes:</i> internal energy in the control volume \(dU=dU_{in}+\delta Q-dU_{out}-\delta W_{tot}\)  But: enthalpy \(H=U+pV\)  \[\implies dU=dH_{in}+\delta Q-dH_{out}-\delta W_{external}\]  </p>
+<h1 id="Cyclic_Processes">Cyclic Processes</h1>
+<p>System returns to its initial state. This means that all state variables, including \(U\), return to their initial value: \[\Delta U=0\implies W=Q\]  </p>
+<h2 id="Heat_Engines">Heat Engines</h2>
+<p><br><img src="../Assets/HeatEngine.png" alt="HeatEngine.png"/><br>  First Law: \(W=Q_H-Q_C\)  With efficiency \[\eta=\frac{W}{Q_H}\]  </p>
+<h3 id="Carnot_cycle">Carnot cycle</h3>
+<p>...A specific type of engine that is theoretically the <i>most efficient engine</i>..  \[\eta=1-\frac{T_C}{T_H}\]  A reversed heat engine is also a refrigerator, with performance \(K=\frac{|Q_C|}{|W|}\).  The Carnot cycle <i>is reversible</i>, in which its performance is \(K=\frac{T_C}{T_H-T_C}\).  </p>
+<h1 id="Coefficients_that_Characterizes_the_Classical_States">Coefficients that Characterizes the Classical States</h1>
+<p><br><img src="../Assets/Something.png" alt="Something.png"/><br>  If a process is reversible: \[Q=\int^{S_2}_{S_1}T\;ds\qquad\] </p>
+<ul>
+<li>Isothermal: \(Q=\Delta ST\)</li>
+<li>Adiabatic: \(Q=0\)</li></ul>
+<p> </p>
+<h1 id="Thermodynamic_Definition_of_Entropy">Thermodynamic Definition of Entropy</h1>
+<p>In a reversible process: \[S=\int\frac{\delta Q}{T}\]  Thus: \[\left(\frac{\partial U}{\partial S}\right)_V=T\]  </p>
+<h1 id="Entropic_Form,_Second_Law">Entropic Form, Second Law</h1>
+<p> </p>
+<blockquote>For natural, spontaneous process, the total entropy of system and surroundings always increases:\[\Delta S\gt 0\]</blockquote>
+<p> </p>
+<h1 id="Principle_of_Minimum_Energy_(Closed_Systems)">Principle of Minimum Energy (Closed Systems)</h1>
+<p>In closed systems, natural processes with fixed extropy \(S\), and external parameters (volume, etc), proceed to reach an equilibrium state that <i>minimises</i> the internal energy \(U\).  </p>
+<h1 id="Statistical_Definition_of_Entropy">Statistical Definition of Entropy</h1>
+<p>\[S=k_B\ln\Omega\] where \(\Omega\) is the number of microstates (orientations) of a system.  </p>
+<h1 id="Gibbs_Entropy_Formula">Gibbs Entropy Formula</h1>
+<p>Goal: make thermodynamics work for non-isolated systems  The Gibbs entropy formula is particularly useful when dealing with systems where the microstates have different probabilities. This is common in systems in thermal equilibrium with varying energy levels and where not all microstates are equally likely. The Gibbs entropy is given by:  \[S=-k_B\sum_iP_i\ln P_i\] where \(S\) is the entropy, \(k_B\)​ is the Boltzmann constant, \(P_i\)​ is the probability of the system being in the \(i\)-th microstate, and the sum is over all possible microstates.  <br><img src="../Assets/GibbsEntropy.png" alt="GibbsEntropy.png"/><br>  </p>
+<h1 id="Boltzmann_Distribution">Boltzmann Distribution</h1>
+<p>The Boltzmann entropy formula \(S=k_B\ln\Omega\) applies to isolated systems: The total energy \(U\), volume \(V\), and particle number \(N\) are fixed.  </p>
+<ul>
+<li>Working out the number of microstates \(\Omega\) for such systems is difficult.</li>
+<li>Also, we are often interested in systems that are not isolated.</li></ul>
+<p> </p>
+<blockquote>The most important case are systems coupled to a reservoir of fixed temperature. Thermodynamically, we describe this situation by the free energy \(F=U-TS\)Each microstate of energy \(E_i\) occurs with probability: \(p_i=\frac{1}{Z}e^{-\frac{E_i}{k_BT}}\)</blockquote>
+<p> The normalisation constant \(Z=\sum_ie^{-\frac{E_i}{k_BT}}\) is known as the <b>partition function</b>. </p>
+</div>
+</body>
+</html>

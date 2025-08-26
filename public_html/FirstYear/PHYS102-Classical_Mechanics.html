@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PHYS102-Classical_Mechanics</title>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="../style.css" title="DevEng Style"/>
+	</head>
+<body>
+<script>
+window.MathJax = {
+    loader: {
+        load: ['[tex]/physics', '[tex]/color']
+    },
+    tex: {
+        packages: {
+            '[+]': ['physics', 'color']
+        }
+    }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<div id="__container__">
+
+<h1>PHYS102-Classical_Mechanics</h1>
+
+<div onclick="toc_click()" id="__toc_button__" class="w3-block w3-button" style="background-color: #444; color:white; font-weight: bold;">Table of Contents</div>
+<div id="__toc__" class="w3-hide w3-animate-top w3-container">
+<ol class="__toc_ol__ __lvl_1__">
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Angular_Velocity,_Acceleration">Angular Velocity, Acceleration</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Linear_Speed_In_Angular_Motion">Linear Speed In Angular Motion</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Acceleration">Acceleration</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Moment_Of_Inertia">Moment Of Inertia</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#For_Composite_Bodies">For Composite Bodies</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#For_An_Extended_Object">For An Extended Object</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Kinetic_Energy">Kinetic Energy</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Torque">Torque</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Work_and_Power">Work and Power</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Rolling_without_Slipping">Rolling without Slipping</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Angular_Momentum">Angular Momentum</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Object_Stability">Object Stability</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Real_Bodies">Real Bodies</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Kepler's_Laws">Kepler's Laws</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#1st">1st</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#2nd">2nd</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#3rd">3rd</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Escape_Speed">Escape Speed</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Fluid_Mechanics">Fluid Mechanics</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Fluid_Equilibrium">Fluid Equilibrium</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Conservation_Of_Liquid">Conservation Of Liquid</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Bernoulli's_Equation">Bernoulli's Equation</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Viscosity">Viscosity</a></li>
+</ol>
+</ol>
+</ol>
+</div>
+<script>
+function toc_click() {
+    var x = document.getElementById('__toc__');
+    if (x.classList.contains("w3-hide")) {
+        x.classList.remove("w3-hide");
+    }
+    else {
+        x.classList.add("w3-hide");
+    }
+}
+</script>
+
+<h1 id="Angular_Velocity,_Acceleration">Angular Velocity, Acceleration</h1>
+<p>Angular velocity \((\omega)\) and angular acceleration \((\alpha)\) are \[\omega=\frac{d\theta}{dt};\;\;\;\;\alpha=\frac{d\omega}{dt}=\frac{d^2\theta}{dt^2}\] The direction of \(\omega\) is given by the right hand grip rule (thumb = direction, fingers = rotation). Direction of \(\alpha\) uses the same rule, but the fingers are the rate of change of \(\omega\). </p>
+<h1 id="Linear_Speed_In_Angular_Motion">Linear Speed In Angular Motion</h1>
+<p>Speed \((v)\) is: \[v=\frac{ds}{dt}=r\frac{d\theta}{dt}=r\omega\] Where \(s\) is arc length, and \(r\) is radius. </p>
+<h2 id="Acceleration">Acceleration</h2>
+<p>Tangential component: \[a_{tangential}=\frac{dv}{dt}=\frac{d}{dt}(r\omega)=r\alpha\] Centripetal Component \[a_{centripetal}=\frac{v^2}{r}=\omega^2r\] </p>
+<h2 id="Moment_Of_Inertia">Moment Of Inertia</h2>
+<p>Moment of inertia is a measure of how hard it is to start an object rotating. \[I=\sum_im_ir_i^2\] </p>
+<h2 id="For_Composite_Bodies">For Composite Bodies</h2>
+<p>For a body with multiple moments of inertia stacked symmetrically along the axis of rotation:  \[I=I_A+I_B+I_C=\sum_iI_i\] </p>
+<h2 id="For_An_Extended_Object">For An Extended Object</h2>
+<p><br><img src="../Assets/Dumbell_Interial.jpeg" alt="Dumbell_Interial.jpeg"/><br> Inertia in Z = I Inertia in Z’=I’ \[I'=I_{cm}+md^2\;\;\;\;\;(cm=center \;of\; mass)\] </p>
+<h2 id="Kinetic_Energy">Kinetic Energy</h2>
+<p>For a point mass: \[K_{Rotational}=\frac{1}{2}mv^2=\frac{1}{2}m\omega^2r^2\] For one particle in the system: \[K_i=\frac{1}{2}m_iv_i^2=\frac{1}{2}m_ir_i^2\omega^2\] So in total: \[K=\sum_i\frac{1}{2}m_ir_i^2\omega^2=\frac{1}{2}\omega^2\sum_im_ir_i^2\] BUT Moment of Inertia \((I)\) is \(\sum_im_ir_i^2\), so \[K=\frac{1}{2}I\omega^2\] </p>
+<h1 id="Torque">Torque</h1>
+<p> Torque \((\tau)\): \[\boldsymbol{\tau}=F_tl=Fr_\perp\sin(\phi)\] As a vector: \[\boldsymbol{\tau}=\mathbf{F}\times\mathbf{r}\;\;\;(cross\;product)\] You can use the right hand grip rule for the direction of torque. (\(\tau\)=thumb)  From \(F=ma:\) \[\boldsymbol{\tau}=\mathbf{I}\cdot\boldsymbol{\alpha}\] </p>
+<h2 id="Work_and_Power">Work and Power</h2>
+<p>\[W=\int dW=\int \tau d\theta=\tau\Delta\theta\;\;\;(If \;\tau\;is\;constant)\] \[P=\frac{dW}{dt}=\tau\frac{d\theta}{dt}=\tau\omega\] </p>
+<h2 id="Rolling_without_Slipping">Rolling without Slipping</h2>
+<p>If a body is rolling without slipping: \[v_{cp}=v_{cm}-\omega R=0\] Where \(cp\)=contact point and \(cm\)=centre of mass, so \[V_{cm}=\omega R\] </p>
+<h1 id="Angular_Momentum">Angular Momentum</h1>
+<p>Definition: \[\mathbf{L}=\sum_i\mathbf{r_i}\times\mathbf{p_i}\] Angular momentum is conserved in the absence of external torque. If there is a torque then: \[\frac{d\mathbf{L}}{dt}=\boldsymbol{\tau}\] If the rotation axis is an axis of symmetry then the angular momentum is: \[\mathbf{L}=I\boldsymbol{\omega}\] Precession Angular Velocity \[\Omega=\frac{\tau_y}{L_x}\] Gyroscope Equation: \[\omega_p=\frac{\tau}{L}\] </p>
+<h1 id="Object_Stability">Object Stability</h1>
+<p>Conditions for equilibrium:  \[\sum\mathbf{F}=0\;\;\;\&\;\;\;\sum\boldsymbol{\tau}=0\] Theorem: The gravitational torque acts completely through the objects centre of mass: \[\boldsymbol{\tau}_W=M\mathbf{r}_{cm}\times\mathbf{g}\] </p>
+<h1 id="Real_Bodies">Real Bodies</h1>
+<p>Table of deformations (Young's modulus type stuff):  </p>
+<table Class="centre"><thead><tr><th style="text-align:left">Type</th><th style="text-align:left">Stress</th><th style="text-align:left">Strain</th><th style="text-align:left">Deformation</th></tr></thead><tbody><tr><td style="text-align:left">Uniaxial (Youngs Modulus)</td><td style="text-align:left">\(\frac{F_{\perp}}{A}\)</td><td style="text-align:left">\(\frac{\Delta l}{l_0}\)</td><td style="text-align:left">\(Y=\frac{F_{\perp}/A}{\Delta l /l_0}\)</td></tr><tr><td style="text-align:left">Bulk (Bulk Modulus)</td><td style="text-align:left">\(\Delta p\)</td><td style="text-align:left">\(\frac{\Delta V}{V_0}\)</td><td style="text-align:left">\(B=-\frac{\Delta p}{\Delta V/V_0}\)</td></tr><tr><td style="text-align:left">Shear (Shear Modulus)</td><td style="text-align:left">\(\frac{F_{//}}{A}\)</td><td style="text-align:left">\(\frac{x}{h}\)</td><td style="text-align:left">\(S=\frac{F_{//} /A}{x/h}\)</td></tr></tr></body></table>
+<h2 id="Kepler's_Laws">Kepler's Laws</h2>
+<h3 id="1st">1st</h3>
+<p>Planets move in an elliptical orbit with the parent star as one of the two foci. </p>
+<h3 id="2nd">2nd</h3>
+<p>The areas swept out by the orbit from time interval \(\Delta t\) is identical through all positions of orbit. </p>
+<h3 id="3rd">3rd</h3>
+<p>\(T^2\propto r^3\),  \(T^2=\left (\frac{4\pi^2}{GM}\right )r^3\), or \(T=\frac{2\pi a^{3/2}}{\sqrt{GM}}\) where \(2a\) is the diameter of the widest point of orbit.  </p>
+<h2 id="Escape_Speed">Escape Speed</h2>
+<p>You can use energy conservation. \(U+K=\textrm{const}.\) \[v=\sqrt{\frac{2GM}{R}}\] Following from this, the Schwarzschild radius is: \[R=\sqrt{\frac{2GM}{c^2}}\] </p>
+<h2 id="Fluid_Mechanics">Fluid Mechanics</h2>
+<p>Pressure depends on depth, as there will be more fluid above an object the further it descends.\[p(y)=-\rho gy+p_0\] </p>
+<h3 id="Fluid_Equilibrium">Fluid Equilibrium</h3>
+<p><b>Pascal's Principle:</b> A change in pressure applied to an enclosed fluid is transmitted undiminished to all points in the fluid.  <b>Archimedes' Principle:</b> When a body is partially or fully immersed, the buoyancy force is equal to the weight of the fluid displaced.  </p>
+<h3 id="Conservation_Of_Liquid">Conservation Of Liquid</h3>
+<p>The volume of liquid through a point will exit the point. The flow rate is constant. \[\ddot V=A_1v_1=A_2v_2=\textrm{constant}\] <br><img src="../Assets/Conservation_of_Liquid.png" alt="Conservation_of_Liquid.png"/><br>  </p>
+<h3 id="Bernoulli's_Equation">Bernoulli's Equation</h3>
+<p>Along a streamline of incompressible fluid where energy is conserved: \[p+\rho gy+\frac{1}{2}\rho v^2=\textrm{constant}\] Awful proof, just learn this lol <br><img src="../Assets/BernoullisEq.png" alt="BernoullisEq.png"/><br> </p>
+<h3 id="Viscosity">Viscosity</h3>
+<p>\(\eta\) …the measure of fluid resistance. <br><img src="../Assets/ViscosityDiagram.png" alt="ViscosityDiagram.png"/><br> \[F=\eta\frac{vA}{L}\] <b>Laminar Flow</b> \[\ddot V=(p_{in}-p_{out})\frac{\pi R^4}{8\eta l}\] </p>
+</div>
+</body>
+</html>

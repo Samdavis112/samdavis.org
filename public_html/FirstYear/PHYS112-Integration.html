@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PHYS112-Integration</title>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="../style.css" title="DevEng Style"/>
+	</head>
+<body>
+<script>
+window.MathJax = {
+    loader: {
+        load: ['[tex]/physics', '[tex]/color']
+    },
+    tex: {
+        packages: {
+            '[+]': ['physics', 'color']
+        }
+    }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<div id="__container__">
+
+<h1>PHYS112-Integration</h1>
+
+<div onclick="toc_click()" id="__toc_button__" class="w3-block w3-button" style="background-color: #444; color:white; font-weight: bold;">Table of Contents</div>
+<div id="__toc__" class="w3-hide w3-animate-top w3-container">
+<ol class="__toc_ol__ __lvl_1__">
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Derivative_Of_Integrals">Derivative Of Integrals</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Trig-Substitution">Trig-Substitution</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Partial_Fractions">Partial Fractions</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Improper_Integrals">Improper Integrals</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Type_I_-_Infinite_range_of_integration">Type I - Infinite range of integration</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Type_II_-_Discontinuous_Integrand">Type II - Discontinuous Integrand</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Multiple_Integrals">Multiple Integrals</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Transforming_Coordinate_Systems">Transforming Coordinate Systems</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Special_Functions">Special Functions</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Heaviside_Function">Heaviside Function</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Delta_Function">Delta Function</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Line_Integrals">Line Integrals</a></li>
+</ol>
+</ol>
+</div>
+<script>
+function toc_click() {
+    var x = document.getElementById('__toc__');
+    if (x.classList.contains("w3-hide")) {
+        x.classList.remove("w3-hide");
+    }
+    else {
+        x.classList.add("w3-hide");
+    }
+}
+</script>
+
+<h2 id="Derivative_Of_Integrals">Derivative Of Integrals</h2>
+<p>Take note of the limits here. The upper limit must be the variable you are differentiating by, and the function in the integral must not. \[\frac{d}{dx}\int^{x}_{a}f(t)dt=f(x)\] Proof \[\begin{align} &\frac{d}{dx}\int^x_af(t)dt=\frac{d}{dt}\left [F(t)\right ]^x_a\\\\ &=\frac{d}{dx}F(x)-\frac{d}{dx}F(a)\\\\ &=f(x)-0\\\\ &=f(x) \end{align}\]  </p>
+<h2 id="Trig-Substitution">Trig-Substitution</h2>
+<p>Three forms and their respective substitutions:  </p>
+<table Class="centre"><thead><tr><th style="text-align:left">Form</th><th style="text-align:left">Substitution</th></tr></thead><tbody><tr><td style="text-align:left">\(\int\sqrt{a^2-x^2}dx\)</td><td style="text-align:left">\(x=a\sin\theta\)</td></tr><tr><td style="text-align:left">\(\int\sqrt{a^2+x^2}dx\)</td><td style="text-align:left">\(x=a\tan\theta\)</td></tr><tr><td style="text-align:left">\(\int\sqrt{x^2-a^2}dx\)</td><td style="text-align:left">\(x=a\sec\theta\)</td></tr></tr></body></table>
+<h2 id="Partial_Fractions">Partial Fractions</h2>
+<ol>
+<li> Unrepeated linear factor \[\frac{A}{ax+b}\]</li>
+<li> Repeated linear factor \[\frac{B}{(ax+b)^m},\;\;m\geq2\]</li>
+<li>  Unrepeated quadratic factor \[\frac{Cx+D}{ax^2+bx+c}\]</li>
+<li> Repeated quadratic factor \[\frac{Ex+F}{(ax^2+bx+c)^n},\;\;n\geq2\]</li></ol>
+<p> </p>
+<h2 id="Improper_Integrals">Improper Integrals</h2>
+<h3 id="Type_I_-_Infinite_range_of_integration">Type I - Infinite range of integration</h3>
+<p>We can treat type I improper integrals as limits: \[\int^\infty_af(x)dx=\lim_{b\to\infty}\int_a^bf(x)dx=l\] If the limit \(l\) is finite, the integral is said to <b>converge</b> and be equal to \(l\). If \(l\to\pm\infty\) (or does not exist) as \(b\to\infty\), then the integral is said to diverge.  <b>Note:</b> the following is also possible \[\int^\infty_{-\infty}f(x)dx=\lim_{a\to-\infty}\int_a^0f(x)dx+\lim_{b\to\infty}\int_0^bf(x)dx\] …Which, if either or both of these limits diverge, then the original expression diverges also.  </p>
+<h4 id="Simple_convergence_test">Simple convergence test</h4>
+<p>For a integral \(\int^\infty_af(x)dx\): If for a large \(x\), \(f(x)=\frac{g(x)}{x^n}\) is such that \(g(x)\) is non zero:  </p>
+<ol>
+<li> \(|g(x)| \lt  C\) (arbitrary constant)</li>
+<li> n\gt 1</li></ol>
+<p> Then the integral is convergent. </p>
+<h3 id="Type_II_-_Discontinuous_Integrand">Type II - Discontinuous Integrand</h3>
+<p>If for integral: \(\int^b_af(x)dx\), the range of \(a\;\&\;b\) are finite, but \(f(x)\to\pm\infty\) as \(x\to a\), \(x=a\) is known as a singularity point.  Such we can define the improper integral: \[\int^b_af(x)dx=\lim_{\epsilon\to0}\int^b_{a+\epsilon}f(x)dx=l\] If \(l\) is finite, the integral will <b>converge</b> and be equal to \(l\), else it will either be infinite or not exist and in which case will be said to <b>diverge</b>.  </p>
+<h2 id="Multiple_Integrals">Multiple Integrals</h2>
+<h3 id="Transforming_Coordinate_Systems">Transforming Coordinate Systems</h3>
+<p>When translating from cartesian coordinates to polar, cylindrical or spherical coordinates, we must multiply the function by the Jacobian. \[\begin{array}{l} \textrm{polar:}\iint dxdy\implies\iint r\cdot drd\theta\\  \textrm{cylindrical:}\iiint dxdydz\implies\iiint r\cdot dzdrd\theta\\  \textrm{Spherical:}\iiint dxdydz\implies \iiint\rho\sin^2(\phi)\cdot d\rho d\theta d\phi  \end{array}\]  </p>
+<h2 id="Special_Functions">Special Functions</h2>
+<h3 id="Heaviside_Function">Heaviside Function</h3>
+<p>(Step function) \[H(x)\equiv \Theta(x)\equiv v(x)\] It is related to the modulus function... \[|x|=x\cdot(H(x)-H(-x))\]<br><img src="../Assets/HeavisideFunction.png" alt="HeavisideFunction.png"/><br> <br><img src="../Assets/Heaviside(sinx).png" alt="Heaviside(sinx).png"/><br> This is useful in many applications of physics, such as momentum changes when a ball hits a wall. </p>
+<h3 id="Delta_Function">Delta Function</h3>
+<p>This one is harder to understand... Definition: \[\delta(t)=\frac{dH(t)}{dt}\qquad:\qquad\int\delta(t)dt=1\] <br><img src="../Assets/DeltaFunctionStuff.png" alt="DeltaFunctionStuff.png"/><br> </p>
+<h2 id="Line_Integrals">Line Integrals</h2>
+<p><b>Definition</b>: Let \(f(x,y)\;\;\&\;\;g(x,y)\) be single values functions. \[I_{line}=\int_{(AB)}(f(x,y)dx\;+\;g(x,y)dy)\] This way is a bit difficult to apply, so it is generally better to use parameterisation.  Length of a curve: \[L=\int_Cf(x,y)ds\qquad\qquad ds=\sqrt{\left (\frac{dx}{dt} \right)^2 + \left (\frac{dy}{dt} \right)^2}dt\] Where the limits are the bounds of \(t\). </p>
+</div>
+</body>
+</html>

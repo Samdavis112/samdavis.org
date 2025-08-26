@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PHYS265-Dynamics_&_Content_of_the_Universe</title>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="../style.css" title="DevEng Style"/>
+	</head>
+<body>
+<script>
+window.MathJax = {
+    loader: {
+        load: ['[tex]/physics', '[tex]/color']
+    },
+    tex: {
+        packages: {
+            '[+]': ['physics', 'color']
+        }
+    }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<div id="__container__">
+
+<h1>PHYS265-Dynamics_&_Content_of_the_Universe</h1>
+
+<div onclick="toc_click()" id="__toc_button__" class="w3-block w3-button" style="background-color: #444; color:white; font-weight: bold;">Table of Contents</div>
+<div id="__toc__" class="w3-hide w3-animate-top w3-container">
+<ol class="__toc_ol__ __lvl_1__">
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Cosmic_Distance_Ladder">The Cosmic Distance Ladder</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Parallax">Parallax</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Statistical_Parallax">Statistical Parallax</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Measurements">Measurements</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Luminosity_Distance">Luminosity Distance</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Magnitudes">Magnitudes</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Standard_Candles">Standard Candles</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Cepheids">Cepheids</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Supernovae">Supernovae</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Galaxies_as_Standard_Candles">Galaxies as Standard Candles</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Hubble-Lemaitre_Law">Hubble-Lemaitre Law</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Expansion_of_the_Universe">The Expansion of the Universe</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Cosmological_Horizon">The Cosmological Horizon</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Scale_Factor_of_the_Universe">The Scale Factor of the Universe</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Olber's_Paradox">Olber's Paradox</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Cosmological_Principle">The Cosmological Principle</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Friedmann_Equation">The Friedmann Equation</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Continuity_Equation">The Continuity Equation</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Equation_of_State">The Equation of State</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Acceleration_Equation">The Acceleration Equation</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Curvature_of_the_Universe">The Curvature of the Universe</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Dynamics_and_Curvature">Dynamics and Curvature</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Closed,_Matter-Dominated_Universe">Closed, Matter-Dominated Universe</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Deceleration_Parameter">The Deceleration Parameter</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Cosmological_Constant">Cosmological Constant</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Dynamics_and_Cosmological_Constant">Dynamics and Cosmological Constant</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Problem_with_\(\Lambda\)">The Problem with \(\Lambda\)</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Dark_Energy">Dark Energy</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Dynamics_with_Spatial_Flatness">Dynamics with Spatial Flatness</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Radiation_Domination">Radiation Domination</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Cosmological_Constant_Domination">Cosmological Constant Domination</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Phantom_Dark_Energy">Phantom Dark Energy</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Age_of_the_Universe">The Age of the Universe</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Horizon_Revisited">The Horizon Revisited</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Cosmic_Inflation">Cosmic Inflation</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#(Quasi)_de-Sitter_Inflation">(Quasi) de-Sitter Inflation</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Horizon_Problem">The Horizon Problem</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Solving_the_Horizon_Problem">Solving the Horizon Problem</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Flatness_Problem">The Flatness Problem</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Solving_the_Flatness_Problem">Solving the Flatness Problem</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Inflation_and_Density_Perturbations">Inflation and Density Perturbations</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Dark_Matter">Dark Matter</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Observational_Evidence_for_Dark_Matter">Observational Evidence for Dark Matter</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Properties_of_non-baryonic_Dark_Matter">Properties of non-baryonic Dark Matter</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Candidates_for_Dark_Matter">Candidates for Dark Matter</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Problems_of_CDM">Problems of CDM</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Observational_Evidence">Observational Evidence</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Content_of_the_Universe">Content of the Universe</a></li>
+</ol>
+</div>
+<script>
+function toc_click() {
+    var x = document.getElementById('__toc__');
+    if (x.classList.contains("w3-hide")) {
+        x.classList.remove("w3-hide");
+    }
+    else {
+        x.classList.add("w3-hide");
+    }
+}
+</script>
+
+<h1 id="The_Cosmic_Distance_Ladder">The Cosmic Distance Ladder</h1>
+<p><br><img src="../Assets/CosmicDistanceLadder.png" alt="CosmicDistanceLadder.png"/><br> </p>
+<blockquote><b>Cosmic Distance Ladder:</b> A sequence of techniques for the estimation of distances of celestial bodies used to chart the observable Universe. Each technique in the sequence corresponds to a range of distances, greater than but overlapping with the previous technique in the sequence. </blockquote>
+<p> </p>
+<h2 id="Parallax">Parallax</h2>
+<p>The parallax method is triangulation, using the diameter of the Earth's orbit as a baseline. </p>
+<ul>
+<li>The parallax method uses the apparent change in direction of the source due to the Earth's motion around the sun.</li>
+<li>Two observations are taken, 6 months apart.</li>
+<li>The change in the direction of observation is measured through the displacement of the star’s image with respect to the images of the far more populous and distant stars in the background.</li></ul>
+<p>We then use the formula \[D=d\cot\phi\approx d/\phi\] ...where \(D\) is the distance to the source, \(d\) is the radius of Earths orbit (\(d\equiv 1\textrm{AU}\)), and \(\phi\) is the <i>parallax</i> (in radians). </p>
+<blockquote><i>Parallax:</i> Half of the apparent angular displacement of a source (star) on the celestial sphere per semester</blockquote>
+<p> </p>
+<blockquote><i>Celestial sphere:</i> An imaginary sphere of indefinite but very large radius, where the images of distant sources (stars) are projected.</blockquote>
+<p> </p>
+<blockquote><i>Parsec (pc):</i> The distance of a source which has parallax equal to unity in arc-seconds. \[1\;\textrm{pc}\equiv\frac{1\;[\textrm{AU}]}{1''[\textrm{rad}]}=3.26\;\textrm{Lyrs}\]Hence, \(D(\textrm{pc})=1/\phi(\textrm{arcsec})\)</blockquote>
+<p> The resolution of telescopes limits range to: \(D\lesssim30\;\textrm{pc}\). </p>
+<h2 id="Statistical_Parallax">Statistical Parallax</h2>
+<p>Typical star velocity: \(v\equiv|\mathbf{v}|\lesssim100\;\textrm{km/sec}\) where \[\mathbf{v}=\mathbf{v}_r+\mathbf{v}_\perp\] \(\mathbf{v}_r\): radial velocity; along the line of sight. \(\mathbf{v}_\perp\): transverse velocity; perpendicular to line of sight. </p>
+<h3 id="Measurements">Measurements</h3>
+<p>\(|\mathbf{v}_r|\): from Doppler shift of spectral lines (see later) \(|\mathbf{v}_\perp|\): from proper motion \(\omega\)(angular velocity): \(|\mathbf{v}_\perp|=D\omega\). </p>
+<blockquote><i>Statistical Parallax method:</i> Considers open star clusters without overall velocity, comprised of stars whose random motion is assumed isotropic.</blockquote>
+<p> Measurements of radial velocity and proper motion of individual stars are used to estimate the average values of \(\overline{v}_r\) and \(\overline{\omega}\) of the cluster.  Isotropy \(\implies 2\overline{v}_r^2\equiv\overline{2v^2_r}\eqsim\overline{v^2_\perp}\) \[D\eqsim\frac{\sqrt{2}\overline{v}_r}{\overline{\omega}}\] Statistical parallaxes can be used up to distances of \(D\lesssim 1\;\textrm{kpc}\).  </p>
+<h2 id="Luminosity_Distance">Luminosity Distance</h2>
+<blockquote><i>Absolute luminosity (\(L\)):</i> Total power radiated. Measured in units \([L]=\textrm{Watts}=10^7\;\textrm{erg/sec}\).</blockquote>
+<p> </p>
+<blockquote><i>Apparent luminosity (\(l\)):</i> Power per unit area normal to the line of sight. Measured in units \([l ]=\textrm{Watts/m}^2\).</blockquote>
+<p> Use energy conservation \(L=\ell\times(4\pi D^2)\) \[\implies D=\sqrt{\frac{L}{4\pi\ell}}\] Provided \(L\) is known, then \(D\) can be obtained by measuring \(\ell\). </p>
+<h2 id="Magnitudes">Magnitudes</h2>
+<p>Astronomical observations use: </p>
+<blockquote><i>Apparent magnitude (\(m\)):</i> Logarithmic measure of apparent luminosity \(\ell\)</blockquote>
+<p> \[\frac{\ell_1}{\ell_2}=100^{\frac{1}{5}(m_2-m_1)}\iff m_2-m_1=2.5\log\left(\frac{\ell_1}{\ell_2}\right)\] The greater the \(m\), the fainter the image of the source. We use the zero point: \(\ell_0\equiv\ell(m=0)=2.52\times 10^{-8}\;\textrm{Watts/m}^2\). </p>
+<blockquote><i>Absolute magnitude (\(M\)):</i> Apparent magnitude at a distance of \(10\;\textrm{pc}\) from the source.</blockquote>
+<p> Magnitudes are dimensionless. It can be found that \[\boxed{m-M=2.5\log(\ell_M/\ell)=5\log(D/10\;\textrm{pc})}\] This is known as the distance modulus. Provided \(M\) is known then \(D\) can be obtained by measuring \(m\). </p>
+<h2 id="Standard_Candles">Standard Candles</h2>
+<p>...are objects of known absolute luminosity and/or magnitude. We can then use the distance modulus. </p>
+<h3 id="Cepheids">Cepheids</h3>
+<blockquote>Variable stars with known relation between their brightness variation period and their average absolute luminosity / magnitude.</blockquote>
+<p> Leavitt relation: \[M=-2.8\log(P/days)-1.43\;\textrm{or}\;L\propto P^{1.12}\] Typically: \(P~10\;\textrm{days}\implies M\eqsim -4\). Cepheids can be seen up to distances of \(\lesssim10\;\textrm{Mpc}\). </p>
+<h3 id="Supernovae">Supernovae</h3>
+<blockquote><i>Supernovae SN-Ia:</i> White dwarfs in close binary systems which flare up when they collapse after accreting enough mass from their companion to surpass the Chandrasekhar limit \(M_C=1.44 M_\odot\)</blockquote>
+<p> Brightness comparable to host galaxy. There is a tight relation between \(M_\textrm{peak}\) and fading time \(\tau_f\). Hence we can use empirical Phillips relation to find the peak luminosity given fading time.  SNe-Ia can be seen up to distances of \(\lesssim 500\;\textrm{Mpc}\). </p>
+<h3 id="Galaxies_as_Standard_Candles">Galaxies as Standard Candles</h3>
+<blockquote><i>Tully-Fisher  method:</i> Relation between abs luminosity/magnitude and galactic rotational velocity. (For disk/spiral galaxies). \[L\propto v_\textrm{rot}^4\]</blockquote>
+<p> This works for distances up to \(\sim150\;\textrm{Mpc}\) with a limited precision of \(\sim10\%\).  </p>
+<blockquote><i>Brightest galaxy method:</i> Assume that the brightest galaxy in a cluster has the same absolute luminosity/magnitude.</blockquote>
+<p> Due to observed fact that apparent luminosity of galaxies within a cluster has sharp upper limit. Calibrated by Virgo cluster: \(M_\textrm{min}=-21.7\). Distance determination up to \(~8000\;\textrm{Mpc}\), but unreliable for \(D\gtrsim1000\;\textrm{Mpc}\) </p>
+<h2 id="Hubble-Lemaitre_Law">Hubble-Lemaitre Law</h2>
+<blockquote><i>Cosmological Redshift:</i> The motion of galaxies with respect to us affects identifiable sets of absorption and emission lines in their spectra due to the Doppler effect on light waves. \[\textrm{Redshift}:\qquad z\equiv\frac{\lambda_0-\lambda}{\lambda}\eqsim\frac{v}{c} \qquad\begin{align} &\lambda:\textrm{Emitted wavelength}\\ &\lambda_0:\textrm{Observed wavelength}\end{align}\]</blockquote>
+<p> "Redshift" because the vast majority of galaxies are receding from us.  </p>
+<blockquote><i>Hubble-Lemaitre Law:</i> Distant galaxies are receding from us with velocity proportional to their distance. \[v_H=H_0\times D\]SNe-Ia observations provide us with the estimation: \(H_0\approx 67.8\;[\textrm{km sec}^{-1}\textrm{Mpc}^{-1}]\)</blockquote>
+<p> The H-L law estimates \(D\sim\textrm{(several)}\times100\;\textrm{Mpc}\) </p>
+<h1 id="The_Expansion_of_the_Universe">The Expansion of the Universe</h1>
+<p>The H-L law in vector form is \(\boxed{\mathbf{v}=H_0\mathbf{r}}\) . Consider two galaxies with position vectors \(\mathbf{r}_1, \mathbf{r}_2\). It can be shown that \(\mathbf{v}_{12}=H_0\mathbf{r}_{12}\), hence the H-L law is true for all observers. This means that all galaxies are receding from all other galaxies.  We therefore define: </p>
+<blockquote><i>Universe Expansion ("Hubble Flow"):</i> All unbound parts of the universe move away from each other.</blockquote>
+<p> "Move away" does not literally mean travel away through space, rather they appear to do this as space itself expands between them.  </p>
+<h1 id="The_Cosmological_Horizon">The Cosmological Horizon</h1>
+<p>If we were to flow time backwards, the universe would contract. All points in space merge together in finite time, suggesting the existence of the big bang. </p>
+<blockquote><i>Big Bang:</i> The universe began with an explosion at all points in space.</blockquote>
+<p> The universe exists for finite time: for \(Z\to1,\quad v_H\to c\). The H-L law breaks down for \(Z\gtrsim1\) due to relativistic corrections.  Estimate of maximum observable distance: \[D_H\eqsim c/H_0=ct_H\eqsim4\;\textrm{Gpc}\] Signals from beyond \(D_H\) cannot reach us because: </p>
+<ul>
+<li>The apparent recession velocity exceeds the speed of light</li>
+<li>The time required is larger than the age of the Universe.</li></ul>
+<p>Hence \(D_H:\) The range of causal correlation. (Or the "Hubble radius") </p>
+<blockquote><i>Horizon (\(D_H\)):</i> the dimensions of a region in the Universe that is causally connected</blockquote>
+<p> <i>There is more of the Universe beyond the Horizon!!</i> The Horizon grows with time. The observable universe is defined as the horizon at the present. </p>
+<h1 id="The_Scale_Factor_of_the_Universe">The Scale Factor of the Universe</h1>
+<p>Structures following the Hubble flow grow in size in a self-similar manner. </p>
+<blockquote><i>The Scale Factor:</i> A function \(a(t)\) of cosmic time which  parameterizes the expansion of the Universe.</blockquote>
+<p> \[\boxed{\mathbf{r}(t)=a(t)\mathbf{x}}\quad\textrm{with}\quad \begin{align} &r:\;\textrm{Physical distance}\\ &x:\;\textrm{Comoving distance} \end{align}\] Comoving coordinated follow the universe expansion. Imagine a grid on a rubber sheet that gets stretched. \[\mathbf{v}=\dot{\mathbf{r}}=\mathbf{v}_H+\mathbf{v}_\textrm{pec} \quad\begin{align} &\mathbf{v}_\textrm{pec}\equiv a\dot{\mathbf{x}}:\;\textrm{Peculiar velocity (proper motion)}\\ &\mathbf{v}_H\equiv H\mathbf{r}:\;\textrm{Hubble Flow}\\ \end{align}\] ...with \[\textrm{Hubble Parameter}:\quad H(t)\equiv\left(\frac{\dot{a}}{a}\right)\] This is the <i>rate of universe expansion.</i> The Hubble parameter at the current time is the Hubble constant.  For galaxies \(v_\textrm{pec}\sim(\textrm{a few})\times100\;\textrm{km/sec}\implies\)Hubble flow dominates for \(D\gtrsim 10\;\textrm{Mpc}\).  The scale factor has only relative values and can be normalized to unity at any convenient time. E.g. \(a_0\equiv 1\). This leads to \[\frac{a_0}{a}=z+1\] Which is <i>Cosmological Redshift:</i> Stretching of wavelengths due to Universe expansion. </p>
+<h1 id="Olber's_Paradox">Olber's Paradox</h1>
+<p>Why is the sky dark at night? Were the Universe static, infinite and filled with stars then all lines of sight would end on the surface of a star. The total field of visibility would be as bright as the Sun!  <i>Big Bang Solution:</i> Expansion + Finite Age </p>
+<h1 id="The_Cosmological_Principle">The Cosmological Principle</h1>
+<blockquote><i>Cosmological Principle:</i> The Universe on large scales is homogeneous and isotropic</blockquote>
+<p> </p>
+<ul>
+<li>Homogeneity: The universe looks the same at every point in space (uniformity)</li>
+<li>Isotropy: The universe looks the same towards any spatial direction.</li></ul>
+<p> This tell us: </p>
+<ul>
+<li>There is no centre, or edges.</li>
+<li>No axis of rotation.</li>
+<li>Each region contains enough information to account for complete global description</li></ul>
+<p> <i>Homogeneous but not Isotropic example:</i> A uniform universe permeated by a uniform magnetic field. <i>Isotropic but not Homogeneous example:</i> A universe with a spherically symmetric distribution of matter.  This principle is supported observationally with scales of galactic super clusters (\(\gt 100\;\textrm{Mpc}\)). </p>
+<h1 id="The_Friedmann_Equation">The Friedmann Equation</h1>
+<p>The dynamics of the Universe is determined by a balance between its geometry and its content. \[\boxed{H^2\equiv\left(\frac{\dot{a}}{a}\right)}=\frac{8\pi G}{3}\rho-\frac{kc^2}{a^2}\] where \(kc^2=-2U/mx^2=\textrm{const}\). (from homogeneity, \(k\) cannot depend on \(x\)). \(k\;[\textrm{length}^{-2}]:\) Curvature parameter.  <b>Physical Intuition:</b> </p>
+<ul>
+<li>\(H^2\): Dynamics (expansion)</li>
+<li>\(8\pi G\rho/3\): Content (density)</li>
+<li>\(kc^2/a^2\): Geometry (curvature)</li></ul>
+<h1 id="The_Continuity_Equation">The Continuity Equation</h1>
+<p>Also known as the "fluid equation". \[\dot{\rho}+3H\left(\rho+\frac{p}{c^2}\right)=0\] The pressure (\(p\)) expresses work done by the expansion of the universe. It is isotropic (no gradients).  This equation represents energy conservation.  The continuity equation is valid for all independent components \(\rho_i\) of the density \(\rho\). Independent components are those which do not decay into one another. </p>
+<h1 id="The_Equation_of_State">The Equation of State</h1>
+<p>Cosmological perfect fluids: \(p_i=w_i\epsilon_i\), where \(\epsilon_i=\rho_ic^2=\textrm{energy density}\) and \(w_i=\textrm{baratropic parameter}\).  Hence we can express the continuity equation as \[\dot{\rho}+3(1+w_i)H\rho_i=0\]This is an ODE with solution: \[\rho_i\propto a^{-3(1+w_i)}\qquad\textrm{for const }w_i\] Examples: </p>
+<ul>
+<li>Non-relativistic matter (pressureless): \(p_m=0\implies w_m=0\implies\rho_m\propto a^{-3}\)</li>
+<li>Relativistic matter (radiation): \(p_r=\frac{\epsilon_r}{3}\implies w_r=1/3\implies\rho_r\propto a^{-4}\)</li></ul>
+<p> The early universe is radiation dominated. Both \(\rho_m,\;\rho_r\) are diluted faster than curvature \(kc^2/a^2\). The early universe is approximately spatially flat. </p>
+<h1 id="The_Acceleration_Equation">The Acceleration Equation</h1>
+<p>We differentiate the Friedmann equation w.r.t time, then use the continuity equation to find \[\frac{\ddot{a}}{a}=-\frac{4\pi G}{3}\left(\rho+\frac{3p}{c^2}\right)=-\frac{4\pi}{3}(1+3w)G\rho\] Hence we find acceleration if \(w\lt -1/3\), where \(w\) represents the barotropic parameter of the dominant component of the universe content. </p>
+<h1 id="The_Curvature_of_the_Universe">The Curvature of the Universe</h1>
+<p>A homogeneous and isotropic space can have only three types of global geometry: </p>
+<ul>
+<li>Euclidean (flat): \(k=0\)</li>
+<li>Spherical (closed): \(k\gt 0\)</li>
+<li>Hyperbolic (open): \(k\lt 0\)</li></ul>
+<p>The volume of the Universe is finite only in the case of spherical geometry (closed Universe).  If we apply the Friedmann equation to the flat universe \((k=0)\) we recover the critical density: \[\rho_c(t)=\frac{3H^2}{8\pi G}\] </p>
+<blockquote><i>Critical Density:</i> The density that a spatially flat Universe would have for a given value H of the Hubble parameter.</blockquote>
+<p> We can then introduce the density parameter: \(\Omega(t)\equiv\rho/\rho_c\). Hence we find that \[\Omega-1=\frac{kc^2}{a^2H^2}\] Hence: </p>
+<ul>
+<li>\(\rho\gt \rho_c\implies\) Closed Universe</li>
+<li>\(\rho\lt \rho_c\implies\) Open Universe</li>
+<li>\(\rho=\rho_c\implies\) Flat Universe</li></ul>
+<p> The global geometry of the Universe is determined by the average density. <i>A large density curves space substantially</i>. </p>
+<h1 id="Dynamics_and_Curvature">Dynamics and Curvature</h1>
+<p>Recall the Friedmann equation: \(H^2=\frac{8\pi G}{3}\rho-\frac{kc^2}{a^2}\) For matter and radiation domination, \(\rho\) decreases faster than \(a^{-2}\), hence the curvature term becomes increasingly important. </p>
+<ul>
+<li><i>Closed universe:</i> \(k\gt 0\), hence the \(k\)-term becomes comparable with the \(\rho\) term \(\implies H\to0\), i.e. the universe stops expanding. Eventually it will collapse down into a big crunch.</li>
+<li><i>Open universe:</i> \(k\lt 0\), hence both terms on the RHS are positive, hence the universe expands forever.</li>
+<li><i>Flat universe:</i> \(k=0\), hence \(H\to 0\) in infinite time. This means the universe expands forever asymptotically approaching a static solution.</li>
+<li>At early times of the universe the \(\rho\) term is much bigger, hence the universe behaves as if it were flat.</li></ul>
+<p><br><img src="../Assets/FriedmannUniverses.png" alt="FriedmannUniverses.png"/><br> </p>
+<h1 id="Closed,_Matter-Dominated_Universe">Closed, Matter-Dominated Universe</h1>
+<p>\(k=1/X^2_c\), where \(X_c\) is called the comoving radius of curvature. </p>
+<ul>
+<li>Physical radius \(r=aX_c=a/\sqrt{k}\)</li>
+<li>Max radius \(r_\textrm{max}=a_\textrm{max}/\sqrt{k}\)</li>
+<li>Min density \(\rho_\textrm{min}=\rho(a_\textrm{max})\)</li></ul>
+<p>At max radius, \(H=0\): Parametric solution of Friedmann equation: \[\begin{array}{l} a=\frac{1}{2}a_\textrm{max}(1-\cos\tau)\\ \sqrt{k}ct=\frac{1}{2}a_\textrm{max}(\tau-\sin\tau) \end{array}\] This is a cycloid curve parameterised by \(\tau\). We find that the universe collapses into a black hole. </p>
+<h1 id="The_Deceleration_Parameter">The Deceleration Parameter</h1>
+<p>The scalar factor can be expanded out with the Taylor series, around the present time \(t_0\) \[a(t)=a(t_0)\left[1+H_0(t-t_0)-\frac{1}{2}q_0H^2_0(t-t_0)^2\right]\] where \[\textrm{Deceleration parameter}:\quad q\equiv-\frac{a\ddot{a}}{\dot{a}^2}=-\frac{\ddot{a}}{aH^2}\] <i>Deceleration parameter:</i> a measure of the deceleration of the universe expansion.  We can employ the acceleration parameter to find the deceleration parameter in the form: \[q=\frac{1}{2}\Omega(1+3w)\] Assuming matter domination today: \(q_0=\Omega_0/2\gt 0\), however observations of high redshift SNe-Ia suggest \(q_0\lt 0\), i.e. the universe is accelerating at present! This requires \(w_0\lt -1/3\) which implies <i>dark energy domination</i>. </p>
+<h1 id="Cosmological_Constant">Cosmological Constant</h1>
+<p>Symmetries in General Relativity allow a constant contribution on the RHS of Friedmann equation. \[\textrm{Friedmann equation}:\;H^2=\frac{8\pi G}{3}\rho-\frac{kc^2}{a^2}+\frac{\Lambda c^2}{3}\] where \(\Lambda\) is called the cosmological constant. It has dimensions: \([\Lambda]=[k]=[\textrm{length}]^{-2}\)q.  Furthermore, \(\Lambda\) can be considered as a constant contribution to \(\rho\). \[H^2=\frac{8\pi G}{3}(\rho+\rho_\Lambda)-\frac{kc^2}{a^2}\implies\rho_\Lambda=\frac{\Lambda c^2}{8\pi G}\] </p>
+<blockquote><i>Cosmological constant:</i> corresponds to constant, non-zero vacuum density \(\rho_\Lambda\).</blockquote>
+<p> \[\left.\begin{align}&\rho_\Lambda=\textrm{constant}\\&\rho_\Lambda\propto a^{-3(1+w_\Lambda)}\\\end{align}\right\}\implies\boxed{w_\Lambda=-1}\] For \(\Lambda\gt 0\) the corresponding vacuum density has negative pressure: \(p_\Lambda=-\rho_\Lambda c^2\lt 0\). This can be considered as a constant contribution to \(p\).  \(\rho_\Lambda\) domination \(\implies\) <i>acceleration expansion</i>. </p>
+<h1 id="Dynamics_and_Cosmological_Constant">Dynamics and Cosmological Constant</h1>
+<blockquote>A positive (negative) cosmological constant corresponds to a repulsive (attractive) force which counteracts (reinforces) the attractive gravitational force of matter.</blockquote>
+<p> </p>
+<ul>
+<li>A closed universe expands forever for \(\Lambda\gt 0\)</li>
+<li>An open universe recollapses for \(\Lambda\lt 0\)</li></ul>
+<p> If \(\Lambda\gg0\) there is not even a big bang. However this is ruled out by observations. At present matter dominates radiation \(\implies\) \(\Omega_0=\Omega_M+\Omega_\Lambda\).  The deceleration parameter with \(\Lambda\neq0:\;\;q_0=\frac{1}{2}\Omega_M-\Omega_\Lambda\). A closed universe requires: \(\Omega_0\gt 1\implies\Omega_\Lambda\gt 1-\Omega_M\). Accelerated expansion at present requires \(\Omega_\Lambda\gt \frac{1}{2}\Omega_M\). </p>
+<h1 id="The_Problem_with_\(\Lambda\)">The Problem with \(\Lambda\)</h1>
+<p>The natural scale for gravity is the Planck mass. </p>
+<blockquote><i>Planck mass (\(M_p\)):</i> The mass of a particle whose de Broglie wavelength equals its Schwartzchild radius.</blockquote>
+<p> \[\frac{2\pi\hbar}{M_pc}\sim\frac{2GM_p}{c^2}\implies M_p=\sqrt{\frac{\hbar c}{G}}\] Planck length: \[l _P=\frac{\hbar}{M_Pc}=\frac{\sqrt{G\hbar}}{c^{3/2}}\] Planck density: \[\rho_P\equiv\frac{M_P}{l ^3_P}=\frac{c^5}{\hbar G^2}\] We would expect: \(\rho_\Lambda\eqsim\rho_P\implies|\Lambda|\eqsim c^3/\hbar G\) BUT: Structure formation needs: \(\rho_\Lambda\lesssim\rho_0\sim10^{-121}\rho_P\). This is the infamous cosmological constant problem.  Until recently the "solution" was to set \(\Lambda=0\) due to an <i>unknown</i> symmetry. However latest observations may imply \(\Lambda\neq 0\). </p>
+<h1 id="Dark_Energy">Dark Energy</h1>
+<p>Recent CMB observations confirm that the universe is close to spatially flat: \[\Omega(t_0)=1.000\pm0.002\] Hence the statement above (\(\Omega_\Lambda\eqsim 1-\Omega_M\)) seems to fit. High-redshift SN-Ia suggest that the universe expansion is accelerating: \(\Omega_\Lambda\gt \frac{1}{2}\Omega_M\).  The two datasets correspond to regions in the \(\Omega_M-\Omega_\Lambda\) plane, which are almost orthogonal. \[\textrm{Best fit point}:\;\Omega_M\eqsim0.3\;\;\&\;\;\Omega_\Lambda\eqsim0.7\] Hence, it seems that \(\rho_\Lambda\eqsim0.7\rho_0\sim10^{-121}\rho_P\).  Alternative solution: <i>Dark Energy</i>  </p>
+<blockquote><i>Dark Energy:</i> A substance with barotropic parameter negative enough (\(w_{DE}\lt -\frac{1}{3}\)) so that it causes accelerated expansion if dominated.</blockquote>
+<p> \(\rho_\Lambda\) can be thought of as a paticular type of dark energy.  <b>Properties:</b> </p>
+<ul>
+<li>Uniform distribution (no clumping)</li>
+<li>Barotropic parameter: \(w_{DE}=-1.028\pm0.0031\)</li>
+<li>Recent importance only: \(Z_{DE}\lesssim2\)</li></ul>
+<p> If Dark Energy were important at higher redshifts (earlier times) then it would inhibit galaxy formation. </p>
+<h1 id="Dynamics_with_Spatial_Flatness">Dynamics with Spatial Flatness</h1>
+<p>CMB observations confirm spatial flatness. Hence \(k\to0\). As seen earlier, we can use the Friedmann equation to find: \[\rho(t)=\frac{3H^2}{8\pi G}\] where \(\rho=\sum_i\rho_i=\rho_m+\rho_r+\rho_{DE}+\ldots\) We can solve this differential equation to find \[\rho=c_1a^{-3(1+w)}\implies a^{\frac{3}{2}(1+w)}=\frac{3}{2}(1+w)c_1t\] (for a constant \(w\gt -1\))  We solve for a: \[a\propto t^{\frac{2}{3(1+w)}}\;\;\textrm{for }a(t=0)=0\] \[\implies H=\frac{2}{3(1+w)t}\] and \[\rho=3H^2/8\pi G=\frac{1}{6(1+w)^2\pi Gt^2}\] for a constant \(w\gt -1\): \(\boxed{H\sim1/t}\) & \(\boxed{\rho\sim1/\pi Gt^2}\) </p>
+<blockquote><i>Hubble time (\(t_H\equiv H^{-1}\)):</i> Typical timescale for the dynamics of the universe expansion.</blockquote>
+<p> Matter Domination: \(w=0\implies\boxed{a\propto t^{2/3}}\) Radiation Domination: \(w=\frac{1}{3}\implies\boxed{a\propto t^{1/2}}\) </p>
+<h1 id="Radiation_Domination">Radiation Domination</h1>
+<p>\[\left.\begin{align}&\rho_r\propto a^{-4}\\&\rho_m\propto a^{-3}\end{align}\right\}\implies\textrm{early universe rad domin}\]  (Dark energy is negligible at redshifts \(z\gt 1:\) ignore thereafter).  We can define the equilibrium time (\(t_{eq}\)) of equal matter and radiation densities: \[\frac{\rho_m}{\rho_r}\propto a\implies\frac{a_0}{a_{eq}}=\left.\frac{\rho_m}{\rho_r}\right|_{t_0}\eqsim10^4\] Between \(t_{eq}\) and \(t_0\) the universe is matter dominated: \[a\propto t^{2/3}\implies t_{eq}\eqsim\left(\frac{a_{eq}}{a_0}\right)^{3/2}t_0\sim10^4\;\textrm{yrs}\;(z\eqsim3356)\] (Dark energy becomes important only very recently as \(z_{DE}\lesssim 2\). </p>
+<h1 id="Cosmological_Constant_Domination">Cosmological Constant Domination</h1>
+<p>\[\rho=\rho_\Lambda=\textrm{const}\implies H=\sqrt{\frac{8\pi G}{3}\rho}=\textrm{const}\equiv C=\left(\frac{\dot{a}}{a}\right)\] solve to find: \(a\propto e^{Ct}\). \[\Lambda\textrm{-Domination:}\;w=-1\implies a\propto e^{Ht}\] </p>
+<h1 id="Phantom_Dark_Energy">Phantom Dark Energy</h1>
+<p>\(w\lt -1\) violates the null energy condition. We can use the flat Friedmann equation: \[\sqrt{\frac{8\pi G}{3}\rho}=\left(\frac{\dot{a}}{a}\right)\] with \(\rho=Ca^{-3(1+w)}\).  Solve this to find \[a\propto \left(1-\frac{t}{t_*}\right)^{\frac{2}{3(1+w)}}\] with \(t\to t_*\implies a\to\infty\). </p>
+<blockquote><i>Big Rip:</i> All distances blow-up in finite time.</blockquote>
+<p> We can then find the Hubble parameter: \[H=-\frac{2}{3(1+w)t_*}\left(1-\frac{t}{t_*}\right)^{-1}=\frac{2}{3|1+w|}\frac{1}{t_*-t}\] Thus when the universe is dominated by phantom DE, it undergoes super accelerated expansion, with \(H\gt 0\). </p>
+<h1 id="The_Age_of_the_Universe">The Age of the Universe</h1>
+<p>We can use the characteristic timescale: \[t_H=H_0^{-1}\eqsim14.4\;\textrm{Gyrs}\] This is in agreement with Nuclear cosmo-chronology and Globular cluster ages.  <i>Age Problem:</i> Originally believed that current Universe is matter dominated \[t_0=\frac{2}{3}H_0^{-1}\eqsim9.6\;\textrm{Gyrs}\implies\textrm{Too little.}\] Dark energy solves the Age Problem.  For a flat universe with matter and \(\Lambda\), the age is: \[t_0=\frac{2}{3}\frac{H_0^{-1}}{\sqrt{1-\Omega_M}}\ln\left(\frac{1+\sqrt{1-\Omega_M}}{\sqrt{\Omega_M}}\right)\] With \(\Omega_M\eqsim 0.3\), we have \(t_0\eqsim13.8\;\textrm{Gyrs}\). This is in excellent agreement with observations. </p>
+<h1 id="The_Horizon_Revisited">The Horizon Revisited</h1>
+<p>Assume a flat universe. \[\left.\begin{align}&dr=a\;dx\\&dr=c\;dt\end{align}\right\}\implies dx=\frac{c\;dt}{a}\] <i>Horizon</i> = Edge of causal correlations (probed by light) \[D_H=ax_H=a\int^{t_2}_{t_1}\frac{c\;dt}{a}\]<i>Particle Horizon:</i> Edge of causal correlations <b>so far</b>. \[(t_1,t_2)=(0,t):\quad\textrm{for}\;\;w\gt -1/3\] <i>Event Horizon:</i> Ultimate edge of causal correlations. \[\begin{align} &(t_1,t_2)=(t,\infty):\quad\textrm{for}\;\;-1\lt w\lt -1/3\\ &(t_1,t_2)=(t,t_*):\quad\textrm{for}\;\;w\lt -1 \end{align}\] </p>
+<blockquote>\(D_H\) is a particle (event) horizon if \(w\) is bigger (smaller) than \(-1/3\).</blockquote>
+<p> </p>
+<ul>
+<li>\(w\gt -1\implies D_H\sim ct:\;\textrm{Horizon grows at }c\)</li>
+<li>\(w=-1\implies\textrm{Horizon remains constant}\)</li>
+<li>\(w\lt -1\implies D_H\to 0\;\textrm{as}\;t\to t_*:\;\textrm{big rip}\)</li></ul>
+<p> </p>
+<h1 id="Cosmic_Inflation">Cosmic Inflation</h1>
+<blockquote><i>Inflation:</i> A period of accelerated expansion in the early universe.</blockquote>
+<p> \[\begin{align}&\textrm{Acceleration}\\&\textrm{Equation}\end{align}:\frac{\ddot{a}}{a}=-\frac{4\pi G}{3}\left(\rho+\frac{3p}{c^2}\right)=-\frac{4\pi G}{3}(1+3w)\rho\] we know \[\ddot{a}\gt 0\iff p\lt-\frac{1}{3}\rho c^2\iff w\lt-\frac{1}{3}\] During inflation the Universe transverses an epoch of negative pressure. </p>
+<blockquote><i>Inflation:</i> Period of dark energy domination.\[\left.\begin{align}-1\lt w\lt -1/3\implies\frac{2}{3(1+w)\gt 1}\\\textrm{Flat Universe}:a\propto t^{\frac{2}{3(1+w)}}\end{align}\right\}\implies a\propto t^q\;\textrm{with}\;q\gt 1\]</blockquote>
+<p>  \(\implies\) Superluminal expansion. It is allowed by relativity because it does not correspond to movement of matter or energy but it is due to enlargement of space itself.  Any preexisting radiation is diluted away. Radiation be re-created for the Hot Big Bang to begin.  </p>
+<blockquote><i>Reheating:</i> Entropy production after the end of inflation, which transfers the inflation energy to the newly created radiation.</blockquote>
+<p> </p>
+<h1 id="(Quasi)_de-Sitter_Inflation">(Quasi) de-Sitter Inflation</h1>
+<p>Most efficient inflation happens at \(w_\textrm{inf}=-1\). This implies that \(\rho_\textrm{inf}\propto a^{-3(1+w_\textrm{inf})}=\textrm{const}\).  The universe is dominated by an effective cosmological constant. \[\rho_\textrm{inf}=\frac{\Lambda_\textrm{eff}c^2}{8\pi G}\] The Friedmann equation becomes: \[H^2_\inf=\frac{8\pi G}{3}\rho_\textrm{inf}=\textrm{const}\] \[\implies a(t)=a_i\exp[H_\textrm{inf}(t-t_i)]\iff a\propto e^{H_\textrm{inf}t}\] The universe expands exponentially fast. Eventually, de-Sitter expansion is terminated and reheating generates radiation with \(\rho_\gamma\sim\rho_\textrm{inf}\).  Most particle–physics models of inflation correspond to (quasi) de-Sitter inflation. </p>
+<h1 id="The_Horizon_Problem">The Horizon Problem</h1>
+<p>Remember the observable universe is the region of the universe spanned by the horizon at present. \(D_H\eqsim c/H_0\). \[R_\textrm{obs}\propto a,\;R_\textrm{obs}(t_0)=D_H(t_0)\] \[\frac{R_\textrm{obs}(t)}{D_H(t)}=\frac{R_\textrm{obs}(t_0)}{D_H(t)}\frac{a(t)}{a(t_0)}=\frac{a(t)H(t)}{a(t_0)H(t_0)}=\boxed{\frac{\dot{a(t)}}{\dot{a}(t_0)}}\]Radiation and matter \(\ddot{a}\lt 0\implies \dot{a}(t)\gt \dot{a}(t_0)\) for \(t\lt t_0\) \[\implies \boxed{D_H(t)\lt R_\textrm{obs}(t)\quad\forall\; (t\lt t_0)}\] The Universe at early times becomes increasingly causally disconnected.  CMB radiation: afterglow of Big Bang. The CMB is isotropic over distances much larger than the causal horizon when emitted How did causally disconnected patches of the Universe come into equilibrium? </p>
+<h2 id="Solving_the_Horizon_Problem">Solving the Horizon Problem</h2>
+<blockquote><i>Inflation:</i> Superluminal expansion results in super-horizon correlations.</blockquote>
+<p> Inflation enlarges a causally connected region enough to encompass the observable universe. </p>
+<ul>
+<li>Inflation homogenizes a region of the universe at least as large as the observable universe.</li>
+<li>After the end of inflation the universe evolution continues based on uniform initial conditions.</li>
+<li>Homogeneity and isotropy persists because of the causal nature of the universe evolution.</li></ul>
+<p> </p>
+<blockquote>Inflation imposes the Cosmological Principle.</blockquote>
+<p> For \(t\lt t_\textrm{inf}:\) \[D_H(t)\gt R_\textrm{obs}(t)\iff\frac{\dot{a}(t)}{\dot{a}(t_\textrm{inf})}\lt \frac{\dot{a}(t_0)}{\dot{a}(t_\textrm{inf})}\] where \(t_\textrm{inf}\) corresponds to the end of inflation. The horizon problem is solved if inflation lasts long enough. </p>
+<h1 id="The_Flatness_Problem">The Flatness Problem</h1>
+<p>Friedmann: \[\left.\begin{align} &H^2=\frac{8\pi G}{3}\rho-\frac{kc^2}{a^2}\\ &H^2\equiv\frac{8\pi G}{3}\rho_c\\ &\Omega\equiv\rho/\rho_c\end{align}\right\} \implies 1=\Omega-\frac{kc^2}{(aH)^2}\]\[\implies|\Omega-1|=\frac{|k|c^2}{(aH)^2}\equiv\textrm{Deviation from flatness}\] \[\frac{|\Omega(t_0)-1|}{|\Omega(t)-1|}=\left[\frac{\dot{a}(t)}{\dot{a}(t_0)}\right]^2\] Consider \(\Omega_{BBN}, a_{BBn},\;t_{BBN}\sim 1s\), \(\ddot{a}\lt 0\) (due to gravity) hence the deviation from flatness grows with time.  \(\Omega=1\) is a repeller! Observations \(|\Omega_0-1|\leq 0.01\). This suggests severe fine tuning of initial conditions.  </p>
+<blockquote><i>Big Bang Nucleosynthesis (BBN):</i> The earliest confirmation of Big Bang cosmology \(t_{BBN}\sim 1s\).</blockquote>
+<p> </p>
+<h1 id="Solving_the_Flatness_Problem">Solving the Flatness Problem</h1>
+<ul>
+<li>In inflation (\(\ddot{a}\gt 0\)) the deviation from flatness diminishes with time.</li>
+<li>\(\Omega=1\) is an attractor. The rapid expansion inflates the curvature away.</li>
+<li>Inflation erases the memory of any preexisting period and imposes homogeneous and isotropic initial conditions to the Big Bang cosmology.</li></ul>
+<p> </p>
+<h1 id="Inflation_and_Density_Perturbations">Inflation and Density Perturbations</h1>
+<p>Take the Compton wavelength of a particle of mass \(M\), and the H.U.P: \[\Delta x\Delta p\geq\hbar\implies\Delta x\geq\frac{\hbar}{\Delta P}\implies\boxed{\ell_C\equiv\frac{\hbar}{M_C}}\] virtual particles can travel over horizon distance before annihilation if \[\ell_C\gt D_H\iff E_V\equiv Mc^2\lt \hbar H\] \[\Delta E\Delta t\geq\hbar\implies\Delta t\geq\frac{\hbar}{E_V}\implies\Delta t\gt \frac{1}{H}\] virtual particles survive longer than expansion timescale. The virtual particles are affected by the expansion Inflation: subhorizon scales \(\to\) superhorizon scales.  </p>
+<blockquote><i>Particle Production:</i> The virtual particles cannot annihilate over superhorizon distances \(\implies\textrm{Virtual}\to\textrm{Real}\).</blockquote>
+<p> Overdensities from inflation = sources for structure formation. </p>
+<h1 id="Dark_Matter">Dark Matter</h1>
+<p>Characteristic scale of Universe density = given by \(\rho_c\). Latest observations \(\Omega_0=1.000\pm0.002\)  BUT Numerous uncorrelated observations suggest that most of matter in the Universe is unaccounted for.  </p>
+<blockquote><i>Dark Matter:</i> Non-luminous matter whose presence is indirectly inferred from the effect of its gravitational attraction onto luminous matter and on the global geometry of the Universe.</blockquote>
+<p> </p>
+<h2 id="Observational_Evidence_for_Dark_Matter">Observational Evidence for Dark Matter</h2>
+<ol>
+<li> <i>Star Counts:</i> Stellar structure theory provides clear link between the mass of a star and its surface temperature and absolute luminosity. \[\Omega_\textrm{stars}\lesssim 0.01\]</li>
+<li> <i>Galaxy rotation curves:</i> Dynamical estimate of galactic mass based on the gravitational attraction inferred from the rotation of the galactic disk. (Use circular motion and Keplers.) Indication of dark halo extending beyond luminous disk \[\Omega_\textrm{halo}\eqsim 0.1\]</li>
+<li> <i>Hot Gas in Galactic Clusters:</i>  as present in intergalactic space is heated when it falls into the potential well of a galactic cluster. Gas temperature generates pressure, which counter-balances gravitational attraction. Gas temperature is determined by X-ray observations BUT: Inferred mass much larger than that of gas. \[\Omega_\textrm{cluster}\gtrsim 0.3\]</li>
+<li> <i>Bulk flows:</i> Dynamical estimate of galactic masses based on the gravitational attraction inferred by the relative peculiar motions of neighbouring galaxies. \[\Omega_M\geq 0.2\]</li>
+<li> <i>Structure formation:</i> The formation of Large Scale Structure is due to the growth of overdensities triggered by the presence of initially small irregularities (density perturbations) of primordial origin. \[t_0\;\textrm{enough only if}:\;\Omega_M\geq 0.2\]</li>
+<li> <i>Big Bang Nucleosynthesis:</i> BBN is a major success of Big Bang Cosmology. BBN accounts for the observations on the delicate abundance of light elements such as D, \(^7\)Li, \(^3\)He and \(^4\)He, not produced by stars. BBN imposes stringent bounds on baryonic (= regular) matter: \[0.03\leq\Omega_B\leq0.05\] Therefore most of dark matter is NOT baryonic.</li></ol>
+<h2 id="Properties_of_non-baryonic_Dark_Matter">Properties of non-baryonic Dark Matter</h2>
+<p>Structure formation requires a number of properties for non-baryonic Dark Matter. These requirements set stringent constraints on non-baryonic Dark Matter candidates. </p>
+<ol>
+<li> <i>Pressureless:</i> Non-baryonic Dark Matter = non-relativistic (dust). Such Dark Matter is called: Cold Dark Matter (CDM). \[p_{CDM}=0\implies\rho_{CDM}\propto a^{-3}\]</li>
+<li> <i>Collisionless:</i> CDM interactions are weak \(\to\) Collisionless. Such CDM cannot dissipate its kinetic energy due to the in-fall into the gravitational wells of overdensities. CDM does not form disks nor does it gather at the centre of overdensities. CDM forms spherical halos around galaxies.</li>
+<li> <i>Weakly Interacting:</i> CDM interacts predominantly gravitationally with (regular) baryonic matter. CDM is notoriously difficult to detect.</li></ol>
+<h2 id="Candidates_for_Dark_Matter">Candidates for Dark Matter</h2>
+<ol>
+<li> <i>Baryonic Dark Matter:</i> Massive Astrophysical Compact Halo Objects (MACHOs). Examples: star remnants (neutron stars, burned out white dwarfs), brown dwarfs (failed stars), Jupiters (giant planets). Have been observed by gravitational lensing events. BUT: MACHO Density = small: \[\Omega_{MACHOS}\lt 0.06\]</li>
+<li> <i>Non-Baryonic Dark Matter (CDM):</i> Weakly Interacting Massive Particles (WIMPs). Examples: neutralino, gravitino. Neutralinos interact with ordinary matter through the Weak Nuclear Force (like neutrinos) ⇒ ∃ numerous direct detection experiments.</li>
+<li> <i>Primordial Black Holes:</i> PBHs are possible to generate in the Early Universe. Massive enough not to evaporate until today. Not overabundant to avoid overclosing the Universe. Of low enough abundance not to disturb BBN. BUT: Subject to many astrophysical constraints because they can interact with stars. (Another option is “Planck particles”, remnants from PBH evaporation).</li></ol>
+<h2 id="Problems_of_CDM">Problems of CDM</h2>
+<ol>
+<li> <i>Cuspy Halos:</i> CDM halos in simulations feature a cusp at galactic centre compared to mass distribution inferred by rotation curves.</li>
+<li> <i>Missing Satellites:</i> DM simulations predict too many small satellite dwarf galaxies compared to observations around spiral galaxies.</li></ol>
+<h1 id="Observational_Evidence">Observational Evidence</h1>
+<p><br><img src="../Assets/BulletCluster.png" alt="BulletCluster.png"/><br> Observations of the so-called bullet cluster depict two galaxy clusters passing through each-other </p>
+<ul>
+<li>X-ray observations of the hot intergalactic gas of the clusters provide the image in red for the location of baryonic matter.</li>
+<li>Gravitational lensing observations infer the distribution of the total matter content of the clusters, shown in blue.  </li></ul>
+<p>There is a significant lag of the baryonic matter, due to its  collisional nature, with respect to the location of the Dark Matter, which is weakly interacting and collisionless. </p>
+<h1 id="Content_of_the_Universe">Content of the Universe</h1>
+<ul>
+<li>Baryons \(\lesssim 5\%\)</li>
+<li>Cold Dark Matter \(\gtrsim 25\%\)</li>
+<li>radiation (CMB+\(\nu\)’s) \(\sim0.01\%\)</li>
+<li>massive neutrinos  \(\sim0.1\%\)</li>
+<li>Dark Energy or \(\Lambda\) \(\lesssim70\%\)</li></ul>
+<p> </p>
+<ol>
+<li> <i>CMB Radiation:</i> The Universe is filled with uniform radiation. This Cosmic Microwave Background (CMB) radiation is further evidence for the Big Bang Cosmology CMB has a perfect black–body spectrum with temperature: \(T_{CMB}=2.7255\pm0.0006\;\textrm{K}\)</li>
+<li> <i>Neutrino Dark Matter:</i> Massless neutrinos would also generate a uniform Cosmic Neutrino Background of temperature: \(T_{CNB}=(4/11)^{1/3}T_{CMB}=1.9454\pm 0.0004\textrm{K}\) BUT, there is proof that neutrinos have small masses: \(m_\nu=0.3\pm0.1\textrm{eV}/c^2\). Neutrinos can be Dark Matter candidates with abundance: \[\Omega_\nu(t0)=\frac{\sum m_\nu c^2}{93.14h^2 \textrm{eV}}\]. Since \(m_\nu\) is very small, neutrinos are relativistic Such Dark Matter is called: Hot Dark Matter (HDM).</li></ol>
+</div>
+</body>
+</html>

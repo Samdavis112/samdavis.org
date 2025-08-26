@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PHYS133-Oscilations_&_Waves</title>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="../style.css" title="DevEng Style"/>
+	</head>
+<body>
+<script>
+window.MathJax = {
+    loader: {
+        load: ['[tex]/physics', '[tex]/color']
+    },
+    tex: {
+        packages: {
+            '[+]': ['physics', 'color']
+        }
+    }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<div id="__container__">
+
+<h1>PHYS133-Oscilations_&_Waves</h1>
+
+<div onclick="toc_click()" id="__toc_button__" class="w3-block w3-button" style="background-color: #444; color:white; font-weight: bold;">Table of Contents</div>
+<div id="__toc__" class="w3-hide w3-animate-top w3-container">
+<ol class="__toc_ol__ __lvl_1__">
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Hooke's_Law">Hooke's Law</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Simple_Harmonic_Motion_(SHM)">Simple Harmonic Motion (SHM)</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Mass_on_a_Spring">Mass on a Spring</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Angular_SHM">Angular SHM</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Damping_Oscillations">Damping Oscillations</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Forced_Oscillation">Forced Oscillation</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Pendulums">Pendulums</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Simple_Pendulum">Simple Pendulum</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Physical_Pendulum">Physical Pendulum</a></li>
+</ol>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Waves">Waves</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Speed_of_Waves">Speed of Waves</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Expression_for_Travelling_Waves">Expression for Travelling Waves</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Particle_Velocity_in_a_Wave">Particle Velocity in a Wave</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Reflections">Reflections</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Principle_of_Linear_Superposition">Principle of Linear Superposition</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Standing_Waves">Standing Waves</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Pressure_Waves">Pressure Waves</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Path_Difference">Path Difference</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Interference">Interference</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Beats">Beats</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#The_Mathematics_of_Beats">The Mathematics of Beats</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Doppler_Effect">Doppler Effect</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Doppler_Effect_for_Electromagnetic_Waves">Doppler Effect for Electromagnetic Waves</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Supersonics">Supersonics</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Power_In_Transverse_Waves">Power In Transverse Waves</a></li>
+</ol>
+</ol>
+</div>
+<script>
+function toc_click() {
+    var x = document.getElementById('__toc__');
+    if (x.classList.contains("w3-hide")) {
+        x.classList.remove("w3-hide");
+    }
+    else {
+        x.classList.add("w3-hide");
+    }
+}
+</script>
+
+<h1 id="Hooke's_Law">Hooke's Law</h1>
+<p> For elastic deformation, stress is proportional to strain. For an ideal spring:  \[\mathbf{F}=-k\mathbf{x}\]  All materials display a linear dependence of restoring force on displacement for sufficiently small displacements. For some objects, \(F(x)\) is linear over large ranges of <i>strain</i> which is defined as:  \[\varepsilon=\frac{\Delta l}{l}\]  Springs and elastic or rubber bands can typically be linear for \(\epsilon\leq 2\), and most other materials are linear for \(\epsilon\leq 0.01\).  </p>
+<h1 id="Simple_Harmonic_Motion_(SHM)">Simple Harmonic Motion (SHM)</h1>
+<p> </p>
+<h2 id="Mass_on_a_Spring">Mass on a Spring</h2>
+<p> </p>
+<ul>
+<li>Hooke's Law \(\to F=-kx\)</li>
+<li>N's Second Law \(\to F=m\ddot{x}\)</li>
+<li>\(\implies -kx=m\ddot{x}\)</li></ul>
+<p> We can try a solution of the form \(x(t)=A\cos(\omega_0t+\phi_0)\)  \[m\ddot{x}=-mA\omega_0^2\cos(\omega_0t+\phi_0)\] \[\implies -kx=-m\omega^2_0x\qquad\&\qquad\omega_0=\sqrt{\frac{k}{m}}\]  The energy stored in this spring is the following:  \[E=\frac{1}{2}mv^2+\frac{1}{2}kx^2=\frac{1}{2}kA^2\]  </p>
+<h2 id="Angular_SHM">Angular SHM</h2>
+<p> Consider a rigid body with moment of inertia \(I\) about some axis connected to a spring or suspended from a fibre.  </p>
+<ul>
+<li>This creates a <i>torque</i> \(\tau=-\kappa\theta\) for rotation from equilibrium angle.</li>
+<li>\(\kappa\) is a constant called the torsion constant.</li></ul>
+<p> The equation of motion is given by:  \[-\kappa\theta=I\frac{d^2\theta}{dt^2}\]  The form of this equation is the same as for a mass on a spring. So we are dealing with a form of angular SHM.  The angular frequency \(\omega_0\) and frequency \(f\) are given by:  \[\omega_0=\sqrt{\frac{\kappa}{I}}\qquad:\qquad f=\frac{\omega_0}{2\pi}\]  Motion described by: \(\theta(t)=\Theta\cos(\omega_0t+\phi_0)\)  <b>Note:</b> \(\omega_0\neq d\theta/dt\), as it is oscillating sinusoidally.  </p>
+<h3 id="Damping_Oscillations">Damping Oscillations</h3>
+<p>A solution to the equation of motion <i>assuming damping force is linear with respect to velocity</i> is:  \[x(t)=Ae^{\frac{-b}{2m}t}\cos(\omega't+\phi)\]  ...where \(b\) is the damping term and is small and \(w'\) (The new angular velocity is):  \[\omega'=\sqrt{\omega^2-\frac{b^2}{4m^2}}=\sqrt{\frac{k}{m}-\frac{b^2}{4m^2}}\]  A system is critically-damped if \(b=2\sqrt{km}\), under-damped if less, or over-damped if more.  </p>
+<h2 id="Forced_Oscillation">Forced Oscillation</h2>
+<p> The equation of motion in a forced oscillation is:  \[x(t)=A\sin(\omega_dt+\delta)\]  where \(\omega_d\) is the driving frequency  The amplitude of an oscillator driven by a <i>sinusoidally varying</i> force is:  \[A=\frac{F_0}{\sqrt{(k-m\omega_d^2)^2+b^2\omega_d^2}}\]  </p>
+<h2 id="Pendulums">Pendulums</h2>
+<p> </p>
+<h3 id="Simple_Pendulum">Simple Pendulum</h3>
+<p> A simple pendulum consists of a small finite sized mass supported on a weightless string or rod. One external force, gravity, acts vertically downwards and the tension in the string supports the mass. The mass moves in a circular arc, radius L around the pivot point X. <br><img src="../Assets/SimplePendulum.png" alt="SimplePendulum.png"/><br>  If \(\theta\) is small, \(\implies mg\sin\theta\approx mg\theta\)  Equation of motion:  \[L\frac{d^2\theta}{dt^2}=-g\theta\]  ...with solution  \[\theta(t)=A\cos(\omega_0t+\phi_0)\]  Natural frequency:  \[\omega_0=\sqrt{\frac{g}{L}}\]  </p>
+<h3 id="Physical_Pendulum">Physical Pendulum</h3>
+<ul>
+<li>Know the moment of inertia for a point mass at some distance (\(L\)) from a pivot: \(I=mL^2\)</li>
+<li>Remember the <i>parallel axis theorem</i>: \(I_{||}=I_{cm}+M_{total}d^2\) <br><img src="../Assets/PAxisTheo.png" alt="PAxisTheo.png"/><br></li></ul>
+<p> Equation of motion:  \[\frac{d^2\theta}{dt^2}=-\frac{mgL_{cm}}{I}\theta\]  ...with solution  \[\theta(t)=\Theta\cos(\omega_0t+\phi_0)\]  Natural frequency:  \[\omega_0=\sqrt{\frac{mgL_{cm}}{I}}\]  </p>
+<h1 id="Waves">Waves</h1>
+<p> </p>
+<h2 id="Speed_of_Waves">Speed of Waves</h2>
+<p> <b>String</b>: Tension: \(T\),  mass per unit length: \(\mu\)  \[v=\sqrt{\frac{T}{\mu}}\]  <b>Bulk Material</b>: Bulk modulus: \(B\), density: \(\rho\)  \[v=\sqrt{\frac{B}{\rho}}\]  <b>Rod</b>: Youngs modulus: \(Y\), density: \(\rho\)  \[v=\sqrt{\frac{Y}{\rho}}\]  </p>
+<h2 id="Expression_for_Travelling_Waves">Expression for Travelling Waves</h2>
+<p> A wave travelling to the right (change sign of \(kx\) to change direction) is expressed as:  \[y(x,t)=A\sin(\omega t-kx)\]  Where \(k\) is the <i>wave number</i>:  \[k=\frac{2\pi}{\lambda}\]  The velocity of the wave is:  \[v=f\lambda=\frac{\omega}{k}\]  </p>
+<h2 id="Particle_Velocity_in_a_Wave">Particle Velocity in a Wave</h2>
+<p> Particles of the medium (e.g. rope) move back and forth as the wave propagates. Particle velocity at a fixed position \(x\) is the derivative of \(y\) at that position with respect to time.  \[\left(\frac{\partial y}{\partial t}\right)=A\omega\cos(\omega t-kx)\]  We can use this to derive the <b>Wave Equation</b>:  \[\frac{\partial^2y}{\partial t^2}=v^2\frac{\partial^2y}{\partial x^2}\]  </p>
+<h2 id="Reflections">Reflections</h2>
+<p>A fixed end will invert the wave, whereas a free end will mirror the wave back as it came to the end.  Advanced stuff: <br><img src="../Assets/MoreOnReflections1.png" alt="MoreOnReflections1.png"/><br> <br><img src="../Assets/MoreOnReflections2.png" alt="MoreOnReflections2.png"/><br>  </p>
+<h2 id="Principle_of_Linear_Superposition">Principle of Linear Superposition</h2>
+<p> When two wave functions overlap the resulting displacement is just the algebraic sum of the individual displacements:  \[y(x,t)=y_1(x,t)+y_2(x,t)\]  </p>
+<h2 id="Standing_Waves">Standing Waves</h2>
+<p> Trigonometry simplifies the result to two waves travelling opposite directions:  \[y(x,t)=2A\sin(\omega t+\phi_1)\cos(kx+\phi_2)\]  Positions with zero displacement at all times = ‘Nodes’ Positions where SHM has maximum amplitude = ‘Antinodes’  From A Level, it is clear that: \[\lambda_n=\frac{2L}{n}\] hence, \[k=\frac{2\pi}{\lambda}=\frac{\pi n}{L}\]  Different modes (overtones) are calculated with the following formula:  \[f_n=\frac{nv}{2L}=nf_1\]  When on a string:  \[f_n=\frac{n}{2L}\sqrt{\frac{T}{\mu}}\]  </p>
+<h2 id="Pressure_Waves">Pressure Waves</h2>
+<p> <br><img src="../Assets/PressureWaves.png" alt="PressureWaves.png"/><br>  </p>
+<h2 id="Path_Difference">Path Difference</h2>
+<p> Path difference (\(d\)) is given by:  \[d=\left||\mathbf{a}|-|\mathbf{b}|\right|\]  from the following diagram: <br><img src="../Assets/PathDifference.png" alt="PathDifference.png"/><br> If \(d=n\lambda\), full constructive interference if \(d=n\lambda/2\), full destructive interference  </p>
+<h2 id="Interference">Interference</h2>
+<p>2D Interference: <br><img src="../Assets/2D_Interference.png" alt="2D_Interference.png"/><br>  </p>
+<h2 id="Beats">Beats</h2>
+<p> Beats are another common example of interference. Consider two overlapping waves with <i>slightly</i> different frequencies. The phase difference varies with position, and so does the amplitude, as before… <br><img src="../Assets/Beats.png" alt="Beats.png"/><br>  </p>
+<h3 id="The_Mathematics_of_Beats">The Mathematics of Beats</h3>
+<p> Consider two travelling sound waves of equal amplitude  \[y_1=A\sin(\omega_1t-k_1x)\qquad\qquad y_2=A\sin(\omega_2t-k_2x)\]  Simplify algebra by choosing \(x=0\) (doesn’t affect conclusion), Resultant motion is:  \[\begin{align} &y=A\sin(\omega_1t)+A\sin(\omega_2t)\\ &\implies y=2A\sin\left(\frac{\omega_1+\omega_2}{2}t\right)\cos\left(\frac{\omega_1-\omega_2}{2}t\right)\\ &\omega_a=\frac{\omega_1+\omega_2}{2}\qquad\qquad\omega_d=\frac{\omega_1-\omega_2}{2}\\ &\implies y=2A\sin(\omega_at)\cos(\omega_dt)\;\;(x=0) \end{align}\]  ...A wave with frequency \(\omega_a\) and modulating amplitude \(2A\cos( \omega_dt)\)  Perceived sound has average frequency \(f_a\), with an amplitude slowly varying at frequency \(f_d\). Loudness varies at frequency \(2f_d\) = the beat frequency \(f_b\):  \[f_b=2f_d=f_1-f_2\]  </p>
+<h2 id="Doppler_Effect">Doppler Effect</h2>
+<p> Source emits frequency \(f_s\) and moves with speed \(v_s\) relative to the air directly towards listener. The listener hears frequency \(f_L\) and moves with speed \(v_L\) relative to the air directly towards source. Speed of sound in still air is \(v\):  \[f_L=f_s\left(\frac{v\pm v_L}{v\mp v_s}\right)\]  <b>Note:</b> </p>
+<ul>
+<li>If the listener approaches the source we use \(+\) in the numerator.</li>
+<li>If the source approaches the listener we use \(–\) in the denominator.</li>
+<li>For a receding listener or source we use the opposite sign.</li></ul>
+<p> </p>
+<h3 id="Doppler_Effect_for_Electromagnetic_Waves">Doppler Effect for Electromagnetic Waves</h3>
+<p> There is also a Doppler effect for electromagnetic waves travelling in a vacuum. Here there is no medium and so the effect depends only on the relative motion of the source with respect to the receiver. The frequency detected at the receiver, \(f_r\), is related to the frequency emitted at the source, \(f_s\), by:  \[f_r=\sqrt{\frac{c\pm v}{c\mp v}}f_s\]  Where \(v\) is the relative speed and \(c\) is the speed of light in a vacuum. If the listener and source are approaching we use \(+\) in the numerator and \(–\) in the denominator. If the listener and source are receding we use \(–\) in the numerator and \(+\) in the denominator.  The frequency detected at the receiver, \(f_r\), is related to the frequency emitted at the source, \(f_s\), by:  \[\frac{\lambda_r}{\lambda_s}=\frac{f_s}{f_r}\]  </p>
+<h2 id="Supersonics">Supersonics</h2>
+<p> A cone of constructive interference forms:  \[\sin\theta=\frac{v}{v_{source}}\]  The Mach number (\(M\)) is:  \[M=\frac{v_{source}}{v}\]  </p>
+<h2 id="Power_In_Transverse_Waves">Power In Transverse Waves</h2>
+<p> \[P(x,t)=\sqrt{\mu T}\omega^2A^2\cos^2(\omega t-kx)\] </p>
+</div>
+</body>
+</html>

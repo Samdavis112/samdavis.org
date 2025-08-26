@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PHYS232B-Nuclei_&_Particles</title>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="../style.css" title="DevEng Style"/>
+	</head>
+<body>
+<script>
+window.MathJax = {
+    loader: {
+        load: ['[tex]/physics', '[tex]/color']
+    },
+    tex: {
+        packages: {
+            '[+]': ['physics', 'color']
+        }
+    }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<div id="__container__">
+
+<h1>PHYS232B-Nuclei_&_Particles</h1>
+
+<div onclick="toc_click()" id="__toc_button__" class="w3-block w3-button" style="background-color: #444; color:white; font-weight: bold;">Table of Contents</div>
+<div id="__toc__" class="w3-hide w3-animate-top w3-container">
+<ol class="__toc_ol__ __lvl_1__">
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Nucleus">The Nucleus</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Important_Terms">Important Terms</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Mass_of_the_Nucleus">Mass of the Nucleus</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Mass_Deficit_and_Binding_Energy">Mass Deficit and Binding Energy</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Size_of_the_Nucleus">Size of the Nucleus</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Density_of_Matter_in_Nucleus">Density of Matter in Nucleus</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Angular_Momentum_of_the_Nucleus">Angular Momentum of the Nucleus</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Nuclear_Spin">Nuclear Spin</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Nuclear_Magnetic_Dipole_Moment">Nuclear Magnetic Dipole Moment</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Nuclear_Stability">Nuclear Stability</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Nuclear_Force">Nuclear Force</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Strong_Nuclear_Potential">Strong Nuclear Potential</a></li>
+</ol>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Liquid_Drop_Model">Liquid Drop Model</a></li>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Nuclear_Decays">Nuclear Decays</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#\(\alpha\)-Decay">\(\alpha\)-Decay</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#QM_Tunnelling">QM Tunnelling</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#\(\beta\)-Decay">\(\beta\)-Decay</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Stability_of_Nuclides">Stability of Nuclides</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Q-Value_of_\(\beta\)-Decay">Q-Value of \(\beta\)-Decay</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Electron_Capture">Electron Capture</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#\(\gamma\)-Decay">\(\gamma\)-Decay</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Activity">Activity</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Half-Life">Half-Life</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Decay_Chains">Decay Chains</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Branching_Fraction">Branching Fraction</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Shell_Model">Shell Model</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Magic_Numbers:_Stable_Nuclei">Magic Numbers: Stable Nuclei</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Basic_Assumptions">Basic Assumptions</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Saxon-Woods_Potential">Saxon-Woods Potential</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Quantum_State_of_Nucleons">Quantum State of Nucleons</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Energy_Levels_of_the_Nucleon">Energy Levels of the Nucleon</a></li>
+</ol>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Nuclear_Fission_and_Fusion">Nuclear Fission and Fusion</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Cross-Section">Cross-Section</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Fission">Fission</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Fission_Barrier">Fission Barrier</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Neutron-Induced_Fission">Neutron-Induced Fission</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Nuclear_Reactor">Nuclear Reactor</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Fusion">Fusion</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#The_Standard_Model">The Standard Model</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Units_of_particle_Physics">Units of particle Physics</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Natural_Units">Natural Units</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Fundamental_Particles">Fundamental Particles</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Fundamental_Interactions">Fundamental Interactions</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Particles_of_Matter">Particles of Matter</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Generations_of_Matter">Generations of Matter</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Anti-particles">Anti-particles</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Hadrons">Hadrons</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Fundamental_Forces">Fundamental Forces</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Exchange_of_Gauge_Bosons">Exchange of Gauge Bosons</a></li>
+</ol>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Feynman_Diagrams">Feynman Diagrams</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Conventions">Conventions</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Interaction_Vertex">Interaction Vertex</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Virtual_Particles">Virtual Particles</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Hadron_Involvement">Hadron Involvement</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Interactions">Interactions</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#EM_Interactions">EM Interactions</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Strong_Interaction">Strong Interaction</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#1._Asymptotic_Freedom">1. Asymptotic Freedom</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#2._Confinement">2. Confinement</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Strong_Interaction_of_Hadrons">Strong Interaction of Hadrons</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#White_Objects">White Objects</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Weak_Interaction">Weak Interaction</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Change_of_Flavour_(Type)">Change of Flavour (Type)</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Interaction_with_\(Z\)_Boson">Interaction with \(Z\) Boson</a></li>
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Range_of_the_Weak_Interaction">Range of the Weak Interaction</a></li>
+</ol>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Conserved_Quantities">Conserved Quantities</a></li>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Particle_Decay_and_Production">Particle Decay and Production</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Interactions">Interactions</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Branching_Fraction">Branching Fraction</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Natural_Width">Natural Width</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Centre_of_Mass_Energy">Centre of Mass Energy</a></li>
+<ol class="__toc_ol__ __lvl_3__">
+<li class="__toc_li__ __lvl_3__"><a class="__toc__a__ __lvl_3__" href="#Dominant_Interaction">Dominant Interaction</a></li>
+</ol>
+</ol>
+<li class="__toc_li__ __lvl_1__"><a class="__toc__a__ __lvl_1__" href="#Transformation_of__Flavours">Transformation of  Flavours</a></li>
+<ol class="__toc_ol__ __lvl_2__">
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Coupling_Constant">Coupling Constant</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Flavour_Universality_of_Weak_Interaction">Flavour Universality of Weak Interaction</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Cabibbo's_Theory">Cabibbo's Theory</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Coupling_Constant_for_\(W\)">Coupling Constant for \(W\)</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Quark_Mixing_Matrix">Quark Mixing Matrix</a></li>
+<li class="__toc_li__ __lvl_2__"><a class="__toc__a__ __lvl_2__" href="#Probability_of_Quark_Transitions">Probability of Quark Transitions</a></li>
+</ol>
+</ol>
+</div>
+<script>
+function toc_click() {
+    var x = document.getElementById('__toc__');
+    if (x.classList.contains("w3-hide")) {
+        x.classList.remove("w3-hide");
+    }
+    else {
+        x.classList.add("w3-hide");
+    }
+}
+</script>
+
+<h1 id="The_Nucleus">The Nucleus</h1>
+<p>The nucleus is composed of protons (\(p\)) and neutrons (\(n\)).  Protons and neutrons are collectively called nucleons <i>Main properties of the nucleus:</i> </p>
+<ul>
+<li>\(Z\) - Atomic number (=number of protons)</li>
+<li>\(N\) - Number of neutrons</li>
+<li>\(A\) -  Mass number (= number of nucleons)</li>
+<li>By definition: \(A=Z+N\)</li>
+<li>Charge of nucleus: \(Q=Ze\)</li></ul>
+<p> Working in the units of kilograms is not convenient, we use atomic mass units \(u\) or \(\text{MeV/c}^2\) instead. \[\begin{align} &1u=1.661\times 10^{-27}\;\text{kg}\\ &1u=931.494\;\text{MeV/c}^2\\ \end{align}\] \(1u\) is defined as 1/12 the mass of a carbon-12 atom. </p>
+<h2 id="Important_Terms">Important Terms</h2>
+<ul>
+<li><i>Nuclide</i> - An atom with a specific number of neutrons and protons.</li>
+<li><i>Isotopes</i> have the same \(Z\) but different values of \(N\) and therefore \(A\).</li>
+<li><i>Isobars</i> have the same value of \(A\) but varying \(N\) and \(Z\).</li>
+<li><i>Isotones</i> have the same value of \(N\) but a varying \(A\) and \(Z\).</li></ul>
+<p> Atoms are referred to using the following notation \[^A_ZX\;\text{or}\;^AX,\] where \(X\) is the atomic symbol. </p>
+<h2 id="Mass_of_the_Nucleus">Mass of the Nucleus</h2>
+<p>The mass of the nucleus \(m(A,Z)\) would by intuition be \[\begin{align} &m(Z,A)=Zm_p+\underbrace{(A-Z)}_Nm_n,\\ &\textcolor{red}{\text{THIS IS NOT THE  CASE!!!}} \end{align}\] Experimentally, we find \[m(Z,A)\lt Zm_p+(A-Z)m_n.\] This explains why many nuclei are stable. A nucleus cannot by itself break apart into its individual constituents as this would violate energy conservation. </p>
+<h3 id="Mass_Deficit_and_Binding_Energy">Mass Deficit and Binding Energy</h3>
+<p>Mass deficit of a nucleus, \(\Delta m\), is defined as \[\boxed{\Delta m=m(Z,A)-Zm_p-(A-Z)m_n}\] Binding energy, \(E_B\) is the minimum amount of energy required to break apart a nucleus into its constituent nucleons \[\boxed{E_B=-\Delta m\cdot c^2}=Zm_pc^2+(A-Z)m_nc^2-m(Z,A)c^2.\] Practically the binding energy in MeV can be calculated using the atomic mass \(M(Z,A)=m(Z,A)+Zm_e,\) in atomic mass units and the conversion factor above. \[E_B=\left[Zm_p+Nm_n-(M(Z,A)-Zm_e)\right]\times931.494[\text{MeV}]\] Binding energy is positive, which implies that the total mass of the nucleus is smaller than the sum of the masses of constituents. It is also useful to define the <i>binding energy per nucleon</i> \(E_B/A\), which quantifies the average energy to free a nucleon from the nucleus.  <br><img src="../Assets/EBPerNucleonGraph.png" alt="EBPerNucleonGraph.png"/><br> For low \(A\), \(E_B/A\) oscillates rapidly. It saturates near \(A=60\) and peaks at almost \(9\text{MeV}\) per nucleon, for \(^{56}Fe\). It drops slowly for large \(A\). For the majority of nuclei, \(E_B/A\simeq 8\text{MeV}\). </p>
+<h2 id="Size_of_the_Nucleus">Size of the Nucleus</h2>
+<p>From scattering experiments we find that \[\boxed{R\simeq r_0A^{1/3};\;\;r_0\simeq1.2\;\text{fm}}\] hence \[V\propto R^2\propto A\] </p>
+<h3 id="Density_of_Matter_in_Nucleus">Density of Matter in Nucleus</h3>
+<p>The Density of matter in the nucleus is \[\rho(A,Z)=\frac{m(A,Z)}{V}.\] It is approximately the same for all nuclei \((\rho\simeq 2.3\times 10^{17}\;\text{kg/m}^3)\). </p>
+<h2 id="Angular_Momentum_of_the_Nucleus">Angular Momentum of the Nucleus</h2>
+<p>Angular moment is defined as \(\vb{L}=\vb{r}\times\vb{p}\). In quantum systems, there is another contribution to the overall angular momentum, intrinsic spin \(\vb{S}\) </p>
+<ul>
+<li>Both neutrons and protons have half-integer spin: \(S=\hbar/2\).</li>
+<li>Both \(\vb{L}\) and \(\vb{S}\) combine to give the system’s <i>total angular momentum</i>: \(\vb{J}=\vb{L}+\vb{S}\).</li></ul>
+<p> In QM we can measure simultaneously \(J^2\) and the projection of \(J\) on one axis. They both take only discrete values: \[\begin{array}{ll} J^2=j(j+1)\hbar^2, & j\in\mathbb{Z}^+\\ J_z=m_j\hbar, &m_j=-j,-j+1,\ldots j-1,j \end{array}\] </p>
+<h2 id="Nuclear_Spin">Nuclear Spin</h2>
+<p>The total angular momentum of a nucleus is often referred to as the nuclear spin. For a nucleus with </p>
+<ul>
+<li>\(A\) even and \(N,Z\) odd, \(j\) is integer.</li>
+<li>\(A\) odd, \(j\) is half integer.</li>
+<li>\(Z,N\) even, \(j=0\).</li></ul>
+<p> </p>
+<h3 id="Nuclear_Magnetic_Dipole_Moment">Nuclear Magnetic Dipole Moment</h3>
+<p>Magnetic dipole moment describes the distribution of electric currents in a system. In a nucleus, there is a magnet dipole moment associated with the nuclear spin.  It is measured in terms of the nuclear magneton, \(\mu_n\): \[\mu_n=\frac{e\hbar}{2m_p}\] For \(A,Z\) even, \(\mu_n=0\). </p>
+<h2 id="Nuclear_Stability">Nuclear Stability</h2>
+<p>Nuclear stability depends on \(Z\) and \(N\). It is presented on a Zregre chart. <br><img src="../Assets/ZegreChart.png" alt="ZegreChart.png"/><br> </p>
+<ul>
+<li>Light stable nuclei tend to have \(N=Z\).</li>
+<li>Heavy stable nuclei have \(N\gt Z\).</li>
+<li>Decay occurs via emission of \(\alpha,\beta,\gamma\) particles.</li></ul>
+<p> </p>
+<h2 id="Nuclear_Force">Nuclear Force</h2>
+<p>Nuclei are composed of neutral and positively charged particles Electromagnetic repulsion between like charges must be overcome for nuclei to exist. It is a strong nuclear force.  This force binds together the nucleons. Electrons are insensitive to it, and it does not depend on the charge of particles. It is 100 times stronger than the repulsive Coulomb force. t prefers to bind protons into pairs with opposite spins; neutrons are also preferably bound into pairs with opposite spins. </p>
+<h3 id="Strong_Nuclear_Potential">Strong Nuclear Potential</h3>
+<p><br><img src="../Assets/StrongNuclearPotential.png" alt="StrongNuclearPotential.png"/><br> Strong nuclear force results in an inter-nucleon potential that is repulsive at short distances and attractive over the size of the nucleus. The potential tends to zero outside the nucleus. </p>
+<h1 id="Liquid_Drop_Model">Liquid Drop Model</h1>
+<p>We have the mass of the nucleus \[m(Z,A)=Zm_p+(A-Z)m_n-E_B/c^2.\] The liquid drop model predicts the value of \(E_B\) as the sum of several terms produced by different effects </p>
+<ul>
+<li><i>Volume term</i>. The nuclear force is short range, therefore, each nucleon interacts only with the neighbours: \(a_vA\).</li>
+<li><i>Surface term</i>. Nucleons at the surface have fewer nearest neighbours and are not as tightly bound: \(-a_sA^{2/3}\).</li>
+<li><i>Coulomb term</i>. Protons repel each other: \(-a_c\frac{Z^2}{A^{1/3}}\).</li></ul>
+<p> So far we have \[E_B=a_vA-a_sA^{2/3}-a_c\frac{Z^2}{A^{1/3}}\] The model with just three terms is inadequate. It predicts that the nucleus with \(Z=0\) has the greatest binding energy. If this were the case, all the nuclei would contain only neutrons. The model needs to be corrected by considering other contributions </p>
+<ul>
+<li><i>Asymmetry term</i>. The nucleus can be treated as a gas of free protons and neutrons that are confined to a small region space, the nuclear volume. Protons and neutrons are fermions, and therefore, any two protons or neutrons cannot be in the same quantum state: \(-a_a\frac{(A-2Z)^2}{A}\).</li>
+<li><i>Pairing term</i>. It is found experimentally that two protons or two neutrons are always more strongly bound than one proton and one neutron \(+a_p\frac{\delta(A,Z)}{A^{1/2}}\).</li></ul>
+<p> Thus we can find the <i>semi-empirical mass formula (SEMF)</i> \[\boxed{m(Z,A)=Zm_p+(A-Z)m_n-E_B/c^2}\] where \[\boxed{E_B=a_vA-a_sA^{2/3}-a_c\frac{Z^2}{A^{1/3}}-a_a\frac{(A-2Z)^2}{A}+a_p\frac{\delta(A,Z)}{A^{1/2}}}\] the values of the parameters cannot be calculated and must be extracted from data: \[\begin{array}{|c|c|} \hline \textbf{Parameter} & \textbf{Value [MeV]}\\ \hline a_v & 15.8\\ a_s & 17.8\\ a_c & 0.714\\ a_a & 23.7\\ a_p & 12.0\\ \hline \end{array}\] </p>
+<h1 id="Nuclear_Decays">Nuclear Decays</h1>
+<p>Most nuclei are unstable, i.e., they <i>spontaneously</i> transform into other nuclei. This transformation is called radioactive or nuclear decay.  </p>
+<blockquote>The total number of nucleons is always conserved.</blockquote>
+<p> Radioactive decay occurs if </p>
+<ul>
+<li>A lower energy state with the same number of nucleons exists.</li>
+<li>The combined mass of the decay produced in the final state is less than the mass of the initial state, i.e. \[m_i\gt\sum m_f\]</li>
+<li>Total energy, momentum, charge and \(A\) are conserved in nuclear decays.</li>
+<li>Energy released in a decay is denoted \(Q\) and referred to as the "Q-Value" \[Q=\Delta mc^2=(m_i-\Sigma m_f)c^2\]</li>
+<li>For \(Q\gt 0\) the reaction occurs spontaneously. For \(Q\lt0\) energy must be supplied. </li></ul>
+<p> </p>
+<h2 id="\(\alpha\)-Decay">\(\alpha\)-Decay</h2>
+<p>In this type of decay, a helium-4 nucleus is emitted: \[_Z^AX\to_{Z-2}^{A-2}Y+_2^4\text{He}\] The helium nucleus is known as an "\(\alpha\) particle". The energy released in the process and carried away by the products as kinetic energy.  An alpha particle is very tightly bound and easy to form in the nucleus. Nuclei that decay via alpha emission have lifetimes in the range of \(10^{10}\) years to \(10^{-7}\) seconds.  </p>
+<h3 id="QM_Tunnelling">QM Tunnelling</h3>
+<p>The potential energy of an \(\alpha\) particle depends on its position \(r\) relative to the centre of the nucleus. <br><img src="../Assets/AlphaParticleTunnelling.png" alt="AlphaParticleTunnelling.png"/><br> </p>
+<ul>
+<li>\(r\lt R\): the \(\alpha\) experiences the strong nuclear force.</li>
+<li>\(r\gt R\): the \(\alpha\) experiences only the coulomb repulsive force.</li></ul>
+<p> The fact that \(\alpha\)-decay occurs indicates that \(E_\alpha\gt 0\) and it is this energy released in a decay. However \(E_\alpha\) is not greater than the Coulomb barrier as the nucleus with this \(A\) would not exist. Thus the particle escapes via QM tunnelling.  The wave function falls exponentially inside the barrier region. The Coulomb part of the potential well is very steep. A small change in \(E_\alpha\) makes a large change in the thickness of the barrier \(\Delta r=R'-R\). <br><img src="../Assets/TunnelingAlphaParticleThickness.png" alt="TunnelingAlphaParticleThickness.png"/><br> Probability for transmission \(P\) is \[P\simeq e^{-2k\Delta r}\] where \(k=\sqrt{2m(V_c-E_\alpha)}/\hbar\).  We can solve the relevant equations to find the relationship between half life and \(E_\alpha\): \[\log(t_{1/2})=a(Z)+\frac{b}{\sqrt{E_\alpha}}\] where \(a\) is a parameter that depends on \(Z\) and \(b\) is a constant. This is the <i>Geiger-Nuttall relation.</i> </p>
+<h2 id="\(\beta\)-Decay">\(\beta\)-Decay</h2>
+<p>There are two types. \(\beta^-\) and \(\beta^+\). An electron or positron and a neutrino are emitted. </p>
+<ul>
+<li>\(\beta^-\)-decay with electron emission: \[^A_ZX\to_{Z+1}^AY+e^-+\bar{\nu}_e\]</li>
+<li>\(\beta^+\)-decay with positron emission: \[^A_ZX\to_{Z-1}^AY+e^++\nu_e\]</li></ul>
+<h3 id="Stability_of_Nuclides">Stability of Nuclides</h3>
+<p>We can remember the SEMF, </p>
+<ul>
+<li>In \(\beta\)-decay, \(A\) is constant and \(Z\) changes by one unit.</li>
+<li>The dependence of \(m(Z,A)\) on \(Z\) is quadratic.</li>
+<li>For a given \(A\) there should be a minimum of \(m\).</li>
+<li>The nuclide with minimal \(m\) is stable against beta decay.</li>
+<li>For a given \(A\), for the most stable nuclide: \[\frac{\delta M(A,Z)}{\delta Z}\simeq 0\]</li></ul>
+<h3 id="Q-Value_of_\(\beta\)-Decay">Q-Value of \(\beta\)-Decay</h3>
+<p>\[\begin{align} &\beta^-:\qquad Q=(m(Z,A)-m(Z+1,A)-m_e)c^2\\ &\beta^+:\qquad Q=(m(Z,A)-m(Z-1,A)-m_e)c^2 \end{align}\] It is more convenient to compute this using atomic masses \[M(Z,A)=m(Z,A)+Zm_e\] \[\begin{align} &\beta^-:\qquad Q=(M(Z,A)-M(Z+1,A))c^2\\ &\beta^+:\qquad Q=(M(Z,A)-M(Z-1,A)-2m_e)c^2 \end{align}\] </p>
+<h3 id="Electron_Capture">Electron Capture</h3>
+<p>For some atoms \[M(Z-1,A)\lt M(Z,A)\lt M(Z-1,A)+2m_e\] </p>
+<ul>
+<li>In this case \(\beta^+\)-decay is forbidden because \(Q\lt 0\).</li>
+<li>However, it is possible for such atoms that the nucleus captures an electron from the atomic shell and emits a neutrino \[e+_Z^AX\to\;^A_{Z-1}Y+\nu_e\]</li>
+<li>This is called electron capture, with \(Q=(M(Z,A)-M(Z-1,A))c^2\)</li></ul>
+<p> </p>
+<h2 id="\(\gamma\)-Decay">\(\gamma\)-Decay</h2>
+<p>After a nuclear decay or reaction, the daughter nuclide is often left in an 'excited state', i.e. the nucleons are not in the lowest energy state.  The nucleons will 'de-excite' to the ground state with the emission of a photon \[^A_ZX^*\to^A_ZX+\gamma\] This is similar to atomic de-excitation of electrons, but at much higher photon energy and concerning the nucleons NOT the electrons. Sometimes more than one photon is emitted. This is known as a \(\gamma\) cascade. </p>
+<ul>
+<li>Higher energy states fairly long-lived (\(t_{1/2}\gt 100\text{ns}\)) are 'metastable' states called <i>isomers</i>.</li>
+<li>We denote excited states with stars \((*)\).</li>
+<li>In more detailed analysis of nuclei we can use \(m,n,p\) for the first second and third excited states respectively.</li></ul>
+<p> </p>
+<h2 id="Activity">Activity</h2>
+<p>A large number of radioactive decays must be studied to infer the average properties. We can define the number of nuclei in a sample at time \(t\) as \(N(t)\). The <i>activity</i> also known as the <i>decay rate</i>, is the rate of change of \(N(t)\) with respect to \(t\) with a minus sign.  It has units of becquerel \([\text{Bq}]\) which is 1 decay per second. \[\text{Activity}\equiv -\dv{N}{t}=\lambda N(t)\] where \(\lambda\) is the radioactive decay constant.  Let the number of radioactive nuclei in a sample be \(N_0\) at \(t=0\). By solving the differential equation we find \[N(t)=N_0e^{-\lambda t}\] </p>
+<h3 id="Half-Life">Half-Life</h3>
+<p>The half life (\(t_{1/2}\)) of a radioactive nuclei is defined as the time taken for 50% of the sample to decay. Hence \[\lambda=\frac{\ln(2)}{t_{1/2}}\] the mean lifetime is defined as \(\tau=1/\lambda=t_{1/2}/\ln(2)\). </p>
+<h3 id="Decay_Chains">Decay Chains</h3>
+<p>Some isotopes follow a sequence of radioactive decays until a stable isotope is reached. The sequence of decays is often referred to as a decay chain. </p>
+<ul>
+<li>The original nucleus in the decay chain referred to as the <i>parent nucleus</i>. </li>
+<li>The decay product of the parent nucleus is referred to as the <i>daughter nucleus</i>.</li></ul>
+<p> </p>
+<h4 id="Secular_Equilibrium">Secular Equilibrium</h4>
+<p>When a decay chain has a member than lives for a relatively long time in comparison to other nuclei, all other nuclei below said member can only decay as fast as the nucleus above it in the chain. Thus the nuclei are in secular equilibrium as the nuclei below are roughly constant w.r.t time.  E.g. <br><img src="../Assets/SecularEquib.png" alt="SecularEquib.png"/><br> Compared with the other isotopes in the chain, lead-210 is longer-lived. In this case, the number of lead-210 in a given sample will barely change during a small time interval. </p>
+<h2 id="Branching_Fraction">Branching Fraction</h2>
+<p>For some nuclides, several different decays are possible. <br><img src="../Assets/Thorium-232_Branching.png" alt="Thorium-232_Branching.png"/><br> The <i>branching fraction</i> is defined as the ratio of the  probability of decay by a given decay mode to the probability of decay by any mode.  For example in the figure above the branching fraction of thorium-232 to thallium-208 is 36%. (From the split at bismuth) </p>
+<h1 id="Shell_Model">Shell Model</h1>
+<h2 id="Magic_Numbers:_Stable_Nuclei">Magic Numbers: Stable Nuclei</h2>
+<p>The most stable nuclei are those with the highest binding energy per nucleon. Binding energy as predicted by the SEMF, is sometimes in significant disagreement with measured energies. </p>
+<ul>
+<li>The disagreement is observed for nuclei with \(Z\;\text{and/or}\;N=2,8,20,28,50,82,126\). For such nuclei, the binding energy per nucleon is larger than expected. Hence the numbers above are called <i>magic numbers</i>.</li>
+<li>Nuclei with a magic number of protons and neutron have exceptionally high binding energy - these nuclei are called <i>doubly magic nuclei</i>.</li>
+<li>Nuclei with magic numbers have more isotopes and isotones.</li>
+<li>For magic \(Z\), they have a higher first excited state and greater natural abundance.</li></ul>
+<p> The presence of magic numbers cannot be explained via the liquid drop model or the SEMF. We use the <i>shell model</i> to explain them. The nuclear shell model only involves nucleons within the nucleus. There is no involvement from electrons. </p>
+<h2 id="Basic_Assumptions">Basic Assumptions</h2>
+<ul>
+<li>A single nucleon moves in a nuclear potential that represents the average effect of interactions with other nucleons in the nucleus.</li>
+<li>The potential varies smoothly</li>
+<li>As nucleons are bound, the potential is a potential well.</li>
+<li>A nucleon move in an orbit of a single particle in the well.</li>
+<li>The nucleons obey Pauli exclusion principle.</li></ul>
+<p> </p>
+<h2 id="Saxon-Woods_Potential">Saxon-Woods Potential</h2>
+<p>The nuclear potential can be described via a "Saxon-Woods" potential \[V(r)\sim\frac{-V_0}{1+e^{(r-R)/d}}\] </p>
+<ul>
+<li>\(V_0\) is the depth of the potential (\(\sim 50\text{MeV}\)).</li>
+<li>\(d\) is the surface thickness of the nucleus.</li>
+<li>\(R\) is the nuclear radius, \(R=r_0A^{1/3}\)</li></ul>
+<p> <br><img src="../Assets/Saxon-Woods_potential.png" alt="Saxon-Woods_potential.png"/><br> </p>
+<h3 id="Quantum_State_of_Nucleons">Quantum State of Nucleons</h3>
+<p>According to the Pauli exclusion principle, two fermions of the same type cannot occupy the same quantum state. This applies separately to protons and neutrons.  The quantum state of the nucleon is described by: </p>
+<ul>
+<li>Principle quantum number (\(n=1,2,3,\ldots\))</li>
+<li>Orbital quantum number (\(l=0,1,2,\ldots\) which are denoted as \(s,p,d,f,\ldots\))</li>
+<li>\(\vb{L}\) and \(\vb{S}\) of the nucleon, which are combined as \(\vb{J}=\vb{L}+\vb{S}\).</li>
+<li>The observable quantum numbers are \(\vb{J}^2=j(j+1)\hbar^2\) and \(J_z=m_j\hbar\), where \(m_j=-j,-j+1,\ldots, j\)</li>
+<li>The QM rules for adding angular momentum and spin determine the possible values of \(j\): \(l\pm\frac{1}{2}\).</li>
+<li>The notation of the quantum state of the nucleon is \[(n)(l)_{(j)}\] e.g. the state \(2p_{3/2}\) has \(n=2,l=1,j=3/2\).</li></ul>
+<p> </p>
+<h3 id="Energy_Levels_of_the_Nucleon">Energy Levels of the Nucleon</h3>
+<p>Energy levels of the nucleon with different quantum numbers are obtained from the solution of the Schrodinger equation for the Saxon-Woods potential. <br><img src="../Assets/NucleusShells.png" alt="NucleusShells.png"/><br> The different states are grouped into shells </p>
+<ul>
+<li>The difference of energy within the shell is small.</li>
+<li>The difference of energy between the shells is large</li></ul>
+<p> The nuclei with the filled shells have 2, 8, 20, 28, 50 nucleons. This is a perfect match to the experimentally observed magic numbers! </p>
+<h1 id="Nuclear_Fission_and_Fusion">Nuclear Fission and Fusion</h1>
+<p>Some nuclei are naturally radioactive and thus unstable. Other nuclei can transmute into other elements through nuclear reactions. Nuclear reactions can be initiated in any nuclide (stable or not) by bombarding a nucleus with other nuclei or particles such as \(\alpha,\gamma,n,p\), etc.  E.g. \[^7_3\text{Li}+p\to^7_4\text{Be}+n\] Fusion of two nuclei can occur if the sum of their masses is greater than the mass of the resulting nuclei. E.g. \[^2\text{H}+^3\text{H}\to^4\text{He}+n+17.6\text{MeV}\] This can happen for any nuclei below \(^{56}\text{Fe}\).  Fission causes a single nucleus to split into two or more smaller nuclei. This can happen for any nuclei above \(^{56}\text{Fe}\). </p>
+<h3 id="Cross-Section">Cross-Section</h3>
+<p>A quantitative measure of the probability that the nuclear reaction will occur is called a <i>cross-section</i> \(\sigma\). The cross section can be interpreted as the effective area of the nucleus presented to the beam for which a particular reaction can be expected to occur.  <br><img src="../Assets/CrossSection.png" alt="CrossSection.png"/><br> We find that for a number of particles hitting a target \(J\), the number of reactions per second is \[W=j\frac{\sigma N_t}{A_t}\] where \(N_t\) is the number of target nuclei and \(A_t\) is the total area of the target. The number of nuclei per unit volume is \(n=\frac{N_t}{A_t\delta x}\) and therefore \[\sigma=\frac{W}{Jn\;\delta x}\] The unit of the cross section is barn \(1\;\text{barn [b]}=10^{-28}\;\text{m}^2\).  For a given beam of particles, several reactions can occur. Each reaction \(i\) has a <i>partial cross section</i> \(\sigma_i\) and therefore there is a total cross section \(\sigma_\text{tot}=\sum_i\sigma_i\). </p>
+<h2 id="Fission">Fission</h2>
+<p>Some very heavy nuclei can undergo spontaneous fission. This is the process where a parent nucleus breaks into two daughter nuclei without any external input. This is only possible if energy is released in the process. Fission can be induced, usually by bombardment with neutrons (neutron activation) e.g. in nuclear reactors. </p>
+<h3 id="Fission_Barrier">Fission Barrier</h3>
+<p>To undergo spontaneous fission, the (daughter) nuclei should tunnel through potential barrier like in the \(\alpha\)-decay. However the fragments are very heavy so the tunnelling probability is small.  The height of the top of the fission barrier above the ground state energy of the nucleus is called <i>activation energy</i>. Activation energy decreases as \(A\) increases, and for very heavy nuclei, the spontaneous fission has a reasonably high probability. </p>
+<h3 id="Neutron-Induced_Fission">Neutron-Induced Fission</h3>
+<p>Neutrons are neutral particles, and they are not repelled by the positively charged nucleus, therefore, low-energy neutrons can be easily absorbed by nuclei, often resulting in an excited state, which subsequently decays.  Neutron-induced fission, commonly referred to as fission, can occur when a nucleus captures a low-energy neutron and receives sufficient energy to overcome the fission barrier. For example \[^{235}_{92}\text{U}+n\to\text{X}^*+\text{Y}^*\to\text{X}+\text{Y}+kn\] where \(k\) represents the number of neutrons released in the reaction. A chain reaction can happen since neutrons released can trigger other bombardment. There is the following condition: </p>
+<ul>
+<li>\(k\lt 1\): Sub-critical state.</li>
+<li>\(k=1\): Critical state.</li>
+<li>\(k\gt 1\): Supercritical state.</li></ul>
+<p> </p>
+<h3 id="Nuclear_Reactor">Nuclear Reactor</h3>
+<p>The nuclear reactor consists of the following major parts: </p>
+<ul>
+<li><i>Fuel</i> - usually either natural or enriched uranium.</li>
+<li><i>Moderators</i> - Slow down fast neutrons via elastic collisions.</li>
+<li><i>Control rods</i> - Control the number of neutrons available for fission.</li>
+<li><i>Cooling system</i> - The reactor needs to be held at a reasonable temperature.</li></ul>
+<p> </p>
+<h2 id="Fusion">Fusion</h2>
+<p>Nuclear fusion occurs when it is energetically favourable for light nuclei to fuse and release energy. For fusion to occur the Coulomb barrier must be overcome. The most simple example is the combination of two protons: \[p+p\to d+e^++\nu_e+0.42\;\text{MeV}\] For two protons, the Coulomb energy is around 1.2 MeV. Released energy is not sufficient to overcome the Coulomb barrier. However, this is the main fusion process within the Sun! It MUST therefore be possible!  The ways to overcome the Coulomb barrier: </p>
+<ul>
+<li>Accelerate particles to slam them together.</li>
+<li>Increase density.</li>
+<li>Increase temperature.</li>
+<li>Combine several of the above <i>and</i> quantum tunnelling.</li></ul>
+<p> </p>
+<h1 id="The_Standard_Model">The Standard Model</h1>
+<h2 id="Units_of_particle_Physics">Units of particle Physics</h2>
+<p>Main properties of particles: mass \(m\), charge \(q\), spin \(s\). </p>
+<ul>
+<li>For an electron, assuming SI, we have \[\begin{align}&m(e)=9.109\times 10^{-31}\;\text{kg}\\&q(e)=-1.602\times 10^{-19}C\\&s_z=\pm\hbar/2=\pm1/2\times1.055\times10^{-31}\;\text{Js}\end{align}\]</li>
+<li>Using SI is not convenient, so we use special units s.t. \[\begin{align}&m(e)=0.511\;\text{MeV/c}^2\\&q(e)=-1\\&s_z(e)=\pm1/2\end{align}\]</li>
+<li>This implies that \(\hbar=1\), and we often set \(c=1\) too.</li></ul>
+<p> </p>
+<h3 id="Natural_Units">Natural Units</h3>
+<p>\(\hbar=1\) implies that \[\begin{align} &[\text{energy}]\times[\text{time}]=1\\ &[\text{momentum}]\times[\text{distance}]=1 \end{align}\] We can recall the relativistic energy-momentum relationship: \[E^2=p^2c^2+(mc^2)^2\] Making the choice \(\hbar=1,\;c=1\) implies: </p>
+<ul>
+<li>Energy, momentum and mass are measured in the same units.</li>
+<li>Time and distance are both measured in inverse energy.</li>
+<li>Angular momentum is dimensionless.</li></ul>
+<h2 id="Fundamental_Particles">Fundamental Particles</h2>
+<p><br><img src="../Assets/StandardModel.png" alt="StandardModel.png"/><br> Matter is made up of fermions which are: </p>
+<ul>
+<li>Six <i>quarks</i>,</li>
+<li>Six <i>leptons</i></li></ul>
+<p> Forces are carried via bosons: </p>
+<ul>
+<li>Four <i>gauge bosons</i> which carry strong force, EM force, and control weak interactions</li>
+<li><i>Higgs boson</i> responsible for masses</li></ul>
+<p> Each particle has a corresponding antiparticle. </p>
+<h3 id="Fundamental_Interactions">Fundamental Interactions</h3>
+<p>All known interactions between fundamental particles are produced by the strong, weak, and electromagnetic forces.  (Gravity is insignificant at the energy scales of experimental particle physics and is not included in the model) </p>
+<h3 id="Particles_of_Matter">Particles of Matter</h3>
+<p>Quarks and leptons are fundamental particles of matter. All known matter in the Universe is formed from quarks and leptons. </p>
+<ul>
+<li>Quarks and leptons are fermions; their spin is 1/2.</li>
+<li>The charge of quarks is \(+2e/3\) (up) \(-e/3\) (down)</li>
+<li>The charge of leptons is \(-e\) (charged leptons) \(0\) (neutrino)</li>
+<li>\(e=1.60\times10^{-19}\text{C}\) is the absolute value of the charge of the electron.</li></ul>
+<p> The main difference between quarks and leptons is that quarks participate in strong, weak and electromagnetic interactions. Charged leptons participate in weak and electromagnetic interactions. Neutrinos participate only in weak interactions (because their charge is zero).  Neutrinos are massless in the standard model, but we know they have masses, just not their values.  All quarks have an additional quantum number called <i>colour charge</i>. It can be in one of three states: <i>red, green</i> and <i>blue</i>. </p>
+<h2 id="Generations_of_Matter">Generations of Matter</h2>
+<p>The particles of matter are grouped in three generations. Each generation contains two quarks and two leptons. The first generation contains up and down quarks, electron and electron neutrino. Between generations, the similar particles differ by their mass, but their interactions are the same.  Similar particles in the generations are successively heavier and less stable. </p>
+<h2 id="Anti-particles">Anti-particles</h2>
+<p>All fermions have anti-particles. They are denoted with a bar above the symbol of the particle. Anti-particles have identical mass, spin, energy, momentum, etc, but opposite charge.  When a particle meets its corresponding antiparticle, they annihilate to release the energy contained in their masses. The inverse process (creation of matter) is also possible. Respectively: \[\begin{align} &e^++e^-\to\gamma+\gamma\\ &\gamma+\gamma\to e^+=e^- \end{align}\] </p>
+<h2 id="Hadrons">Hadrons</h2>
+<p>Quarks cannot exist as free particles. They must be confined within composite particles called hadrons. They are classified into </p>
+<ul>
+<li><i>Baryons</i> - with half integer spin, and</li>
+<li><i>Mesons</i> - with integer spin.</li></ul>
+<p> Baryons consist of three quarks, whereas mesons consist of a quark and anti-quark. Each hadron has an anti-hadron such as \(uud\) and \(\bar{u}\bar{u}\bar{d}\). </p>
+<h2 id="Fundamental_Forces">Fundamental Forces</h2>
+<ul>
+<li>Classical physics: Interaction at a distance is described in terms of a potential or field due to one particle acting on another.</li>
+<li>Quantum theory: interaction is viewed as an exchange of specific quanta (i.e. bosons) associated with the particular type of interaction.</li></ul>
+<p> Quarks and leptons interact via one of four fundamental forces. Interaction is mediated by the field quanta, which manifest as gauge bosons. The four gauge bosons have spin 1. The Higgs boson has spin 0. </p>
+<h3 id="Exchange_of_Gauge_Bosons">Exchange of Gauge Bosons</h3>
+<p>In the exchange process, the relation between the energy and momentum of the gauge boson is violated. </p>
+<ul>
+<li>For a free particle \(E^2=p^2c^2+(mc^2)^2\).</li>
+<li>In the exchange process \(q^2=E^2-p^2c^2\neq(mc^2)^2\).</li></ul>
+<p> The exchange boson is virtual, and it is referred to as being "off mass shell". Violation of energy-mass relation is possible during a short period of time due to the uncertainty principle \(\Delta E\Delta t\geq\hbar/2\). This allows us to "borrow" an amount of energy \(\Delta E=Mc^2\) for a time \(\Delta t\).  The maximum distance travelled by the exchange particle is \[\Delta x=c\Delta t\sim\frac{\hbar c}{Mc^2}\] (Electromagnetic interaction is long-range because the mass of the photon is zero) </p>
+<h1 id="Feynman_Diagrams">Feynman Diagrams</h1>
+<p>They are a pictorial representation of an interaction between fundamental particles. Special Feynman rules associated with Feynman diagrams allow calculation of the probability of any process in particle physics. </p>
+<blockquote>If you cannot draw a valid Feynman diagram connecting an initial state to a final state, then the reaction cannot happen.</blockquote>
+<p> </p>
+<h2 id="Conventions">Conventions</h2>
+<p>Feynman diagram shows the evolution of a process in time (but not in space) (on the \(x\)-axis): <br><img src="../Assets/FeynmanDiagramTime.png" alt="FeynmanDiagramTime.png"/><br> The \(y\)-axis is not related to the position of particles or the distance between them.  For example, this diagram shows the electromagnetic scattering of two electrons. Initially, both electrons are on the left side of the diagram; this is called the initial state. They move along the full lines and interact by exchanging the photon.  As a result of interaction, the properties of the electrons (e.g., momentum, energy, etc.) change. The break in the electron lines reflects this. The diagram does not specify which properties change or how much. After the interaction, the particles continue to move undisturbed along their lines and finish on the right side of the diagram, which is called the final state. </p>
+<h3 id="Interaction_Vertex">Interaction Vertex</h3>
+<p>The diagram is constructed from several basic elements called vertex.  The vertex of the EM interaction consists of one full broken line with an arrow corresponding to a fermion and one "zig-zag" line corresponding to a photon. <br><img src="../Assets/FeynmanLineStyles.png" alt="FeynmanLineStyles.png"/><br> A Feynman diagram is ‘topological’. It can be drawn in slightly different ways, and it still means the same thing. However, it is best practice to draw the diagram in the most simple form to avoid confusion  Feynman diagrams can be rotated to change what is in the initial and final states. The result is a different process. We can rotate not the diagram but only one of the fermion lines and obtain a diagram describing a different process. </p>
+<h2 id="Virtual_Particles">Virtual Particles</h2>
+<p>The closed lines on the diagrams correspond to virtual particles. The uncertainty principle allows the virtual particles to exist for the time \(\Delta t\sim\hbar/E\). Both fermions and bosons can be virtual. </p>
+<h2 id="Hadron_Involvement">Hadron Involvement</h2>
+<p>Hadrons are composed of several quarks and/or anti-quarks. Even though some of the quarks of the hadron do not participate in the interaction, they are also shown on a diagram. Such quarks and/or anti-quarks are called spectators. Initial and final state of the processes are hadrons, not quarks. Initial and final hadrons must be specified. <br><img src="../Assets/HadronFeynmanDiagram.png" alt="HadronFeynmanDiagram.png"/><br> </p>
+<h1 id="Interactions">Interactions</h1>
+<h2 id="EM_Interactions">EM Interactions</h2>
+<p>Only one type of vertex exists for the electromagnetic interaction of fermions. <br><img src="../Assets/EMInteractionFeynman.png" alt="EMInteractionFeynman.png"/><br> </p>
+<ul>
+<li>A particle cannot become an antiparticle from an EM interaction.</li>
+<li>Only one photon in the vertex.</li>
+<li>The flavour of the particle does not change \(\implies\) charge is conserved in the EM interaction.</li></ul>
+<p> </p>
+<h2 id="Strong_Interaction">Strong Interaction</h2>
+<p>The colour state of quarks change in a strong interaction. Since colour charge is conserved this implies that the gluon also has a colour state: <br><img src="../Assets/StrongInteractionFeynman.png" alt="StrongInteractionFeynman.png"/><br> A gluon can therefore interact with itself. Thus the strong interaction has two important properties </p>
+<ol>
+<li> Asymptotic freedom</li>
+<li> Confinement</li></ol>
+<p> </p>
+<h3 id="1._Asymptotic_Freedom">1. Asymptotic Freedom</h3>
+<p>The strong force strength decreases with the decrease of distance. I.e. as \(r\to0\), the force becomes very small. Thus a group of quarks very close together are free! </p>
+<h3 id="2._Confinement">2. Confinement</h3>
+<p>The strong force does not decrease with distance, therefore the energy to completely separate two particles is infinite. Thus colour objects cannot be free, they combine into colourless ("white") objects. </p>
+<h3 id="Strong_Interaction_of_Hadrons">Strong Interaction of Hadrons</h3>
+<p>They do not interact when the distance between them is large, but when they are close together the quarks within the hadrons can react with the quarks in other hadrons. This is why nucleons are bound to each other in the nucleus. </p>
+<h2 id="White_Objects">White Objects</h2>
+<p>Two combinations of colour particles give colourless (white) objects: </p>
+<ul>
+<li><i>Mesons</i>: e.g. \(u(r)+\bar{d}(\bar{r})\) </li>
+<li><i>Baryons</i>: e.g. \(p=u(r)+u(g)+d(b)\)</li></ul>
+<p> Thus only mesons and baryons can exist as free particles. Leptons, and all bosons except the gluon do not have the colour charge; they are also treated as white particles. </p>
+<h2 id="Weak_Interaction">Weak Interaction</h2>
+<p>The weak interaction is mediated by \(W^\pm\) and \(Z\) bosons. Both of these bosons are massive particles \[M(W)=80\text{MeV},\qquad M(Z)=91\text{GeV}.\] The charges of these particles are \[q(W)=\pm1,\qquad q(Z)=0.\] The charge is conserved in weak interactions, therefore the flavour of the fermion in the interaction with a \(W\) boson changes. </p>
+<ul>
+<li>A charged lepton is transformed to a neutrino (and vice versa).</li>
+<li>Up type quarks are transformed into down type quarks (and vice versa).</li></ul>
+<p> </p>
+<h3 id="Change_of_Flavour_(Type)">Change of Flavour (Type)</h3>
+<ul>
+<li>Any up-type quark can transform into any down-type quark, e.g., \[u\to W^+d\quad\text{or}\quad b\to W^-d\]</li>
+<li>However, a charged lepton is transformed <i>ONLY</i> to the neutrino of the same generation \[e\to W^-\nu_e\quad\text{or}\quad\nu_\tau\to W^+\tau\]</li>
+<li>Therefore, the number of leptons from each generation is conserved in weak interactions. We can introduce the <i>individual lepton number</i> \(L_e,L_\mu,L_\tau\).</li></ul>
+<p> For example </p>
+<ul>
+<li>Each electron or electron neutrino is assigned \(L_e=+1\)</li>
+<li>Each positron of electron anti-neutrino is assigned \(L_e=-1\)</li>
+<li>Any other particle has \(L_e=0\)</li>
+<li>\(L_\mu,L_\tau\) are defined similarly.</li></ul>
+<p> </p>
+<h4 id="Lepton_Number_and_Baryon_Number">Lepton Number and Baryon Number</h4>
+<p>All known interactions do not transform leptons to quarks and vice versa. To quantify this statement, the lepton number \(L\) and baryon number \(B\) are introduced. </p>
+<ul>
+<li>\(L=L_e+L_\mu+L_\tau\). It is conserved in W.</li>
+<li>Each quark is given \(B=+1/3\) and each anti-quark is given \(B=-1/3\).</li></ul>
+<p> So all known interactions conserve \(L\) and \(B\). (Separately) </p>
+<h3 id="Interaction_with_\(Z\)_Boson">Interaction with \(Z\) Boson</h3>
+<p>The \(Z\) boson interacts with <i>any</i> fermion. (Including neutrinos, which is their only interaction.) </p>
+<ul>
+<li>Particles cannot become antiparticles</li>
+<li>Only one \(Z\) in each vertex</li>
+<li>The flavour of the particle does not change \(\implies\) \(q\) is conserved.</li></ul>
+<p> </p>
+<h3 id="Range_of_the_Weak_Interaction">Range of the Weak Interaction</h3>
+<p>Since \(W\) and \(Z\) are massive, they are virtual particles and exist for a very short time: \[\Delta t\sim\frac{\hbar}{\Delta E}\to\Delta x=c\Delta t\sim\frac{c\hbar}{Mc^2}\sim2.4\times 20^{-18}\text{m}\] this is a very short range. E.g. <br><img src="../Assets/WBosonInteraction.png" alt="WBosonInteraction.png"/><br> </p>
+<h2 id="Conserved_Quantities">Conserved Quantities</h2>
+<p>The fundamental interactions conserve some quantities and do not conserve others  All interactions in the standard model conserve </p>
+<ul>
+<li>Four-momentum (energy and momentum)</li>
+<li>Total angular momentum</li>
+<li>Electric charge</li>
+<li>Colour charge</li>
+<li>Individual + total lepton number</li>
+<li>Baryon number</li></ul>
+<p> On the contrary, the flavour is conserved in EM and strong interactions, but not in weak interactions. </p>
+<h4 id="Conservation_of_Four-momentum">Conservation of Four-momentum</h4>
+<p>Conservation of four-momentum implies that the mass of decaying particle is always greater than the sum of the masses of the decay products \[M_i\gt\sum_fM_f.\] In the rest frame of the decaying particle, the initial energy is equal to the mass of the particle, and the final energy is greater than the sum of the masses of the decay products.  This is why the decay \(n\to p+e+\bar{\nu}_e\) is allowed, but the decay \(p\to n+\bar{e}+\nu_e\) is not permitted.  Note that this latter <i>can</i> happen when the proton is in the nucleus, as this is \(\beta^+\) decay. It just cant happen when the proton is a free particle. In the case of the neutron we must consider the mass of the nucleus before and after the decay. </p>
+<h1 id="Particle_Decay_and_Production">Particle Decay and Production</h1>
+<p>Many particles, both composite (hadrons) and fundamental (fermions and bosons) cease to exist after some time after their creation and produce several other particles. This process is called decay. E.g. \[\mu\to e\bar{\nu}_e\nu_\mu\] <br><img src="../Assets/WeakDecayOfMoun.png" alt="WeakDecayOfMoun.png"/><br> </p>
+<ul>
+<li>Particles decay spontaneously and independently of each other.</li>
+<li>The number of particles that have decayed \(\dd{N}\) in an interval \(\dd{t}\) must be proportional to the number of particles present at the start of the interval, \(N(t)\). \[\frac{\dd{N}}{dt}=-\Gamma N\]</li>
+<li>\(\Gamma\) is a positive constant called the <i>natural decay width</i>.</li>
+<li>Like in radioactive decay, the solution to the equation is \[N(t)=N_0e^{-\Gamma t}\]</li>
+<li>The quantity \(\tau=1/\Gamma\) is called the <i>mean lifetime</i>.</li></ul>
+<p> </p>
+<h2 id="Interactions">Interactions</h2>
+<p>All decays are the result of interaction. </p>
+<ul>
+<li><i>Strong decay</i> are mediated by gluons. Only hadrons strongly decay. \(\tau\sim 10^{-23}\text{s}\)</li>
+<li><i>Electromagnetic decays</i> are mediated by photons. Only hadrons electromagnetically decay. \(\tau\sim 10^{-20}\text{s}\)</li>
+<li><i>Weak decays</i> are mediated by \(W^\pm\) and \(Z\) bosons. Both hadrons, fundamental fermions, \(W^\pm\) and \(Z\) bosons weakly decay. From \(\tau\sim 10^{-6}\;\text{to}\;10^{-12}\text{s}\) for light particles and up to \(10^{-24}\text{s}\) for heavy particles.</li></ul>
+<p> <br><img src="../Assets/DecaysByInteractions.png" alt="DecaysByInteractions.png"/><br> Mean lifetime above \(\sim10^{-13}\text{s}\) can be experimentally measured. For particles with m.l. below that, natural width is used instead. This has units of \(\text{MeV or GeV}\).  </p>
+<h2 id="Branching_Fraction">Branching Fraction</h2>
+<p>Usually a particle can decay into different final states. decays to different final states are called <i>decay modes.</i> For example, the following decays are possible \[\pi^-\to\mu\bar{\nu}_\mu\quad\text{or}\quad\pi^-\to e\bar{\nu}_e\] The probability of decay to different decay modes depends on the property of interaction. The branching fraction is defined as the ratio of the probability of decay by a given decay mode to the probability of decay by any mode. </p>
+<h2 id="Natural_Width">Natural Width</h2>
+<p>The observed mass of a particle with a very short lifetime is subject to the uncertainty principle \[\Delta E\Delta t\gtrsim\frac{\hbar}{2}\] The energy of a particle at rest is its mass. Thus the uncertainty is the mass is \[\Delta M\gtrsim\frac{\Gamma}{2}\] </p>
+<h2 id="Centre_of_Mass_Energy">Centre of Mass Energy</h2>
+<p>The centre of mass energy \(\sqrt{s}\) is defined as \[\sqrt{s}=\sqrt{(E_1+E_2)^2-(\vb{P}_1+\vb{P}_2)^2}=\sqrt{(p_1+p_2)^2}\] This expression is Lorentz-invariant, i.e., it is the same in any frame. </p>
+<h3 id="Dominant_Interaction">Dominant Interaction</h3>
+<p>In many cases, several interactions can contribute to the production of the particles. </p>
+<ul>
+<li>In general if a process is mediated by the EM interaction, it can also be mediated by the \(Z\) boson. (The reverse is not true)</li>
+<li>Any strong interaction of quarks can be mediated by the photon or \(Z\) boson.</li></ul>
+<p> Probability of a process (both decay and production) is determined by the sum of contributions of all possible interactions. Often, only one type of interaction gives the main contribution to the probability. </p>
+<ul>
+<li>The strong interaction if possible always dominates over EM and weak interactions.</li>
+<li>At low energies \(\sqrt{s}\ll M(Z)\), EM dominates over weak interactions with the \(Z\) boson.</li>
+<li>At high energies \(\sqrt{s}\gtrsim M(Z)\) then the weak interaction becomes dominant.</li></ul>
+<p> </p>
+<h1 id="Transformation_of__Flavours">Transformation of  Flavours</h1>
+<h2 id="Coupling_Constant">Coupling Constant</h2>
+<p>The probability of each process in particle physics depends on a coupling constant of interaction. It is a numerical quantity describing the strength of interaction. It depends on the energy of the interaction. For EM interactions, it also depends on the charge of the particle. \(Qg_\text{em}\) where \(g_\text{em}=\sqrt{4\pi/137}\).  Probability of each process (decay or collision) is proportional to the square of the product of the constants in all vertices of the Feynman diagram.  The probability of the production of the \(u\bar{u}\) pair in the \(\bar{e}e\) interaction is: \[P(e\bar{e}\to u\bar{u})\propto(Q_eQ_ug^2_\text{em})^2\] </p>
+<h2 id="Flavour_Universality_of_Weak_Interaction">Flavour Universality of Weak Interaction</h2>
+<p>Weak interaction with \(W\) boson changes the flavour of fermions. An important assumption of the Standard Model is that the strength of interaction of any fermion with \(W\) boson (i.e. the coupling constant) should be the same. This  assumption is called the flavour universality of weak interaction.  This assumption works well in weak interactions of leptons: \[g_W^e=g_W^\mu=g_W^\tau=g_W\approx0.641\] But differs from that of quarks \[g_W^{d\to u}=0.975g_W\qquad\quad g_W^{s\to u}=0.223g_W\] </p>
+<h2 id="Cabibbo's_Theory">Cabibbo's Theory</h2>
+<p>Flavour universality of weak interactions can be restored if we assume that the down-type quarks participating in the weak interactions are not d and s, but their combination: \[\begin{align} &d'=\cos\theta_c\;d+\sin\theta_c\;s\\ &s'=-\sin\theta_c\;d+\cos\theta_c\;s \end{align}\] where \(\theta_c=12.9^\circ\) is the Cabibbo angle. </p>
+<h2 id="Coupling_Constant_for_\(W\)">Coupling Constant for \(W\)</h2>
+<p>d' and s' participate in the weak interactions. They are called <i>weak eigenstates</i>. d and s are called mass eigenstates; they have the mass and form hadrons.  Only the interaction of \(W\) with the up and down quarks of the same family is possible. The coupling constant in the obeying interactions is the same as in the case with leptons. </p>
+<h2 id="Quark_Mixing_Matrix">Quark Mixing Matrix</h2>
+<p>We can rewrite the relationship between the weak (d',s') and mass (d,s) eigenstates in a matrix form: \[\pmatrix{d'\\s'}=\pmatrix{V_{ud}&V_{us}\\V_{cd}&V_{cs}}\pmatrix{d\\s}=\pmatrix{\cos\theta_c&\sin\theta_c\\-\sin\theta_c&\cos\theta_c}\pmatrix{d\\s}\] ...this is the mixing matrix of two quark families. This can be extended to include the third family: \[\pmatrix{d'\\s'\\b'}=\pmatrix{V_{ud}&V_{us}&V_{ub}\\V_{cd}&V_{cs}&V_{cb}\\V_{td}&V_{ts}&V_{tb}}\pmatrix{d\\s\\b}\] </p>
+<h2 id="Probability_of_Quark_Transitions">Probability of Quark Transitions</h2>
+<p>The <i>CKM parameters</i> \(V_{xx}\) contribute to the probability of processes with quarks. I.e. \[P(d\to ue\bar{\nu}_e)\propto\abs{V_{ud}}^2\] If the process involves several transitions between quarks, the total probability is proportional to the square of the product of the corresponding CKM parameters: \[P(b\to c\bar{u}s)\propto(g_W^2V_{cb}V_{us})^2\] </p>
+</div>
+</body>
+</html>
